@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>footprint story</title>
         <meta name="description" content="footprint story - 프리미엄 취업/커리어 스토리 연재 서비스" />
