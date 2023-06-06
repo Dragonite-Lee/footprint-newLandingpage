@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         <meta name="twitter:image" content="https://footprintstory.kr/images/image.png" /> 
       </Head>
 
-      
+    
     </div>
   )
 }
