@@ -1,12 +1,12 @@
 import styles from './logo.module.css'
 
 
-function Logo() {
+function Ongoing() {
     return (
         <div>
-            fsd 
+            Ongoing페이지 
         </div>
     )
 }
 
-export default Logo;
+export default Ongoing;

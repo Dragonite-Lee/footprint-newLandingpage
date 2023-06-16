@@ -116,3 +116,15 @@ a {
   box-sizing: border-box;
 }
 
+.container {
+  width: 1920px;
+  background-color: blue;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (max-width: 1920px) {
+  .container {
+    width: 100%;
+  }
+}

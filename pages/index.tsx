@@ -9,57 +9,10 @@ import Logo from '../component/logo'
 import QuestionFirst from '../component/question/first'
 import styles from '../styles/Home.module.css'
 
-const PageNumber = [
-  { pageNum : 1 },
-  { pageNum : 2 },
-];
+
 
 const Home: NextPage = () => {
-  const [windowObj, setWindowObj] = useState<Window>();
-  const [currentPageNum, setCurrentPageNum] = useState<number>(1);
-  const totalNum = PageNumber.length;
-  const pageRefs = useRef<HTMLDivElement[]>([]); 
-
-  useEffect(() => {
-    if (window !== undefined) {
-      setWindowObj(window);
-    }
-  }, [])
-
-  const handleScrollPageChange = () => {
-    let scroll = windowObj?.scrollY!;
-    // console.log(scroll)
-    // console.log(pageRefs.current[2].offsetTop)
-    // console.log(windowObj!.outerHeight / 3)
-    // console.log(pageRefs.current[2].offsetHeight)
-    for (let i = 1; i <= totalNum; i++) {
-      if (scroll > pageRefs.current[i].offsetTop - windowObj!.outerHeight / 3 &&
-        scroll < pageRefs.current[i].offsetTop - windowObj!.outerHeight / 3 + pageRefs.current[i].offsetHeight
-      ) {
-        pageRefs.current[i].scrollTo({
-          top: windowObj!.innerHeight * i,
-          left: 0,
-          behavior: 'smooth'
-        })
-        break;
-      }
-    }
-  };
-  // 버튼 클릭
-  const handlePointClick = (pageNum: number) => {
-    windowObj?.scrollTo({
-      top: pageRefs.current[pageNum].offsetTop,
-      behavior: "smooth",
-    });
-  };
-
-  useEffect(() => {
-    windowObj?.addEventListener("scroll", handleScrollPageChange);
-    return () => {
-      windowObj?.removeEventListener("scroll", handleScrollPageChange);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [windowObj]);
+  
 
   return (
     <div>
@@ -86,17 +39,8 @@ const Home: NextPage = () => {
         <meta name="twitter:image" content="https://footprintstory.kr/images/image.png" /> 
       </Head>
 
-      <div>
-        <Logo 
-          pageNum={PageNumber[0].pageNum}
-          window={windowObj!}
-          pageRefs={pageRefs}
-        />
-        <QuestionFirst 
-          pageNum={PageNumber[1].pageNum}
-          window={windowObj!}
-          pageRefs={pageRefs}
-        />
+      <div className="container">
+        container
       </div>
     
     </div>
