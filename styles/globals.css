@@ -34,7 +34,7 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'Pretendard';
+  font-family: 'Pretendard-regular';
   font-weight: 400;
   font-style: normal;
   src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Regular.eot');
@@ -45,7 +45,7 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'Pretendard';
+  font-family: 'Pretendard-medium';
   font-weight: 500;
   font-style: normal;
   src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Medium.eot');
@@ -56,7 +56,7 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'Pretendard';
+  font-family: 'Pretendard-semibold';
   font-weight: 600;
   font-style: normal;
   src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-SemiBold.eot');
@@ -67,7 +67,7 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'Pretendard';
+  font-family: 'Pretendard-bold';
   font-weight: 700;
   font-style: normal;
   src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-Bold.eot');
@@ -78,7 +78,7 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'Pretendard';
+  font-family: 'Pretendard-extrabold';
   font-weight: 800;
   font-style: normal;
   src: url('https://cdn.jsdelivr.net/gh/webfontworld/pretendard/Pretendard-ExtraBold.eot');
@@ -116,15 +116,9 @@ a {
   box-sizing: border-box;
 }
 
-.container {
-  width: 1920px;
-  background-color: blue;
-  margin: 0 auto;
-  overflow: hidden;
+.font_bold {
+  font-family: 'Pretendard-bold';
+  font-weight: 700;
+  font-style: normal;
 }
 
-@media (max-width: 1920px) {
-  .container {
-    width: 100%;
-  }
-}

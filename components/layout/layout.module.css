@@ -1,0 +1,61 @@
+/* 웹 1920px 이상 */
+.navbar {
+    background-color: red;
+    width: 1920px; /*반응*/
+    height: 80px; /*반응*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 360px;  /*반응*/
+}
+
+.navbar_left {
+    display: block;
+}
+.navbar_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar_logo {
+    display: block;
+    width: 131px; /*반응*/
+    height: auto;
+}
+.navbar_intro {
+    font-family: 'Pretendard-medium';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 21px; /*반응*/
+    color: #757575;
+}
+.navbar_ongoing {
+    font-family: 'Pretendard-medium';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 21px; /*반응*/
+    color: #757575;
+    margin-left: 100px; /*반응*/
+}
+
+/* 웹 1920px 이하 */
+@media (max-width: 1920px) {
+    .navbar {
+        width: 100%;
+        height: calc(0.04167 * 100vw);
+        padding: 0 calc(0.1875 * 100vw);
+    }
+    .navbar_logo {
+        width: calc(0.07083 * 100vw - 5px);
+    }
+    .navbar_intro {
+        font-size: calc(0.0104167 * 100vw + 1px);
+    }
+    .navbar_ongoing {
+        font-size: calc(0.0104167 * 100vw + 1px);
+        margin-left: calc(37.5/700 * 100vw - 1.8px); 
+    }
+}
+
+/* 패드 모바일 버젼 */

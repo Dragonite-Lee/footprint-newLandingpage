@@ -5,8 +5,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from "react";
 
-import Logo from '../component/logo'
-import QuestionFirst from '../component/question/first'
 import styles from '../styles/Home.module.css'
 
 
@@ -39,7 +37,7 @@ const Home: NextPage = () => {
         <meta name="twitter:image" content="https://footprintstory.kr/images/image.png" /> 
       </Head>
 
-      <div className="container">
+      <div className={styles.container}>
         container
       </div>
     
