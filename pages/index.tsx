@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useEffect, useRef, useState } from "react";
 
 import styles from '../styles/Home.module.css'
+import QnaBox from '../components/qnaBox';
 
 
 
@@ -38,7 +39,7 @@ const Home: NextPage = () => {
       </Head>
 
       <div className={styles.container}>
-        container
+        <QnaBox title="안녕" content="난 컨텐트야"/>
       </div>
     
     </div>

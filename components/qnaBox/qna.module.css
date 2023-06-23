@@ -1,0 +1,26 @@
+.qna_box {
+    width: 1200px;
+    height: 78px;
+    background: #FFFFFF;
+    border: 3px solid #FDBE01;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 30px 19px 20px;
+}
+.qna_box_left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.qna_box_right {
+
+}
+
+.qna_title {
+    font-family: 'Pretendard-bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+}
