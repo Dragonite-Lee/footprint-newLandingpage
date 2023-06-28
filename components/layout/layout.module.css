@@ -100,6 +100,31 @@
         font-size: calc(0.0104167 * 100vw + 1px);
         margin-left: calc(37.5/700 * 100vw - 1.8px); 
     }
+    .footer {
+        width: 100%;
+        height: calc(0.176389 * 100vw - 1.67px);
+        padding: 0 calc(0.190278 * 100vw - 3.33px);
+    }
+    .footer_left_img {
+        width: calc(0.16944 * 100vw + 2.67px);
+    }
+    .footer_right_contact {
+        padding-right: calc(0.03125 * 100vw);
+        padding-bottom: calc(0.054861 * 100vw - 4.33px);
+    }
+    .footer_right_contact_img {
+        width: calc(0.0556 * 100vw + 1.33px);
+        margin-bottom: calc(0.006944 * 100vw - 0.33px);
+    }
+    .instagram {
+        width: calc(0.059375 * 100vw + 1px);
+    }
+    .facebook {
+        width: calc(0.05243056 * 100vw + 1.33px);
+    }
+    .footer_right_bussiness_img {
+        width: calc(0.05694 * 100vw + 1.667px);
+    }
 }
 
 /* 패드 모바일 버젼 */

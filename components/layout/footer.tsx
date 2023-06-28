@@ -5,7 +5,6 @@ import footer_left from '../../public/layout/footer_left.png'
 import footer_right_bussiness from '../../public/layout/footer_right_bussiness.png'
 import footer_right_contact from '../../public/layout/footer_right_contact.png'
 
-import Link from 'next/link';
 import Image from 'next/image';
  
 function Footer() {
@@ -18,8 +17,8 @@ function Footer() {
         <div className={styles.footer_right}>
             <div className={styles.footer_right_contact}>
             <Image src={footer_right_contact} className={styles.footer_right_contact_img} alt='footer_right_contact이미지' />
-            <Image src={instagram} className={styles.instagram} alt='instagram이미지' />
-            <Image src={facebook} className={styles.facebook} alt='facebook이미지' />
+            <Image src={instagram} className={styles.instagram} alt='instagram이미지' onClick={() => {window.open('https://www.instagram.com/footprint_story/')}} />
+            <Image src={facebook} className={styles.facebook} alt='facebook이미지' onClick={() => {window.open('https://www.facebook.com/footprintcareers?mibextid=ZbWKwL')}} />
             </div>
             <div className={styles.footer_right_bussiness}>
             <Image src={footer_right_bussiness} className={styles.footer_right_bussiness_img} alt='footer_right_bussiness이미지' />

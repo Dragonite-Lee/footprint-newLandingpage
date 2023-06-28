@@ -39,7 +39,7 @@ const Home: NextPage = () => {
       </Head>
 
       <div className={styles.container}>
-        <QnaBox title="안녕" content="난 컨텐트야"/>
+        <QnaBox title="안녕" content="난 컨텐트야sdfsdfsdfsdfsdfsdfsfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"/>
       </div>
     
     </div>
