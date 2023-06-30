@@ -1,0 +1,50 @@
+.container {
+    width: 1920px; /*반응*/
+    height: 100%
+}
+.qna_bar {
+    width: 33px; /*반응*/
+    height: 10px; /*반응*/
+    margin-top: 122px; /*반응*/
+    margin-left: 362px; /*반응*/
+    background-color: #FDBE01;
+}
+.qna_text {
+    color: #FDBE01;
+    font-size: 72px; /*반응*/
+    font-family: 'pretendard-extrabold';
+    font-style: normal;
+    font-weight: 800;
+    margin-left: 362px; /*반응*/
+}
+.qna_text_small {
+    font-size: 42px; /*반응*/
+}
+.qna_box {
+    margin-top: 50px; /*반응*/
+    margin-bottom: 217px; /*반응*/
+}
+@media (max-width: 1920px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    .qna_bar {
+        width: calc(0.01722 * 100vw - 0.0666px);
+        height: calc(0.00513889 * 100vw + 0.133px);
+        margin-top: calc(0.0625833 * 100vw + 1.8399px);
+        margin-left: calc(0.188541667 * 100vw);
+
+    }
+    .qna_text {
+        font-size: calc(0.0375 * 100vw);
+        margin-left: calc(0.188541667 * 100vw);
+    }
+    .qna_text_small {
+        font-size: calc(0.021875 * 100vw);
+    }
+    .qna_box {
+        margin-top: calc(0.0263889 * 100vw - 0.666px);
+        margin-bottom: calc(0.11309722 * 100vw - 0.14667px);
+    }
+}

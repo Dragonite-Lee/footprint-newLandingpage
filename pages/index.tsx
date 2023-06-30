@@ -6,9 +6,16 @@ import Image from 'next/image'
 import { useEffect, useRef, useState } from "react";
 
 import styles from '../styles/Home.module.css'
-import QnaBox from '../components/qnaBox';
-
-
+import Title from '../components/main/title';
+import Introduce from '../components/main/introduce';
+import Timer from '../components/main/timer';
+import Subscribe from '../components/main/subscribe';
+import Yellow from '../components/main/yellow';
+import But from '../components/main/but';
+import Gray from '../components/main/gray';
+import Curious from '../components/main/curious';
+import Together from '../components/main/together';
+import Qna from '../components/main/qna';
 
 const Home: NextPage = () => {
   
@@ -39,7 +46,16 @@ const Home: NextPage = () => {
       </Head>
 
       <div className={styles.container}>
-        <QnaBox title="안녕" content="난 컨텐트야sdfsdfsdfsdfsdfsdfsfsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"/>
+          <Title />
+          <Introduce />
+          <Timer />
+          <Subscribe />
+          <Yellow />
+          <But />
+          <Gray />
+          <Curious />
+          <Together />
+          <Qna />
       </div>
     
     </div>

@@ -3,13 +3,18 @@
     width: 1920px;
     height: 100%;
     background-image: url('../public/bg/bg_main.png');
+    background-size: 1920px auto;
     margin: 0 auto;
     overflow: hidden;
+    padding-top: 80px;
   }
   
   @media (max-width: 1920px) {
     .container {
       width: 100%;
       height: 100%;
+      background-size: 100% auto;
+      padding-top: calc(0.04167 * 100vw);
     }
+
   }

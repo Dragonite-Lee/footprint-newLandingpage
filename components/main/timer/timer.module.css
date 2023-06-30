@@ -1,0 +1,104 @@
+.container {
+    width: 1920px; /*반응*/
+    height: 477px; /*반응*/
+    margin-top: 110px; /*반응*/
+    margin-bottom: 110px; /*반응*/
+}
+.timer {
+    width: 632px; /*반응*/
+    height: 149px; /*반응*/
+    margin: 0 auto;
+    padding: 20px; /*반응*/
+    border-radius: 14px; /*반응*/
+    background: rgba(253, 190, 1, 0.50);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    
+}
+.time {
+    width: 97px; /*반응*/
+    height: 97px; /*반응*/
+    border-radius: 97px; /*반응*/
+    background: #FFF;
+    position: relative;
+    
+}
+.time_number {
+    color: #424242;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 42px; /*반응*/
+    font-family: 'Pretendard-extrabold';
+    font-style: normal;
+    font-weight: 800;
+}
+.unit {
+    color: #424242;
+    text-align: center;
+    font-size: 24px; /*반응*/
+    font-family: 'Pretendard-medium';
+    font-style: normal;
+    font-weight: 500;
+    padding-right: 20px; /*반응*/
+}
+.unit:nth-last-child(1) {
+    padding-right: 0px;
+}
+.text_box {
+    padding-top: 20px; /*반응*/
+}
+.text_box_top {
+    color: #424242;
+    text-align: center;
+    font-size: 42px; /*반응*/
+}
+.text_box_bottom {
+    padding-top: 60px; /*반응*/
+    color: #424242;
+    text-align: center;
+    font-size: 33px; /*반응*/  
+}
+@media (max-width: 1920px) {
+    .container {
+        width: 100%;
+        height: calc(0.24947916667 * 100vw - 8px);
+        margin-top: calc(0.057291667 * 100vw - 2px);
+        margin-bottom: calc(0.05625 * 100vw);
+    }
+    .timer {
+        width: calc(0.3291667 * 100vw);
+        height: calc(0.07778 * 100vw - 0.333px); /*반응*/
+        padding: calc(0.0104166 * 100vw);
+        border-radius: calc(0.00729166 * 100vw);
+    }
+    .time {
+        width: calc(0.050520833 * 100vw);
+        height: calc(0.050520833 * 100vw);
+        border-radius: calc(0.050520833 * 100vw);
+        
+    }
+    .time_number {
+        font-size: calc(0.021875 * 100vw);
+    }
+    .unit {
+        font-size: calc(0.0125 * 100vw);
+        padding-right: calc(0.0125 * 100vw);
+    }
+    .text_box {
+        padding-top: calc(0.020833 * 100vw - 20px); /*반응*/
+    }
+    .text_box_top {
+        color: #424242;
+        text-align: center;
+        font-size: calc(0.021875 * 100vw); /*반응*/
+    }
+    .text_box_bottom {
+        padding-top: calc(0.03090277 * 100vw + 0.66666px); /*반응*/
+        color: #424242;
+        text-align: center;
+        font-size: calc(0.0171875 * 100vw); /*반응*/  
+    }
+}
