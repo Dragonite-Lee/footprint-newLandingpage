@@ -1,0 +1,45 @@
+.container {
+    width: 1920px; /*반응*/
+    height: 1104px; /*반응*/
+}
+.main_text {
+    margin-left: 360px; /*반응*/
+    color: #000;
+    font-size: 42px; /*반응*/
+    font-family: 'pretendard-extrabold';
+    font-style: normal;
+    font-weight: 800;
+}
+.line {
+    margin-left: 372px; /*반응*/
+    width: 2px; /*반응*/
+    height: 104px; /*반응*/
+    background-color: #000;
+}
+.sub_text {
+    margin-left: 360px; /*반응*/
+    color: #000;
+    font-size: 33px; /*반응*/
+    font-family: 'pretendard-medium';
+    font-style: normal;
+    font-weight: 500;
+}
+@media (max-width: 1920px) {
+    .container {
+        width: 100%;
+        height: calc(0.575 * 100vw); /*반응*/
+    }
+    .main_text {
+        margin-left: calc(0.1875 * 100vw);
+        font-size: calc(0.021875 * 100vw);
+    }
+    .line {
+        margin-left: calc(0.19375 * 100vw);
+        width: calc(0.001041666 * 100vw);
+        height: calc(0.022486111 * 100vw + 60.826px);
+    }
+    .sub_text {
+        margin-left: calc(0.1875 * 100vw);
+        font-size: calc(0.017180556 * 100vw + 0.0133px);
+    }
+}

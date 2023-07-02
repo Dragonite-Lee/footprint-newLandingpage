@@ -1,8 +1,7 @@
 .container {
     width: 1920px; /*반응*/
-    height: 477px; /*반응*/
-    margin-top: 110px; /*반응*/
-    margin-bottom: 110px; /*반응*/
+    height: 3707px; /*반응*/
+    padding-top: 2919px; /*반응*/
 }
 .timer {
     width: 632px; /*반응*/
@@ -64,9 +63,8 @@
 @media (max-width: 1920px) {
     .container {
         width: 100%;
-        height: calc(0.24947916667 * 100vw - 8px);
-        margin-top: calc(0.057291667 * 100vw - 2px);
-        margin-bottom: calc(0.05625 * 100vw);
+        height: calc(1.9921944 * 100vw - 148.0133333px);
+        padding-top: calc(1.5869722 * 100vw - 98.0133px);
     }
     .timer {
         width: calc(0.3291667 * 100vw);

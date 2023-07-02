@@ -1,0 +1,82 @@
+.container {
+    width: 1920px; /*반응*/
+    height: 2916px; /*반응*/
+    position: relative;
+}
+.yellow_top_left {
+    width: 756.01px; /*반응*/
+    height: 560.58px; /*반응*/
+    position: absolute;
+    z-index: 3;
+    top: 1483.34px; /*반응*/
+    left: 191px; /*반응*/
+}
+.yellow_top_right {
+    width: 914.03px; /*반응*/
+    height: 750.33px; /*반응*/
+    position: absolute;
+    z-index: 2;
+    top: 1269.64px; /*반응*/
+    left: 739.04px; /*반응*/
+}
+.yellow_mid_left {
+    width: 799.89px; /*반응*/
+    height: 589.03px; /*반응*/
+    position: absolute;
+    z-index: 1;
+    top: 1903.69px; /*반응*/
+    left: 231.08px; /*반응*/
+}   
+.yellow_mid_right {
+    width: 822.83px; /*반응*/
+    height: 535.29px; /*반응*/
+    position: absolute;
+    z-index: 0;
+    top: 1849.33px; /*반응*/
+    left: 906.5px; /*반응*/
+}
+.blue_bot {
+    width: 1091.43px; /*반응*/
+    height: 988.68px; /*반응*/
+    position: absolute;
+    z-index: 2;
+    top: 2032.49px; /*반응*/
+    left: 553.89px; /*반응*/
+}
+@media (max-width: 1920px) {
+    .container {
+        width: 100%;
+        height: calc(1.51875 * 100vw); /*반응*/
+    }
+    .yellow_top_left {
+        width: calc(0.39375 * 100vw + 0.00999px); /*반응*/
+        height: calc(0.2919722 * 100vw - 0.0066px); /*반응*/
+        top: calc(0.77256944 * 100vw + 0.00667px); /*반응*/
+        left: calc(0.09948611 * 100vw - 0.0133px); /*반응*/
+
+    }
+    .yellow_top_right {
+        width: calc(0.476055 * 100vw + 0.0033px); /*반응*/
+        height: calc(0.3908055 * 100vw - 0.01667px); /*반응*/
+        top: calc(0.661277 * 100vw - 0.0133px); /*반응*/
+        left: calc(0.38491666 * 100vw); /*반응*/
+    }
+    .yellow_mid_left {
+        width: calc(0.416611 * 100vw - 0.0033px); /*반응*/
+        height: calc(0.30679166 * 100vw - 0.0099px); /*반응*/
+        top: calc(0.99148611 * 100vw + 0.0266px); /*반응*/
+        left: calc(0.1203611 * 100vw - 0.0133px); /*반응*/
+    }   
+    .yellow_mid_right {
+        width: calc(0.42855 * 100vw + 0.0033px); /*반응*/
+        height: calc(0.27879166 * 100vw + 0.01px); /*반응*/
+        top: calc(0.9631944 * 100vw - 0.0033px); /*반응*/
+        left: calc(0.4721388 * 100vw - 0.0066px); /*반응*/
+    }
+    .blue_bot {
+        width: calc(0.56845833 * 100vw - 0.0099px); /*반응*/
+        height: calc(0.51493055 * 100vw - 0.0133px); /*반응*/
+        top: calc(1.05859722 * 100vw - 0.0166px); /*반응*/
+        left: calc(0.28848611 * 100vw - 0.0033px); /*반응*/
+    }
+}

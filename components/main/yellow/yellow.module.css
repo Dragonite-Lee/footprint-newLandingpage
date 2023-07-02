@@ -3,7 +3,7 @@
     height: 1129px; /*반응*/
     display: flex;
     justify-content: end;
-    align-items: start;
+    align-items: flex-start;
     padding-top: 282px; /*반응*/
 }
 .main_text {

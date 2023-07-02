@@ -59,8 +59,8 @@
 }
 .footer_right {
     display: flex;
-    justify-content: end;
-    align-items: start;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 .footer_right_contact {
     padding-right: 60px; /*반응*/

@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 140px;
 }
 .subscribe_box {
     margin-right: 60px; /*반응*/
@@ -76,6 +77,7 @@
     .container {
         width: 100%;
         height: calc(0.297222 * 100vw - 3.6667px);
+        margin-bottom: calc(0.0729166 * 100vw);
     }
     .subscribe_box {
         margin-right: calc(0.030902778 * 100vw + 0.66667px);

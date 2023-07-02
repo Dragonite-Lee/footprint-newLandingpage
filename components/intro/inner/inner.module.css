@@ -1,0 +1,25 @@
+.container {
+    width: 1920px; /*반응*/
+    height: 3215px; /*반응*/
+}
+.main_text {
+    padding-top: 363px; /*반응*/
+    color: #000;
+    text-align: center;
+    font-size: 72px; /*반응*/
+    font-family: 'pretendard-extrabold';
+    font-style: normal;
+    font-weight: 800;
+}
+
+@media (max-width: 1920px) {
+    .container {
+        width: 100%;
+        height: calc(1.71613889 * 100vw - 162px); /*반응*/
+        
+    }
+    .main_text {
+        padding-top: calc(0.23698611 * 100vw - 125.0133px);
+        font-size: calc(0.0375 * 100vw);
+    }
+}
