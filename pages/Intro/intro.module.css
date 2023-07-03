@@ -25,7 +25,7 @@
       display: block;
       width: 768px;
       height: 100%;
-      background-image: url('../public/bg/bg_tablet_intro.png');
+      background-image: url('../../public/bg/bg_tablet_intro.png');
       background-size: 768px auto;
       margin: 0 auto;
       overflow: hidden;
@@ -39,7 +39,7 @@
       width: 100%;
       height: 100%;
       background-size: 100% auto;
-      padding-top: calc(0.05211 * 100vw - 0.02133px);
+      margin-top: calc(0.05211 * 100vw - 0.02133px);
       padding-top: calc(0.05211 * 100vw - 0.02133px);
     }
   }

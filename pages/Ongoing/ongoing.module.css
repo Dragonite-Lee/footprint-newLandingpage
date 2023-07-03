@@ -23,7 +23,7 @@
       display: block;
       width: 768px;
       height: 100%;
-      background-image: url('../public/bg/bg_tablet_ongoing.png');
+      background-image: url('../../public/bg/bg_tablet_ongoing.png');
       background-size: 768px auto;
       margin: 0 auto;
       overflow: hidden;
