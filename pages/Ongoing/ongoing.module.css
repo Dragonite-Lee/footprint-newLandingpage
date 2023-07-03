@@ -2,11 +2,11 @@
     display: block;
     width: 1920px;
     height: 100%;
-    background-image: url('../../public/bg/bg_ongoing.png');
+    background-image: url('../../public/bg/bg_web_ongoing.png');
     background-size: 1920px auto;
     margin: 0 auto;
     overflow: hidden;
-    padding-top: 80px;
+    margin-top: 80px;
   }
   
   @media (max-width: 1920px) {
@@ -14,7 +14,28 @@
       width: 100%;
       height: 100%;
       background-size: 100% auto;
-      padding-top: calc(0.04167 * 100vw);
+      margin-top: calc(0.04167 * 100vw);
     }
 
+  }
+  @media (max-width: 1200px) {
+    .container {
+      display: block;
+      width: 768px;
+      height: 100%;
+      background-image: url('../public/bg/bg_tablet_ongoing.png');
+      background-size: 768px auto;
+      margin: 0 auto;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+      height: 100%;
+      background-size: 100% auto;
+      margin-top: calc(0.05211 * 100vw - 0.02133px);
+    }
   }

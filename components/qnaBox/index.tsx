@@ -24,7 +24,7 @@ function QnaBox({
   const qnaToggleHandler = () => {
     setQnaToggle(!qnaToggle)
   };
-  console.log(qnaToggle)
+  
   return (
     <div className={styles.qna_box}>
         <div className={styles.qna_title_box} onClick={qnaToggleHandler}>

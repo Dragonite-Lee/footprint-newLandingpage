@@ -116,3 +116,92 @@
         width: calc(0.213020833 * 100vw);
     }
 }
+
+@media (max-width: 1200px) {
+    .container {
+        width: 768px; /*반응*/
+        height: 309px; /*반응*/
+    }
+    .subscribe_box {
+        margin-right: 29px; /*반응*/
+    }
+    .input {
+        width: 357px; /*반응*/
+        height: 36px; /*반응*/
+        padding-left: 25px; /*반응*/
+        margin-bottom: 12px; /*반응*/
+        border-radius: 5px; /*반응*/
+        border: 1px solid #FDBE01; /*반응*/
+        font-size: 15px; /*반응*/
+    }
+    .agree_check {
+        width: 14px;/*반응*/
+        height: 14px;/*반응*/
+    }
+    .agree_text {
+        font-size: 15px;/*반응*/
+        margin-left: 11px;/*반응*/
+    }
+    .button_box {
+        margin-top: 22px; /*반응*/
+    }
+    .btn {
+        width: 151px; /*반응*/
+        height: 37px; /*반응*/
+        border-radius: 5px; /*반응*/
+        border: 3px solid #FFCC00; /*반응*/
+        margin-right: 19px; /*반응*/
+        font-size: 15px; /*반응*/
+    }
+    .button_text {
+        font-size: 12px; /*반응*/
+    }
+    .logo_img {
+        width: 200.37px; /*반응*/
+    }
+}
+
+  @media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: calc(0.40233 * 100vw + 0.008px);
+    }
+    .subscribe_box {
+        margin-right: calc(0.0377 * 100vw - 0.0133px);
+    }
+    .input {
+        width: calc(0.464833 * 100vw + 0.0079px);
+        height: calc(0.04688 * 100vw - 0.01066px);
+        padding-left: calc(0.03255 * 100vw - 0.00267px);
+        margin-bottom: calc(0.010416667 * 100vw);
+        border-radius: calc(0.0072916667 * 100vw);
+        border: calc(0.0015625 * 100vw) solid #FDBE01;
+        font-size: calc(0.0171875 * 100vw);
+    }
+    .agree_check {
+        width: calc(0.01583333 * 100vw - 0.3999px);
+        height: calc(0.01583333 * 100vw - 0.3999px);
+    }
+    .agree_text {
+        color: #424242;
+        font-size: calc(0.0171875 * 100vw);
+        margin-left: calc(0.010416666666666666 * 100vw);
+    }
+    .button_box {
+        margin-top: calc(0.023263889 * 100vw - 1.66667px);
+    }
+    .btn {
+        width: calc(0.16111 * 100vw - 0.333px);
+        height: calc(0.0401111 * 100vw - 0.01333px);
+        border-radius: calc(0.0072916667 * 100vw);
+        border: calc(0.0015556 * 100vw - 0.01333px) solid #FFCC00; /*반응*/
+        margin-right: calc(0.006778 * 100vw + 16.98667px);
+        font-size: calc(0.017180556 * 100vw + 0.0133px);
+    }
+    .button_text {
+        font-size: calc(0.0125 * 100vw);
+    }
+    .logo_img {
+        width: calc(0.213020833 * 100vw);
+    }
+}

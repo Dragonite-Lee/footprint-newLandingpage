@@ -12,6 +12,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 4;
 }
 
 .navbar_left {
@@ -132,3 +133,140 @@
 }
 
 /* 패드 모바일 버젼 */
+@media (max-width: 1200px) {
+    .navbar {
+        background-color: white;
+        width: 768px; /*반응*/
+        height: 40px; /*반응*/
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 90px;  /*반응*/
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 4;
+    }
+    
+    .navbar_left {
+        display: block;
+    }
+    .navbar_right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar_logo {
+        display: block;
+        width: 64px; /*반응*/
+        height: auto;
+    }
+    .navbar_intro {
+        font-family: 'Pretendard-medium';
+        font-weight: 500;
+        font-style: normal;
+        font-size: 12px; /*반응*/
+        color: #757575;
+    }
+    .navbar_ongoing {
+        font-family: 'Pretendard-medium';
+        font-weight: 500;
+        font-style: normal;
+        font-size: 12px; /*반응*/
+        color: #757575;
+        margin-left: 40px; /*반응*/
+    }
+    .footer {
+        background-color: #FFE991;
+        width: 768px; /*반응*/
+        height: 164px; /*반응*/
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 79px 0px 89px;  /*반응*/
+    }
+    .footer_left_img {
+        width: 184px; /*반응*/
+        height: auto;
+    }
+    .footer_right {
+        padding-top: 25px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    .footer_right_contact {
+        
+        padding-right: 22px; /*반응*/
+        padding-bottom: 63.16px; /*반응*/
+    }
+    .footer_right_contact_img {
+        display: block;
+        width: 62px; /*반응*/
+        height: auto;
+        margin-bottom: 6px; /*반응*/
+    }
+    .instagram {
+        display: block;
+        width: 62px; /*반응*/
+        height: auto;
+    }
+    .facebook {
+        display: block;
+        width: 55px; /*반응*/
+        height: auto;
+    }
+    .footer_right_bussiness_img {
+        width: 67px; /*반응*/
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: calc(0.05211 * 100vw - 0.02133px);
+        padding: 0 calc(0.1222 * 100vw - 3.867px);
+    }
+    .navbar_logo {
+        width: calc(0.08333 * 100vw);
+    }
+    .navbar_intro {
+        font-size: calc(0.0166 * 100vw - 0.8px);
+    }
+    .navbar_ongoing {
+        font-size: calc(0.0166 * 100vw - 0.8px);
+        margin-left: calc(0.051055 * 100vw + 0.78933px);
+    }
+    .footer {
+        width: 100%; /*반응*/
+        height: calc(0.21355 * 100vw - 0.01066px);
+        padding: 0px calc(0.10122 * 100vw + 1.26133px) 0px calc(0.11588 * 100vw - 0.00266px);  /*반응*/
+    }
+    .footer_left_img {
+        width: calc(0.24044 * 100vw - 0.66133px);
+    }
+    .footer_right {
+        padding-top: calc(0.03255 * 100vw - 0.00266px);
+    }
+    .footer_right_contact {
+        padding-right: calc(0.031611 * 100vw - 2.27733px);
+        padding-bottom: calc(0.08366 * 100vw - 1.0959px);
+    }
+    .footer_right_contact_img {
+        width: calc(0.077 * 100vw + 2.266px);
+        margin-bottom: calc(0.0083 * 100vw - 0.4px);
+    }
+    .instagram {
+        width: calc(0.079944 * 100vw + 0.60266px);
+    }
+    .facebook {
+        width: calc(0.074388 * 100vw - 2.13066px);
+    }
+    .footer_right_bussiness_img {
+        width: calc(0.0888 * 100vw - 1.266px);
+    }
+}

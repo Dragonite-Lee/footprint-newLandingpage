@@ -34,3 +34,36 @@
         font-size: calc(0.01718056 * 100vw - 0.01333px); /*반응*/
     }
 }
+
+@media (max-width: 1200px) {
+    .container {
+        width: 768px; /*반응*/
+        height: 309px; /*반응*/
+    }
+    .btn {
+        margin-top: 267px; /*반응*/
+        margin-left: 90px; /*반응*/
+        width: 200px; /*반응*/
+        height: 37px; /*반응*/
+        border-radius: 5px; /*반응*/
+        padding: 10px 23px 9px 24px; /*반응*/
+        font-size: 15px; /*반응*/
+    }    
+}
+
+  @media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: calc(0.39677 * 100vw + 4.27466px); /*반응*/
+    }
+    .btn {
+        margin-top: calc(0.342777 * 100vw - 12.7466px); /*반응*/
+        margin-left: calc(0.117166 * 100vw + 0.0159px); /*반응*/
+        width: calc(0.26044 * 100vw - 0.02133px); /*반응*/
+        height: calc(0.048166 * 100vw + 0.00799px); /*반응*/
+        border-radius: calc(0.0065 * 100vw + 0.008px); /*반응*/
+        padding: calc(0.013 * 100vw + 0.016px) calc(0.034722 * 100vw - 3.66px) calc(0.012944 * 100vw - 0.94133px) calc(0.03122 * 100vw + 0.02133px); /*반응*/
+        font-size: calc(0.01944 * 100vw + 0.066px); /*반응*/
+    }
+    
+}

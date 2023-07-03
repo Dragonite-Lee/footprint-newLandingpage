@@ -1,12 +1,16 @@
+'use client'
+
 import styles from './introduce.module.css'
 
-import Image from 'next/image';
+import Link from 'next/link';
 
 function Introduce() {
   
   return (
     <div className={styles.container}>
-      <button className={styles.btn}>연재 일정 자세히 알아보기</button>
+      <Link href="/Ongoing">
+        <button className={styles.btn}>연재 일정 자세히 알아보기</button>
+      </Link>
     </div>
   )
 }

@@ -102,3 +102,85 @@
         font-size: calc(0.0171875 * 100vw); /*반응*/  
     }
 }
+@media (max-width: 1200px) {
+    .container {
+        width: 768px; /*반응*/
+        height: 309px; /*반응*/
+        margin-top: 24px; /*반응*/
+        margin-bottom: 19px; /*반응*/
+    }
+    .timer {
+        width: 308px; /*반응*/
+        height: 73px; /*반응*/
+        padding: 13px 10px; /*반응*/
+        border-radius: 5px; /*반응*/
+    }
+    .time {
+        width: 47px; /*반응*/
+        height: 47px; /*반응*/
+        border-radius: 47px; /*반응*/
+        
+    }
+    .time_number {
+        font-size: 18px; /*반응*/
+    }
+    .unit {
+        font-size: 12px; /*반응*/
+        padding-right: 19px; /*반응*/
+    }
+    .unit:nth-last-child(1) {
+        padding-right: 0px;
+    }
+    .text_box {
+        padding-top: 8px; /*반응*/
+    }
+    .text_box_top {
+        color: #424242;
+        text-align: center;
+        font-size: 21px; /*반응*/
+    }
+    .text_box_bottom {
+        padding-top: 28px; /*반응*/
+        color: #424242;
+        text-align: center;
+        font-size: 18px; /*반응*/  
+    }
+}
+
+  @media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: calc(0.404055 * 100vw - 1.31466px);
+        margin-top: calc(0.0233 * 100vw + 6.08px);
+        margin-bottom: 0px;
+    }
+    .timer {
+        width: calc(0.401055 * 100vw - 0.01066px);
+        height: calc(0.095055 * 100vw - 0.00266px); /*반응*/
+        padding: calc(0.016944 * 100vw - 0.0133px) calc(0.013 * 100vw + 0.016px);
+        border-radius: calc(0.0065 * 100vw + 0.008px);
+    }
+    .time {
+        width: calc(0.06122 * 100vw - 0.01866px);
+        height: calc(0.06122 * 100vw - 0.01866px);
+        border-radius: calc(0.06122 * 100vw - 0.01866px);
+        
+    }
+    .time_number {
+        font-size: calc(0.02344 * 100vw - 0.0053px);
+    }
+    .unit {
+        font-size: calc(0.011 * 100vw +  3.4666px);
+        padding-right: calc(0.025 * 100vw - 0.2px);
+    }
+    .text_box {
+        padding-top: calc(0.010388 * 100vw + 0.0213px); /*반응*/
+    }
+    .text_box_top {
+        font-size: calc(0.0277 * 100vw - 0.33px); /*반응*/
+    }
+    .text_box_bottom {
+        padding-top: calc(0.034611 * 100vw + 1.41866px); /*반응*/
+        font-size: calc(0.02344 * 100vw - 0.0053px); /*반응*/  
+    }
+}
