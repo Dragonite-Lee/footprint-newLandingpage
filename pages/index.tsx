@@ -21,7 +21,7 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>footprint story</title>
-        <meta name="description" content="footprint story - 프리미엄 취업/커리어 스토리 연재 서비스" />
+        <meta name="description" content="footprint story - 다양한 분야에 종사하고 있는 선배들의 커리어 성장기와 삶을 이야기에 담아 연재하는 서비스" />
         <link rel="icon" href="/metaOg/footprint_favIcon.png" />
         <meta name='robots' content='all' />
         <meta name='keywords' content='현직자, 직업인, 스토리, 커리어, 취업, 진로, 꿈, 직장' />
@@ -35,10 +35,10 @@ const Home: NextPage = () => {
         <meta property="og:site_name" content="footprint story" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:image:alt" content="footprint story" />
-        <meta property="og:description" content="footprint story - 프리미엄 취업/커리어 스토리 연재 서비스" />
+        <meta property="og:description" content="footprint story - 다양한 분야에 종사하고 있는 선배들의 커리어 성장기와 삶을 이야기에 담아 연재하는 서비스" />
         {/* 트위터 open graph 설정 */}
         <meta name="twitter:title" content="footprint story" /> 
-        <meta name="twitter:description" content="footprint story - 프리미엄 취업/커리어 스토리 연재 서비스" /> 
+        <meta name="twitter:description" content="footprint story - 다양한 분야에 종사하고 있는 선배들의 커리어 성장기와 삶을 이야기에 담아 연재하는 서비스" /> 
         <meta name="twitter:image" content="https://footprintstory.kr/images/image.png" /> 
       </Head>
 
