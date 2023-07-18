@@ -1,6 +1,6 @@
 .container {
     width: 1920px; /*반응*/
-    height: 1052px; /*반응*/
+    height: 1080px; /*반응*/
 }
 .text {
     color: #424242;
@@ -8,18 +8,37 @@
     font-family: 'pretendard-extrabold'; /*반응*/
     font-style: normal;
     font-weight: 800;
-    padding-top: 440px; /*반응*/
-    margin-left: 306px; /*반응*/
+    text-align: center;
+    padding-top: 441px; /*반응*/
+    
 }
 @media (max-width: 1920px) {
     .container {
         width: 100%;
-        height: calc(0.548611 * 100vw - 1.3333px); /*반응*/
-        
+        height: calc(0.5625 * 100vw); /*반응*/
     }
     .text {
         font-size: calc(0.0265625 * 100vw); /*반응*/
-        padding-top: calc(0.258333 * 100vw - 75px);
-        margin-left: calc( 0.159375 * 100vw);
+        padding-top: calc(0.2296944 * 100vw - 0.0133px); /*반응*/
+    }
+}
+@media (max-width: 1200px) {
+    .container {
+        width: 768px;
+        height: 432px; /*반응*/
+    }
+    .text {
+        font-size: 27px; /*반응*/
+        padding-top: 170px; /*반응*/
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: calc(0.5625 * 100vw); /*반응*/
+    }
+    .text {
+        font-size: calc(0.035156 * 100vw + 0.000533px); /*반응*/
+        padding-top: calc(0.22133 * 100vw - 0.0159px); /*반응*/
     }
 }

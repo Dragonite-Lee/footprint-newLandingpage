@@ -4,7 +4,7 @@ function Yellow() {
   
   return (
     <div className={styles.container}>
-        <div className={styles.open_question}>"</div>
+        <div className={styles.open_question}>&quot;</div>
         <div>
             <div className={styles.main_text}>
             우리는 보통, <br/>
@@ -22,7 +22,7 @@ function Yellow() {
                 제가 과연 할 수 있을까요?
             </div>
         </div>
-        <div className={styles.close_question}>"</div>
+        <div className={styles.close_question}>&quot;</div>
     </div>
   )
 }

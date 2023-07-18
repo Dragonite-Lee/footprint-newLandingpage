@@ -2,7 +2,7 @@
     display: block;
     width: 1920px;
     height: 100%;
-    background-image: url('../../public/bg/bg_web_ongoing.png');
+    background-image: url('../../public/bg/bg_ongoing_tablet.png');
     background-size: 1920px auto;
     margin: 0 auto;
     overflow: hidden;
@@ -23,7 +23,7 @@
       display: block;
       width: 768px;
       height: 100%;
-      background-image: url('../../public/bg/bg_tablet_ongoing.png');
+      background-image: url('../../public/bg/bg_ongoing_tablet.png');
       background-size: 768px auto;
       margin: 0 auto;
       overflow: hidden;
