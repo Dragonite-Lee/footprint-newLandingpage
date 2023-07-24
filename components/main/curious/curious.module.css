@@ -2,6 +2,10 @@
     width: 1920px; /*반응*/
     height: 932px; /*반응*/
 }
+.interativeBox {
+    opacity: 0;
+    transform: translateY(70px);
+}
 .q_text {
     color: #424242;
     text-align: justify;

@@ -1,6 +1,10 @@
 .container {
     width: 1920px; /*반응*/
-    height: 890px; /*반응*/
+    height: 596px; /*반응*/
+}
+.interativeBox {
+    opacity: 0;
+    transform: translateY(70px);
 }
 .q_text {
     color: #424242;
@@ -28,7 +32,7 @@
 @media (max-width: 1920px) {
     .container {
         width: 100%;
-        height: calc(0.46354167 * 100vw); /*반응*/
+        height: calc(0.31041667 * 100vw); /*반응*/
         
     }
     .q_text {
@@ -45,7 +49,7 @@
 @media (max-width: 1200px) {
     .container {
         width: 768px;
-        height: 432px;
+        height: 289px;
         
     }
     .q_text {
@@ -62,7 +66,7 @@
 @media (max-width: 768px) {
     .container {
         width: 100%;
-        height: calc(0.5625 * 100vw - 60px); /*반응*/
+        height: calc(0.376277 * 100vw + 0.018667px); /*반응*/
         
     }
     .q_text {
@@ -98,7 +102,7 @@
 @media (max-width: 360px) {
     .container {
         width: 100%;
-        height: calc(0.3637499 * 100vw + 0.05px);
+        height: calc(0.363875 * 100vw + 0.00499px);
     }
     .together_mobile {
         width: calc(0.4375 * 100vw + 2.5px);

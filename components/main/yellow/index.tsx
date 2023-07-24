@@ -2,11 +2,47 @@ import styles from './yellow.module.css'
 import yellow_mobile from '../../../public/main/yellow_mobile.png'
 
 import Image from 'next/image';
+import { useRef, useEffect } from 'react';
 
 function Yellow() {
   
+    const yellowRef = useRef<HTMLDivElement>(null)
+
+    const animation = () => {
+        let winH: number;
+   
+    const initModule = () => {
+      winH = window.innerHeight;
+      addEventHandlers();
+    }
+   
+    const addEventHandlers = () => {
+      window.addEventListener("scroll", checkPosition);
+      window.addEventListener("load", checkPosition);
+      window.addEventListener("resize", initModule);
+    };
+   
+    const checkPosition = () => {
+        if (yellowRef.current) {
+          var posFromTop = yellowRef.current.getBoundingClientRect().top;
+          if (winH > posFromTop) {
+            yellowRef.current.style.opacity = '1';
+            yellowRef.current.style.transform = 'translateY(0px)'
+            yellowRef.current.style.transition = '1.4s';
+          }
+        }
+    }
+   
+    return {
+      init: initModule
+    }
+  }
+  useEffect(() => {
+    animation().init();
+  },[])
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={yellowRef}>
         <div className={styles.open_question}>&quot;</div>
         <div>
             <div className={styles.main_text}>

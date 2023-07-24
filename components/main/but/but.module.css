@@ -10,7 +10,8 @@
     font-weight: 800;
     text-align: center;
     padding-top: 441px; /*반응*/
-    
+    opacity: 0;
+    transform: translateY(70px);
 }
 .but_mobile {
     display: none;

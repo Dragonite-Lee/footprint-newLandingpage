@@ -4,6 +4,8 @@
     display: flex;
     justify-content: end;
     align-items: flex-start;
+    opacity: 0;
+    transform: translateY(70px);
 }
 .main_text {
     color: #424242;
