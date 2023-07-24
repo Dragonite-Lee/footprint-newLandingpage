@@ -70,6 +70,9 @@
     font-style: normal;
     font-weight: 500;
 }
+.yellow_mobile {
+    display: none;
+}
 @media (max-width: 1920px) {
     .container {
         width: 100%;
@@ -115,7 +118,7 @@
     .container {
         width: 768px;
         height: 432px; /*반응*/
-        margin-top: 110px; /*반응*/
+        margin-top: 100px; /*반응*/
     }
     .main_text {
         font-size: 21px; /*반응*/
@@ -157,16 +160,16 @@
     .container {
         width: 100%;
         height: calc(0.5625 * 100vw); /*반응*/
-        /* margin-top: calc(0.14322 * 100vw + 0.00533px); */
+        margin-top: calc(0.14322 * 100vw - 9.99467px);
     }
     .main_text {
         font-size: calc(0.027344 * 100vw - 0.000533px); /*반응*/
-        /* margin-top: calc(0.14322 * 100vw + 0.00533px); */
+        margin-top: calc(0.097667 * 100vw - 0.00799px);
         margin-bottom: calc(0.02967 * 100vw + 4.216px); /*반응*/
     }
     .open_question {
         font-size: calc(0.0234389 * 100vw - 0.001067px); /*반응*/
-        /* margin-top: calc(0.4039 * 100vw - 3.2719px); */
+        margin-top: calc(0.25522 * 100vw - 0.01067px);
     }
     .close_question {
         font-size: calc(0.0234389 * 100vw - 0.001067px); /*반응*/
@@ -191,5 +194,53 @@
         margin-top: calc(0.013 * 100vw - 0.016px);
         margin-left: calc(0.19949 * 100vw + 2.784px);
         font-size: calc(0.019533 * 100vw - 0.0016px);
+    }
+}
+@media (max-width: 588px) {
+    .container {
+        width: 360px;
+        height: 202px; /*반응*/
+        margin-top: 60px; /*반응*/
+        display: block;
+    }
+    .yellow_mobile {
+        display: block;
+        width: 158px;
+        height: auto;
+        padding-top: 36px;
+        margin-left: 146px;
+    }
+    .main_text {
+        display: none;
+    }
+    .open_question {
+        display: none;
+    }
+    .close_question {
+        display: none;
+    }
+    .first_question {
+        display: none;
+    } 
+    .second_question {
+        display: none;
+    }
+    .third_question {
+        display: none;
+    }
+}
+@media (max-width: 360px) {
+    .container {
+        width: 100%;
+        height: calc(0.56112499 * 100vw - 0.00499px);
+        margin-top: calc(0.16662499 * 100vw + 0.015px);
+        display: block;
+    }
+    .yellow_mobile {
+        display: block;
+        width: calc(0.438875 * 100vw + 0.0049px);
+        height: auto;
+        padding-top: calc(0.1 * 100vw);
+        margin-left: calc(0.405499 * 100vw + 0.02px);
     }
 }

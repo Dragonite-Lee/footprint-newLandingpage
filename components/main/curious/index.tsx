@@ -1,4 +1,7 @@
 import styles from './curious.module.css'
+import curious_mobile from '../../../public/main/curious_mobile.png'
+
+import Image from 'next/image';
 
 function Curious() {
   
@@ -11,6 +14,7 @@ function Curious() {
         <div className={styles.a_text}>
             그 과정이 궁금하지 않나요?
         </div>
+        <Image src={curious_mobile} alt="curious_mobile" className={styles.curious_mobile} />
     </div>
   )
 }

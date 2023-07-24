@@ -1,4 +1,7 @@
 import styles from './yellow.module.css'
+import yellow_mobile from '../../../public/main/yellow_mobile.png'
+
+import Image from 'next/image';
 
 function Yellow() {
   
@@ -23,6 +26,7 @@ function Yellow() {
             </div>
         </div>
         <div className={styles.close_question}>&quot;</div>
+        <Image src={yellow_mobile} alt="yellow_mobile" className={styles.yellow_mobile} />
     </div>
   )
 }

@@ -1,9 +1,10 @@
 .container {
     display: block;
     width: 1920px;
-    height: 100%;
+    min-width: 280px;
+    height: 10074px;
     background-image: url('../public/bg/bg_main_pc.png');
-    background-size: 1920px auto;
+    background-size: 1920px 10074px;
     margin: 0 auto;
     overflow: hidden;
     padding-top: 80px;
@@ -12,8 +13,8 @@
   @media (max-width: 1920px) {
     .container {
       width: 100%;
-      height: 100%;
-      background-size: 100% auto;
+      height: calc(5.177430555 * 100vw + 133.33px);
+      background-size: 100% calc(5.177430555 * 100vw + 133.33px);
       padding-top: calc(0.04167 * 100vw);
     }
 
@@ -23,9 +24,9 @@
     .container {
       display: block;
       width: 768px;
-      height: 100%;
+      height: 4337px;
       background-image: url('../public/bg/bg_main_tablet.png');
-      background-size: 768px auto;
+      background-size: 768px 4337px;
       margin: 0 auto;
       overflow: hidden;
       margin-top: 40px;
@@ -36,9 +37,32 @@
   @media (max-width: 768px) {
     .container {
       width: 100%;
+      height: calc(5.64711 * 100vw + 0.01866px);
+      background-size: 100% calc(5.64711 * 100vw + 0.01866px);
+      margin-top: calc(0.052056 * 100vw + 0.02133px);
+      padding-top: 0px;
+    }
+  }
+  @media (max-width: 588px) {
+    .container {
+      display: block;
+      width: 360px;
+      height: 100%;
+      background-image: url('../public/bg/bg_main_mobile.png');
+      background-size: 360px 2040px;
+      margin: 0 auto;
+      overflow: hidden;
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .container {
+      width: 100%;
       height: 100%;
       background-size: 100% auto;
-      margin-top: calc(0.05211 * 100vw - 0.02133px);
+      margin-top: 0px;
       padding-top: 0px;
     }
   }

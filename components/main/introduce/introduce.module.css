@@ -30,6 +30,9 @@
     font-weight: 500;
     padding: 21px 462px; /*반응*/
 }
+.bot_text_mobile {
+    display: none;
+}
 
 @media (max-width: 1920px) {
     .container {
@@ -80,7 +83,7 @@
   @media (max-width: 768px) {
     .container {
         width: 100%; /*반응*/
-        height: calc(0.1718722 * 100vw + 0.002133px); /*반응*/
+        height: calc(0.1718722 * 100vw - 0.010666px); /*반응*/
         margin-top: calc(0.860667 * 100vw + 0.00799px); /*반응*/
     }
     .link_box {
@@ -99,7 +102,7 @@
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 580px) {
     .container {
         width: 360px; /*반응*/
         height: 55px; /*반응*/
@@ -116,7 +119,33 @@
         margin-left: 8px; /*반응*/
     }
     .bot_text {
-        font-size: 10px; /*반응*/ /*6px*/
-        padding: 0px 20px; /*반응*/
+        display: none;
+    }
+    .bot_text_mobile {
+        display: block;
+        width: 319px;
+        height: auto;
+        padding-left: 19px; /*반응*/
+    }
+}
+@media (max-width: 360px) {
+    .container {
+        width: 360px; /*반응*/
+        height: calc(0.15275 * 100vw + 0.00999px);
+        margin-top: calc(0.938875 * 100vw + 0.00499px);
+    }
+    .link_box {
+        padding-left: calc(0.05275 * 100vw + 0.0099px);
+    }
+    .top_text {
+        font-size: calc(0.033375 * 100vw - 0.015px);
+    }
+    .chevron {
+        width: calc(0.0387499 * 100vw + 0.05px);
+        margin-left: calc(0.0305 * 100vw - 2.98px);
+    }
+    .bot_text_mobile {
+        width: calc(0.8875 * 100vw - 0.5px);
+        padding-left: calc(0.05275 * 100vw + 0.0099px);
     }
 }

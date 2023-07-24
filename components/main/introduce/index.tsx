@@ -1,5 +1,6 @@
 import styles from './introduce.module.css'
 import chevron_right from '../../../public/main/chevron-right.png'
+import bot_text_mobile from '../../../public/main/bot_text_mobile.png'
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -20,6 +21,7 @@ function Introduce({top_text, bot_text}: IntroduecProps) {
         <div className={styles.bot_text}>
           {bot_text}
         </div>
+        <Image src={bot_text_mobile} alt="bot_text_mobile" className={styles.bot_text_mobile} />
       </Link>
     </div>
   )

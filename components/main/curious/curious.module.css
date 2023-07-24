@@ -1,6 +1,6 @@
 .container {
     width: 1920px; /*반응*/
-    height: 857px; /*반응*/
+    height: 932px; /*반응*/
 }
 .q_text {
     color: #424242;
@@ -9,7 +9,7 @@
     font-family: 'pretendard-medium';
     font-style: normal;
     font-weight: 500;
-    padding-top: 300px; /*반응*/
+    padding-top: 340px; /*반응*/
     margin-left: 600px; /*반응*/
 }
 .a_text {
@@ -19,21 +19,87 @@
     font-family: 'pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
-    margin-left: 735px; /*반응*/
+    margin-top: 18px;
+    margin-left: 734px; /*반응*/
+}
+.curious_mobile {
+    display: none;
 }
 @media (max-width: 1920px) {
     .container {
         width: 100%;
-        height: calc(0.44722 * 100vw - 1.6667px); /*반응*/
-        
+        height: calc(0.4854166 * 100vw); /*반응*/
     }
     .q_text {
         font-size: calc(0.0171875 * 100vw);
-        padding-top: calc(0.204680556 * 100vw - 120px); /*반응*/
-        margin-left: calc(0.3125 * 100vw);
+        padding-top: calc(0.1770833 * 100vw); /*반응*/
+        margin-left: calc(0.3133611 * 100vw - 1.6533px);
     }
     .a_text {
         font-size: calc(0.021875 * 100vw);
-        margin-left: calc(0.382805556 * 100vw + 0.0133px);
+        margin-top: calc(0.00868055 * 100vw + 1.33px);
+        margin-left: calc(0.38229167 * 100vw);
+    }
+}
+@media (max-width: 1200px) {
+    .container {
+        width: 768px;
+        height: 432px;
+    }
+    .q_text {
+        font-size: 15px;
+        padding-top: 172px;
+        margin-left: 220px;
+    }
+    .a_text {
+        font-size: 21px;
+        margin-top: 10px;
+        margin-left: 271px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: calc(0.5625 * 100vw); /*반응*/
+    }
+    .q_text {
+        font-size: calc(0.019533 * 100vw - 0.00159px);
+        padding-top: calc(0.223944 * 100vw + 0.01067px); /*반응*/
+        margin-left: calc(0.28644 * 100vw + 0.01067px);
+    }
+    .a_text {
+        font-size: calc(0.027344 * 100vw - 0.000533px);
+        margin-top: calc(0.014056 * 100vw - 0.79467px);
+        margin-left: calc(0.35289 * 100vw - 0.01867px);
+    }
+}
+@media (max-width: 588px) {
+    .container {
+        width: 360px;
+        height: 202px;
+    }
+    .q_text {
+        display: none;
+    }
+    .a_text {
+        display: none;
+    }
+    .curious_mobile {
+        display: block;
+        width: 131px;
+        height: auto;
+        padding-top: 90px;
+        margin-left: 96px;
+    }
+}
+@media (max-width: 360px) {
+    .container {
+        width: 100%;
+        height: calc(0.56112499 * 100vw - 0.00499px); /*반응*/
+    }
+    .curious_mobile {
+        width: calc(0.3625 * 100vw + 0.5px); /*반응*/
+        padding-top: calc(0.25 * 100vw); /*반응*/
+        margin-left: calc(0.266625 * 100vw + 0.015px); /*반응*/
     }
 }

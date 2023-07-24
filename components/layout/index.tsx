@@ -3,14 +3,15 @@ import navbarLogo from '../../public/layout/navbar_logo.png'
 import Header from './header';
 import Footer from './footer';
 
-import Link from 'next/link';
-import Image from 'next/image';
+import { useEffect } from 'react';
  
 type AppLayoutProps = {
   children: React.ReactNode;
 };
 
 function Layout({ children }: AppLayoutProps) {
+
+  
 
   return (
     <div>

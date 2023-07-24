@@ -4,8 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 140px; /*반응*/
-    margin-top: 76px; /*반응*/
+    margin-bottom: 5646px; /*반응*/
+    margin-top: 1283px; /*반응*/
 }
 .subscribe_box {
     margin-right: 60px; /*반응*/
@@ -14,17 +14,20 @@
     width: 730px; /*반응*/
     height: 77px; /*반응*/
     padding-left: 50px; /*반응*/
-    margin-bottom: 20px; /*반응*/
+    margin-bottom: 40.4px; /*반응*/
     display: block;
     border-radius: 14px; /*반응*/
     border: 3px solid #FDBE01; /*반응*/
     background: #FFF;
-    color: #BDBDBD;
+    color: #000;
     font-size: 33px; /*반응*/
     font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
 }
+.input::placeholder {color: #BDBDBD;}
+.input::-webkit-input-placeholder {color: #BDBDBD;}
+.input:-ms-input-placeholder {color: #BDBDBD;}
 .agree {
     display: flex;
     justify-content: flex-start;
@@ -32,7 +35,7 @@
 }
 .agree_check {
     width: 30px;/*반응*/
-    height: 30px;/*반응*/
+    height: auto;
 }
 .agree_text {
     color: #424242;
@@ -42,12 +45,17 @@
     font-style: normal;
     font-weight: 500;
 }
-
+.privateImg {
+    display: none;
+}
+.adverImg {
+    display: none;
+}
 .button_box {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 43px; /*반응*/
+    margin-top: 40px; /*반응*/
 }
 .btn {
     width: 309px; /*반응*/
@@ -63,6 +71,9 @@
     font-weight: 700;
     line-height: normal;
 }
+.btn_mobile {
+    display: none;
+}
 .button_text {
     color: #757575;
     font-size: 24px; /*반응*/
@@ -70,19 +81,85 @@
     font-style: normal;
     font-weight: 500;
 }
+.btn_text_img {
+    display: none;
+}
 .logo_img {
     width: 409px; /*반응*/
     height: auto;
 }
+
+.BlackModalContainer {
+    width: 1920px;
+    height: calc(var(--vh, 1vh) * 100);
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+.modalContainer {
+    width: 608px;
+    height: 324px;
+    border-radius: 14px;
+    background: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal_text {
+    display: block;
+    width: 377px;
+    height: auto;
+    margin: 0 auto;
+    padding: 62px 0px 43px 0px;
+}
+.modal_bot {
+    border-top: 1px solid black;
+    padding-top: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.modal_kakao {
+    width: 60px;
+    height: auto;
+    margin-left: 161px;
+}
+.modal_twitter {
+    width: 60px;
+    height: auto;
+    margin-left: 15px;
+}
+.modal_facebook {
+    width: 60px;
+    height: auto;
+    margin-left: 15px;
+}
+.modal_linkcopy {
+    width: 60px;
+    height: auto;
+    margin-left: 15px;
+}
+.modal_close {
+    width: 42px;
+    height: auto;
+    margin-left: 100px;
+    padding-bottom: 3.5px;
+}
+
+
 @media (max-width: 1920px) {
     .container {
         width: 100%;
-        height: calc(0.297222 * 100vw - 3.6667px);
-        margin-bottom: calc(0.0729166 * 100vw);
-        margin-top: calc(0.0395833 * 100vw);
+        height: calc(0.29544 * 100vw - 0.2533px);
+        margin-bottom: calc(2.940625 * 100vw);
+        margin-top: calc(0.63698611 * 100vw + 45.0133px);
     }
     .subscribe_box {
-        margin-right: calc(0.030902778 * 100vw + 0.66667px);
+        margin-right: calc(0.03125 * 100vw);
     }
     .input {
         width: calc(0.38020833 * 100vw);
@@ -94,29 +171,423 @@
         font-size: calc(0.0171875 * 100vw);
     }
     .agree_check {
-        width: calc(0.01583333 * 100vw - 0.3999px);
-        height: calc(0.01583333 * 100vw - 0.3999px);
+        width: calc(0.015722 * 100vw - 0.667px);
     }
     .agree_text {
         color: #424242;
         font-size: calc(0.0171875 * 100vw);
-        margin-left: calc(0.010416666666666666 * 100vw);
+        margin-left: calc(0.0104167 * 100vw);
     }
     .button_box {
-        margin-top: calc(0.023263889 * 100vw - 1.66667px);
+        margin-top: calc(0.02170833 * 100vw - 1.6799px);
     }
     .btn {
-        width: calc(0.16111 * 100vw - 0.333px);
-        height: calc(0.0401111 * 100vw - 0.01333px);
+        width: calc(0.1609375 * 100vw);
+        height: calc(0.040104167 * 100vw);
         border-radius: calc(0.0072916667 * 100vw);
-        border: calc(0.0015556 * 100vw - 0.01333px) solid #FFCC00; /*반응*/
-        margin-right: calc(0.006778 * 100vw + 16.98667px);
-        font-size: calc(0.017180556 * 100vw + 0.0133px);
+        border: calc(0.0015625 * 100vw) solid #FFCC00; /*반응*/
+        margin-right: calc(0.006944 * 100vw + 16.667px);
+        font-size: calc(0.0171875 * 100vw);
     }
     .button_text {
         font-size: calc(0.0125 * 100vw);
     }
     .logo_img {
         width: calc(0.213020833 * 100vw);
+    }
+    .BlackModalContainer {
+        width: 100%;
+    }
+    .modalContainer {
+        width: calc(0.3167 * 100vw);
+        height: calc(0.16944 * 100vw - 1.33px);
+        border-radius: calc(0.00729167 * 100vw);
+    }
+    .modal_text { 
+        width: calc(0.195833 * 100vw + 1px);
+        padding: calc(0.03229167 * 100vw - 7.10542px) 0px calc(0.0213611 * 100vw + 1.9867px) 0px;
+    }
+    .modal_bot {
+        border-top: calc(0.00051389 * 100vw + 0.0133px) solid black;
+        padding-top: calc(0.00729167 * 100vw);
+    }
+    .modal_kakao {
+        width: calc(0.03125 * 100vw);
+        margin-left: calc(0.08386111 * 100vw - 0.0133px);
+    }
+    .modal_twitter {
+        width: calc(0.03125 * 100vw);
+        margin-left: calc(0.0078055 * 100vw + 0.0133px);
+    }
+    .modal_facebook {
+        width: calc(0.03125 * 100vw);
+        margin-left: calc(0.0078055 * 100vw + 0.0133px);
+    }
+    .modal_linkcopy {
+        width: calc(0.03125 * 100vw);
+        margin-left: calc(0.0078055 * 100vw + 0.0133px);
+    }
+    .modal_close {
+        width: calc(0.021875 * 100vw);
+        margin-left: calc(0.0520833 * 100vw);
+    }
+}
+@media (max-width: 1200px) {
+    .container {
+        width: 768px;
+        height: 264px;
+        margin-bottom: 2163px;
+        margin-top: 476px;
+    }
+    .subscribe_box {
+        margin-right: 29px;
+    }
+    .input {
+        width: 357px;
+        height: 36px;
+        padding-left: 25px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #FDBE01;
+        font-size: 15px;
+    }
+    .agree {
+        margin-bottom: 10px;
+    }
+    .agree_check {
+        width: 14px;
+    }
+    .agree_text {
+        font-size: 15px;/*반응*/
+        margin-left: 11px;/*반응*/
+    }
+    .button_box {
+        margin-top: 20px; /*반응*/
+    }
+    .btn {
+        width: 151px; /*반응*/
+        height: 37px; /*반응*/
+        border-radius: 5px; /*반응*/
+        border: 3px solid #FFCC00; /*반응*/
+        margin-right: 19px; /*반응*/
+        font-size: 15px; /*반응*/
+    }
+    .button_text {
+        font-size: 12px; /*반응*/
+    }
+    .logo_img {
+        width: 200px; /*반응*/
+    }
+    .BlackModalContainer {
+        width: 768px;
+    }
+    .modalContainer {
+        width: 542px;
+        height: 238px;
+        border-radius: 14px;
+    }
+    .modal_text { 
+        width: 236px;
+        padding: 49px 0px 36px 0px;
+    }
+    .modal_bot {
+        border-top: 1px solid black;
+        padding-top: 16px;
+    }
+    .modal_kakao {
+        width: 40px;
+        margin-left: 168px;
+    }
+    .modal_twitter {
+        width: 40px;
+        margin-left: 15px;
+    }
+    .modal_facebook {
+        width: 40px;
+        margin-left: 15px;
+    }
+    .modal_linkcopy {
+        width: 40px;
+        margin-left: 15px;
+    }
+    .modal_close {
+        width: 26px;
+        margin-left: 114px;
+    }
+    
+}
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: calc(0.344 * 100vw - 0.533px);
+        margin-bottom: calc(2.816389 * 100vw + 0.0133px);
+        margin-top: calc(0.61978 * 100vw + 0.01067px);
+    }
+    .subscribe_box {
+        margin-right: calc(0.0378 * 100vw - 0.0133px);
+    }
+    .input {
+        width: calc(0.464833 * 100vw + 0.00799px);
+        height: calc(0.0444 * 100vw + 1.867px);
+        padding-left: calc(0.03255 * 100vw - 0.00267px);
+        margin-bottom: calc(0.026056 * 100vw - 0.01067px);
+        border-radius: calc(0.0065 * 100vw - 0.008px);
+        border: 1px solid #FDBE01;
+        font-size: calc(0.01955 * 100vw - 0.0186px);
+    }
+    .agree_check {
+        width: calc(0.01733 * 100vw + 0.688px);
+    }
+    .agree_text {
+        font-size: calc(0.01955 * 100vw - 0.0186px);
+        margin-left: calc(0.01522 * 100vw - 0.69067px);
+    }
+    .button_box {
+        margin-top: calc(0.0277 * 100vw - 1.33px);
+    }
+    .btn {
+        width: calc(0.196611 * 100vw + 0.00267px);
+        height: calc(0.05 * 100vw - 1.4px);
+        border-radius: calc(0.0065 * 100vw - 0.008px);
+        border: 1px solid #FFCC00; /*반응*/
+        margin-right: calc(0.024722 * 100vw + 0.0133px);
+        font-size: calc(0.01955 * 100vw - 0.0186px);
+    }
+    .button_text {
+        font-size: calc(0.015611 * 100vw + 0.01067px);
+    }
+    .logo_img {
+        width: calc(0.258833 * 100vw + 1.21599px);
+    }
+    .BlackModalContainer {
+        width: 100%;
+    }
+    .modalContainer {
+        width: calc(0.7055 * 100vw + 0.133px);
+        height: calc(0.311 * 100vw - 0.933px);
+        border-radius: calc(0.01833 * 100vw - 0.08px);
+    }
+    .modal_text { 
+        width: calc(0.311 * 100vw - 2.933px);
+        padding: calc(0.063778 * 100vw + 0.01867px) 0px calc(0.0484 * 100vw - 1.20533px) 0px;
+    }
+    .modal_bot {
+        border-top: calc(0.00051389 * 100vw + 0.0133px) solid black;
+        padding-top: calc(0.02083 * 100vw);
+    }
+    .modal_kakao {
+        width: calc(0.05211 * 100vw - 0.02133px); 
+        margin-left: calc(0.21872 * 100vw + 0.02133px);
+    }
+    .modal_twitter {
+        width: calc(0.05211 * 100vw - 0.02133px); 
+        margin-left: calc(0.019556 * 100vw - 0.01867px);
+    }
+    .modal_facebook {
+        width: calc(0.05211 * 100vw - 0.02133px); 
+        margin-left: calc(0.019556 * 100vw - 0.01867px);
+    }
+    .modal_linkcopy {
+        width: calc(0.05211 * 100vw - 0.02133px); 
+        margin-left: calc(0.019556 * 100vw - 0.01867px);
+    }
+    .modal_close {
+        width: calc(0.03333 * 100vw + 0.399px);
+        margin-left: calc(0.14844 * 100vw - 0.00533px);
+    }
+}
+@media (max-width: 588px) {
+    .container {
+        width: 360px;
+        height: 134px;
+        margin-bottom: 1376px;
+        margin-top: 253px;
+    }
+    .subscribe_box {
+        margin-right: 4px;
+    }
+    .input {
+        width: 180px;
+        height: 24px;
+        padding-left: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        border: 1px solid #FDBE01;
+        font-size: 10px;
+    }
+    .agree {
+        margin-bottom: 6px;
+    }
+    .agree_check {
+        width: 6px;
+    }
+    .agree_text {
+        display: none;
+    }
+    .privateImg {
+        display: block;
+        width: 86px;
+        height: auto;
+        margin-left: 4px;
+    }
+    .adverImg {
+        display: block;
+        width: 74px;
+        height: auto;
+        margin-left: 4px;
+    }
+    .button_box {
+        margin-top: 8px;
+    }
+    .btn {
+        display: none;
+    }
+    .btn_mobile {
+        display: block;
+        width: 85px;
+        height: 21px;
+        border-radius: 5px;
+        border: 1px solid #FFCC00; /*반응*/
+        margin-right: 10px;
+        background-color: #FFCC00;
+    }
+    .btn_inner_img {
+        width: 65px;
+        height: auto;
+    }
+    .button_text {
+        display: none;
+    }
+    .btn_text_img {
+        display: block;
+        width: 72px;
+        height: auto;
+    }
+    .logo_img {
+        width: 96px;
+    }
+    .BlackModalContainer {
+        width: 360px;
+    }
+    .modalContainer {
+        width: 296px;
+        height: 109px;
+        border-radius: 8px;
+    }
+    .modal_text { 
+        width: 142px;
+        padding: 14px 0px 12px 0px;
+    }
+    .modal_bot {
+        border-top: 0.5px solid black;
+        padding-top: 6px;
+    }
+    .modal_kakao {
+        width: 15px;
+        margin-left: 96px;
+    }
+    .modal_twitter {
+        width: 15px;
+        margin-left: 15px;
+    }
+    .modal_facebook {
+        width: 15px;
+        margin-left: 15px;
+    }
+    .modal_linkcopy {
+        width: 15px;
+        margin-left: 15px;
+    }
+    .modal_close {
+        width: 22px;
+        margin-left: 52px;
+        padding-bottom: 1.5px;
+    }
+}
+@media (max-width: 360px) {
+    .container {
+        width: 100%;
+        height: calc(0.382 * 100vw - 3.52px);
+        margin-bottom: calc(3.82212499 * 100vw + 0.035px);
+        margin-top: calc(0.70287499 * 100vw - 0.0349px);
+    }
+    .subscribe_box {
+        margin-right: calc(0.011125 * 100vw - 0.005px);
+    }
+    .input {
+        width: calc(0.5 * 100vw);
+        height: calc(0.06662499 * 100vw + 0.015px);
+        padding-left: calc(0.03025 * 100vw - 0.89px);
+        margin-bottom: calc(0.014 * 100vw - 0.04px);
+        border-radius: calc(0.014 * 100vw - 0.04px);
+        border: 1px solid #FDBE01;
+    }
+    .agree {
+        margin-bottom: calc(0.02362499 * 100vw - 2.5049px);
+    }
+    .agree_check {
+        width: calc(0.016625 * 100vw + 0.01499px);
+    }
+    .privateImg {
+        width: calc(0.2375 * 100vw + 0.5px);
+        margin-left: calc(0.011125 * 100vw - 0.005px);
+    }
+    .adverImg {
+        width: calc(0.2125 * 100vw - 2.5px);
+        margin-left: calc(0.011125 * 100vw - 0.005px);
+    }
+    .button_box {
+        margin-top: calc(0.029125 * 100vw - 2.485px);
+    }
+    .btn_mobile {
+        width: calc(0.236125 * 100vw - 0.0049px);
+        height: calc(0.058375 * 100vw - 0.015px);
+        border-radius: calc(0.014 * 100vw - 0.04px);
+        margin-right: calc(0.0277499 * 100vw + 0.01px);
+    }
+    .btn_inner_img {
+        width: calc(0.175 * 100vw + 2px);
+    }
+    .btn_text_img {
+        width: calc(0.2 * 100vw);
+    }
+    .logo_img {
+        width: calc(0.266625 * 100vw + 0.015px);
+    }
+    .BlackModalContainer {
+        width: 100%;
+    }
+    .modalContainer {
+        width: calc( 0.82225 * 100vw - 0.0099px);
+        height: calc(0.3027499 * 100vw + 0.01px);
+        border-radius: calc(0.01833 * 100vw - 0.08px);
+    }
+    .modal_text { 
+        width: calc(0.4 * 100vw - 2px);
+        padding: calc(0.0375 * 100vw + 0.5px) 0px calc(0.0167499 * 100vw + 5.97px) 0px;
+    }
+    .modal_bot {
+        border-top: calc(0.007625 * 100vw - 1.745px) solid black;
+        padding-top: calc(0.025 * 100vw - 3px);
+    }
+    .modal_kakao {
+        width: calc(0.041625 * 100vw + 0.01499px); 
+        margin-left: calc(0.266625 * 100vw + 0.015);
+    }
+    .modal_twitter {
+        width: calc(0.041625 * 100vw + 0.01499px); 
+        margin-left: calc(0.041625 * 100vw + 0.01499px); 
+    }
+    .modal_facebook {
+        width: calc(0.041625 * 100vw + 0.01499px); 
+        margin-left: calc(0.041625 * 100vw + 0.01499px); 
+    }
+    .modal_linkcopy {
+        width: calc(0.041625 * 100vw + 0.01499px); 
+        margin-left: calc(0.041625 * 100vw + 0.01499px); 
+    }
+    .modal_close {
+        width: calc( 0.05 * 100vw + 4px);
+        margin-left: calc(0.095875 * 100vw 17.484px);
     }
 }
