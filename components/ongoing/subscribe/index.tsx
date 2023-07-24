@@ -22,9 +22,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 
 interface SendData {
-  email: string;
-  privateAgree: boolean
-  adverAgree: boolean
+  email: string
 }
 
 function Subscribe() {
@@ -37,9 +35,7 @@ function Subscribe() {
   let url: string = usePathname();
 
   const sendData: SendData = {
-    "email" : email,
-    "privateAgree" : agreePrivate,
-    "adverAgree" : agreeAdver
+    "email" : email
   }
 
   axios.defaults.withCredentials = true; // withCredentials 전역 설정
