@@ -15,36 +15,45 @@ function Header() {
   let url: string = usePathname();
   const menu_black = useRef<HTMLDivElement>(null);
   const menu_white = useRef<HTMLDivElement>(null);
+  const menu_mobile = useRef<HTMLDivElement>(null);
+  const menu_wrap = useRef<HTMLDivElement>(null);
   const [menuCurrent, setMenuCurrent] = useState<boolean>(false);
 
   const openModal = () => {
-    if(menu_black.current && menu_white.current) {
+    if(menu_black.current && menu_white.current && menu_wrap.current && menu_mobile.current) {
       menu_black.current.style.background = 'rgba(0,0,0,0.3)';
       menu_black.current.style.transition = 'background 1s ease';
+      menu_black.current.style.zIndex = '5';
       menu_white.current.style.transform = 'translateX(0%)';
       menu_white.current.style.transition = 'transform 1s ease';
+      menu_wrap.current.style.zIndex = '7'; 
     };
     setMenuCurrent(true);
   }
 
   const closeModal = () => {
-    if(menu_black.current && menu_white.current) {
+    if(menu_black.current && menu_white.current && menu_mobile.current && menu_wrap.current) {
       menu_black.current.style.background = 'rgba(0,0,0,0)';
       menu_black.current.style.transition = 'background 1s ease';
-      menu_black.current.style.zIndex = '1';
+      menu_black.current.style.zIndex = '-5'; 
       menu_white.current.style.transform = 'translateX(200%)';
       menu_white.current.style.transition = 'transform 1s ease';
+      // menu_mobile.current.style.zIndex = '1';
+      menu_wrap.current.style.zIndex = '7';
     };
     setMenuCurrent(false);
   }
 
   const closeBlackModal = (e: React.MouseEvent<HTMLElement>) => {
     if (e.target === menu_black.current) {
-      if(menu_black.current && menu_white.current) {
+      if(menu_black.current && menu_white.current && menu_mobile.current && menu_wrap.current) {
         menu_black.current.style.background = 'rgba(0,0,0,0)';
         menu_black.current.style.transition = 'background 1s ease';
+        menu_black.current.style.zIndex = '-5';
         menu_white.current.style.transform = 'translateX(200%)';
         menu_white.current.style.transition = 'transform 1s ease';
+        // menu_mobile.current.style.zIndex = '-1';
+        menu_wrap.current.style.zIndex = '7';
       }
       setMenuCurrent(false);
     }
@@ -77,7 +86,7 @@ function Header() {
           </Link>
         </div>
       </header>
-      <header className={styles.navbar_mobile}>
+      <header className={styles.navbar_mobile} ref={menu_mobile}>
         <div className={styles.menu_black_tab} ref={menu_black} onClick={(e) => closeBlackModal(e)}>
           <div className={styles.menu_white_tab} ref={menu_white}>
             <Link href="/">
@@ -95,7 +104,7 @@ function Header() {
             </Link>
           </div>
         </div>
-        <div className={styles.header_wrap}>
+        <div className={styles.header_wrap} ref={menu_wrap}>
           {
             menuCurrent
             ? <Image src={c_menu} className={styles.c_menu} alt='c_menu' onClick={closeModal}/>

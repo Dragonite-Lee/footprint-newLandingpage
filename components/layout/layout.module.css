@@ -373,7 +373,8 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        position: fixed;
+        position: relative;
+        
     }
     .menu_black_tab {
         width: 360px;
@@ -381,6 +382,7 @@
         height: calc(var(--vh, 1vh) * 100);
         background: rgba(0,0,0,0);
         position: fixed;
+        z-index: -2;
     }
     .menu_white_tab {
         transform: translateX(200%);
@@ -417,6 +419,14 @@
         margin-top: 17px;
         padding-left: 25px;
     }
+    .header_wrap {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 5;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translateZ(0);
+    }
     .h_menu {
         width: 13px;
         height: auto;
@@ -424,7 +434,7 @@
         top: 6px;
         right: 16px;
         cursor: pointer;
-        z-index: 2;
+        z-index: 3;
     }
     .c_menu {
         width: 13px;
@@ -433,7 +443,7 @@
         top: 6px;
         right: 16px;
         cursor: pointer;
-        z-index: 2;
+        
     }
 }
 @media (max-width: 360px) {
