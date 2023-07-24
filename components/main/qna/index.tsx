@@ -92,7 +92,7 @@ function Qna() {
                           }
                       </div>
                       <div className={styles.qna_title}>
-                        Q2. 한 저자의 뉴스레터의 분량은 얼마인가요?'
+                        Q2. 한 저자의 뉴스레터의 분량은 얼마인가요?
                       </div>
                       <Image src={q2} alt="qna_img_title" className={styles.qna_img_title2} />
                   </div>
