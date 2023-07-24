@@ -13,7 +13,7 @@ declare global {
 function MyApp({ Component, pageProps }: AppProps) {
   
   const kakaoInit = () => { // 페이지가 로드되면 실행
-    window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_JS_KEY);
+    window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_API_KEY);
     console.log(window.Kakao.isInitialized());
   }
 
@@ -21,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Layout>
       <Component {...pageProps} />
       <Script
+        defer
         src='https://developers.kakao.com/sdk/js/kakao.js'
         onLoad={kakaoInit} 
       ></Script>

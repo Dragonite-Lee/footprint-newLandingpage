@@ -31,7 +31,7 @@ function Subscribe() {
   const [agreeAdver, setAgreeAdver] = useState<boolean>(false);
   const [email, setEmail] = useState<string>('');
   const [emailValid, setEmailValid] = useState<boolean>(false);
-  const [completeModal, setCompleteModal] = useState<boolean>(false);
+  const [completeModal, setCompleteModal] = useState<boolean>(true);
   let url: string = usePathname();
 
   const sendData: SendData = {
