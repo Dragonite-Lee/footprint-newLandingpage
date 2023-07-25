@@ -61,6 +61,8 @@
 }
 .footer_mobile {
     display: none;
+    position: relative;
+    z-index: 3;
 }
 .footer {
     background-color: #FFE991;
@@ -390,6 +392,7 @@
         height: calc(var(--vh, 1vh) * 100);
         background-color: #fff;
         position: absolute;
+        z-index: -2;
         top: 0;
         right: 0;
         display: flex;
@@ -434,7 +437,7 @@
         top: 6px;
         right: 16px;
         cursor: pointer;
-        z-index: 3;
+        z-index: 5;
     }
     .c_menu {
         width: 13px;
@@ -443,7 +446,7 @@
         top: 6px;
         right: 16px;
         cursor: pointer;
-        
+        z-index: 5;
     }
 }
 @media (max-width: 360px) {

@@ -24,6 +24,7 @@ function Header() {
       menu_black.current.style.background = 'rgba(0,0,0,0.3)';
       menu_black.current.style.transition = 'background 1s ease';
       menu_black.current.style.zIndex = '5';
+      menu_white.current.style.zIndex = '5';
       menu_white.current.style.transform = 'translateX(0%)';
       menu_white.current.style.transition = 'transform 1s ease';
       menu_wrap.current.style.zIndex = '7'; 
@@ -36,9 +37,9 @@ function Header() {
       menu_black.current.style.background = 'rgba(0,0,0,0)';
       menu_black.current.style.transition = 'background 1s ease';
       menu_black.current.style.zIndex = '-5'; 
+      menu_white.current.style.zIndex = '2';
       menu_white.current.style.transform = 'translateX(200%)';
       menu_white.current.style.transition = 'transform 1s ease';
-      // menu_mobile.current.style.zIndex = '1';
       menu_wrap.current.style.zIndex = '7';
     };
     setMenuCurrent(false);
@@ -50,9 +51,9 @@ function Header() {
         menu_black.current.style.background = 'rgba(0,0,0,0)';
         menu_black.current.style.transition = 'background 1s ease';
         menu_black.current.style.zIndex = '-5';
+        menu_white.current.style.zIndex = '2';
         menu_white.current.style.transform = 'translateX(200%)';
         menu_white.current.style.transition = 'transform 1s ease';
-        // menu_mobile.current.style.zIndex = '-1';
         menu_wrap.current.style.zIndex = '7';
       }
       setMenuCurrent(false);

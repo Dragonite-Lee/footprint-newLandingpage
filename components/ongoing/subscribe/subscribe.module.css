@@ -9,6 +9,8 @@
 }
 .subscribe_box {
     margin-right: 60px; /*반응*/
+    position: relative;
+    z-index: 3;
 }
 .input {
     width: 730px; /*반응*/

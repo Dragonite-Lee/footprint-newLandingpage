@@ -2,6 +2,8 @@
     width: 1920px; /*반응*/
     height: 319px; /*반응*/
     margin-top: 1584px; /*반응*/
+    position: relative;
+    z-index: 3;
 }
 .link_box {
     display: flex;
@@ -68,10 +70,12 @@
         padding-left: 141px; /*반응*/
     }
     .top_text {
+        padding-top: 10px;
         font-size: 21px; /*반응*/
     }
     .chevron {
         width: 19px; /*반응*/
+        padding-top: 10px;
         margin-left: 8px; /*반응*/
     }
     .bot_text {
@@ -87,18 +91,20 @@
         margin-top: calc(0.860667 * 100vw + 0.00799px); /*반응*/
     }
     .link_box {
-        padding-left: calc(0.183611 * 100vw - 0.0133px); /*반응*/
+        padding-left: calc(0.183611 * 100vw - 5.0133px); /*반응*/
     }
     .top_text {
         font-size: calc(0.027344 * 100vw - 0.000533px); /*반응*/
+        padding-top: calc(0.01122 * 100vw + 1.38133px);
     }
     .chevron {
         width: calc(0.024778 * 100vw - 0.02933px); /*반응*/
         margin-left: calc(0.01161 * 100vw - 0.91733px); /*반응*/
+        padding-top: calc(0.01122 * 100vw + 1.38133px);
     }
     .bot_text {
         font-size: calc(0.015611 * 100vw + 0.01067px); /*반응*/
-        padding: calc(0.01122 * 100vw + 1.38133px) calc(0.187833 * 100vw - 3.256px); /*반응*/
+        padding: calc(0.01122 * 100vw + 1.38133px) calc(0.187833 * 100vw - 8.256px); /*반응*/
     }
 }
 

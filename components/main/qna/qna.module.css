@@ -23,6 +23,8 @@
 .qna_box {
     margin-top: 50px; /*반응*/
     margin-bottom: 315px; /*반응*/
+    position: relative;
+    z-index: 3;
 }
 .qna_img_text {
     display: none;
