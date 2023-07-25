@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './curious.module.css'
 import curious_mobile from '../../../public/main/curious_mobile.png'
 
@@ -25,7 +27,7 @@ function Curious() {
     const checkPosition = () => {
         if (curiousRef.current) {
           var posFromTop = curiousRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop) {
+          if (winH > posFromTop + 500) {
             curiousRef.current.style.opacity = '1';
             curiousRef.current.style.transform = 'translateY(0px)'
             curiousRef.current.style.transition = '1.4s';

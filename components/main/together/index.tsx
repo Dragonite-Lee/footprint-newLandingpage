@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './together.module.css'
 import together_mobile from '../../../public/main/together_mobile.png'
 
@@ -25,7 +27,7 @@ function Together() {
     const checkPosition = () => {
         if (togetherRef.current) {
           var posFromTop = togetherRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop) {
+          if (winH > posFromTop + 500) {
             togetherRef.current.style.opacity = '1';
             togetherRef.current.style.transform = 'translateY(0px)'
             togetherRef.current.style.transition = '1.4s';

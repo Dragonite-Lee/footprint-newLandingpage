@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './yellow.module.css'
 import yellow_mobile from '../../../public/main/yellow_mobile.png'
 
@@ -25,7 +27,7 @@ function Yellow() {
     const checkPosition = () => {
         if (yellowRef.current) {
           var posFromTop = yellowRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop) {
+          if (winH > posFromTop + 500) {
             yellowRef.current.style.opacity = '1';
             yellowRef.current.style.transform = 'translateY(0px)'
             yellowRef.current.style.transition = '1.4s';

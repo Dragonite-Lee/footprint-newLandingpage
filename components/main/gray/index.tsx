@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './gray.module.css'
 import gray_mobile from '../../../public/main/gray_mobile.png'
 
@@ -25,7 +27,7 @@ function Gray() {
     const checkPosition = () => {
         if (grayRef.current) {
           var posFromTop = grayRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop) {
+          if (winH > posFromTop + 500) {
             grayRef.current.style.opacity = '1';
             grayRef.current.style.transform = 'translateY(0px)'
             grayRef.current.style.transition = '1.4s';
