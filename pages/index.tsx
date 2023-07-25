@@ -18,6 +18,7 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>footprint story</title>
+        <meta name='viewport' content="width=device-width, initial-scale=1" />
         <meta name="description" content="footprint story - 다양한 분야에 종사하고 있는 선배들의 커리어 성장기와 삶을 이야기에 담아 연재하는 서비스" />
         <link rel="icon" href="/metaOg/footprint_favIcon.png" />
         <meta name='robots' content='all' />

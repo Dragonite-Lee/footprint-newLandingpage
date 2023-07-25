@@ -14,6 +14,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
+    overflow: hidden;
 }
 
 .navbar_left {
@@ -63,6 +64,7 @@
     display: none;
     position: relative;
     z-index: 3;
+    overflow: hidden;
 }
 .footer {
     background-color: #FFE991;
@@ -73,6 +75,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 362px;  /*반응*/
+    overflow: hidden;
 }
 .footer_left_img {
     width: 328px; /*반응*/
@@ -376,7 +379,7 @@
         left: 50%;
         transform: translateX(-50%);
         position: relative;
-        
+        overflow: hidden;
     }
     .menu_black_tab {
         width: 360px;
