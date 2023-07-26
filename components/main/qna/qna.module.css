@@ -291,7 +291,7 @@
         font-size: 12.5px; /*반응*/
     }
     .chevron {
-        width: 8px; /*반응*/
+        width: 7px; /*반응*/
         padding-bottom: 4px;
     }
     .qna_content_box_pc {
@@ -352,7 +352,7 @@
         font-size: calc(0.03125 * 100vw + 1.25px)
     }
     .chevron {
-        width: calc(0.025 * 100vw - 2px);
+        width: calc(0.025 * 100vw - 3px);
         padding-bottom: 5px;
     }
     .qna_content_box_pc {
