@@ -277,7 +277,7 @@
         border: 1px solid #FDBE01; /*반응*/
         border-radius: 8px; /*반응*/
         margin-bottom: 20px;
-        padding: 4px 5px;
+        padding: 4px 3px;
     }
     .qna_title_box {
         width: 100%;
@@ -338,7 +338,7 @@
         border: calc(0.001278 * 100vw + 0.01867px) solid #FDBE01; /*반응*/
         border-radius: calc(0.08525 * 100vw - 22.69px); /*반응*/
         margin-bottom: calc(0.055499 * 100vw + 0.02px);
-        padding: calc(0.011125 * 100vw - 0.005px) calc(0.028749 * 100vw - 7.3499px);
+        padding: calc(0.011125 * 100vw - 0.005px) calc(0.028749 * 100vw - 9.3499px);
     }
     .qna_title_box {
         width: 100%;
