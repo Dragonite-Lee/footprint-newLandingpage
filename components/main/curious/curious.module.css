@@ -10,7 +10,7 @@
     color: #424242;
     text-align: justify;
     font-size: 33px; /*반응*/
-    font-family: 'pretendard-medium';
+    font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
     padding-top: 340px; /*반응*/
@@ -20,7 +20,7 @@
     color: #424242;
     text-align: justify;
     font-size: 42px; /*반응*/
-    font-family: 'pretendard-extrabold';
+    font-family: 'Pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
     margin-top: 18px;
@@ -68,7 +68,7 @@
     }
     .q_text {
         font-size: calc(0.019533 * 100vw - 0.00159px);
-        padding-top: calc(0.223944 * 100vw + 0.01067px); /*반응*/
+        padding-top: calc(0.223944 * 100vw - 25.01067px); /*반응*/
         margin-left: calc(0.28644 * 100vw + 0.01067px);
     }
     .a_text {

@@ -31,6 +31,7 @@
     font-style: normal;
     font-weight: 500;
     padding: 21px 462px; /*반응*/
+    white-space: pre-line;
 }
 .bot_text_mobile {
     display: none;
@@ -88,7 +89,7 @@
     .container {
         width: 100%; /*반응*/
         height: calc(0.1718722 * 100vw - 0.010666px); /*반응*/
-        margin-top: calc(0.860667 * 100vw + 0.00799px); /*반응*/
+        margin-top: calc(0.860667 * 100vw - 18.00799px); /*반응*/
     }
     .link_box {
         padding-left: calc(0.183611 * 100vw - 5.0133px); /*반응*/

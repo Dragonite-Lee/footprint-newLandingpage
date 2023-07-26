@@ -2,9 +2,10 @@
     display: block;
     width: 1920px;
     min-width: 280px;
-    height: 10074px;
+    height: 100%;
     background-image: url('../public/bg/bg_main_pc.png');
     background-size: 1920px 10074px;
+    background-repeat: no-repeat;
     margin: 0 auto;
     overflow: hidden;
     padding-top: 80px;
@@ -13,8 +14,8 @@
   @media (max-width: 1920px) {
     .container {
       width: 100%;
-      height: calc(5.177430555 * 100vw + 133.33px);
-      background-size: 100% calc(5.177430555 * 100vw + 133.33px);
+      height: 100%;
+      background-size: 100% auto;
       padding-top: calc(0.04167 * 100vw);
     }
 
@@ -24,7 +25,7 @@
     .container {
       display: block;
       width: 768px;
-      height: 4337px;
+      height: 100%;
       background-image: url('../public/bg/bg_main_tablet.png');
       background-size: 768px 4337px;
       margin: 0 auto;
@@ -37,9 +38,9 @@
   @media (max-width: 768px) {
     .container {
       width: 100%;
-      height: calc(5.64711 * 100vw + 0.01866px);
-      background-size: 100% calc(5.64711 * 100vw + 0.01866px);
-      margin-top: calc(0.052056 * 100vw + 0.02133px);
+      height: 100%;
+      background-size: 100% auto;
+      margin-top: calc(0.05222 * 100vw - 0.1067px);
       padding-top: 0px;
     }
   }

@@ -169,25 +169,27 @@ function Subscribe() {
         (
           <div className={styles.BlackModalContainer}>
             <div className={styles.modalContainer}>
-            <div className={styles.modal_top}>
-              <Image src={modal_text} alt='modal_text' className={styles.modal_text} />
-            </div>
-            <div className={styles.modal_bot}>
-              <div>
-              <Image src={modal_kakao} alt='modal_kakao' className={styles.modal_kakao} onClick={handleKakaoButton}/>
+              <div className={styles.modal_top}>
+                구독 신청되었어요! <br />
+                이제부터 매주 수요일 금요일 오전 8시에 <br />
+                메일로 레터를 보내드릴께요!
               </div>
-              <TwitterShareButton url={url} className={styles.modal_twitter_btn}>
-                <Image src={modal_twitter} alt='modal_twitter' className={styles.modal_twitter} />
-              </TwitterShareButton>
-              <FacebookShareButton url={url} className={styles.modal_facebook_btn}>
-                <Image src={modal_facebook} alt='modal_facebook' className={styles.modal_facebook} />
-              </FacebookShareButton>
-              <div>
-              <Image src={modal_linkcopy} alt='modal_linkcopy' className={styles.modal_linkcopy} onClick={copyURL} />
-              </div>
-              <div>
-              <Image src={modal_close} alt='modal_close' className={styles.modal_close} onClick={closeCompleteModal}/>
-              </div>
+              <div className={styles.modal_bot}>
+                <div>
+                <Image src={modal_kakao} alt='modal_kakao' className={styles.modal_kakao} onClick={handleKakaoButton}/>
+                </div>
+                <TwitterShareButton url={url} className={styles.modal_twitter_btn}>
+                  <Image src={modal_twitter} alt='modal_twitter' className={styles.modal_twitter} />
+                </TwitterShareButton>
+                <FacebookShareButton url={url} className={styles.modal_facebook_btn}>
+                  <Image src={modal_facebook} alt='modal_facebook' className={styles.modal_facebook} />
+                </FacebookShareButton>
+                <div>
+                <Image src={modal_linkcopy} alt='modal_linkcopy' className={styles.modal_linkcopy} onClick={copyURL} />
+                </div>
+                <div className={styles.modal_close} onClick={closeCompleteModal}>
+                  닫기
+                </div>
             </div>
           </div>
           </div>

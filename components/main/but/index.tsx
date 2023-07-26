@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './but.module.css'
 import but_mobile from '../../../public/main/but_mobile.png'
 
@@ -24,7 +26,7 @@ function But() {
     const checkPosition = () => {
         if (butRef.current) {
           var posFromTop = butRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop) {
+          if (winH > posFromTop + 500) {
             butRef.current.style.opacity = '1';
             butRef.current.style.transform = 'translateY(0px)'
             butRef.current.style.transition = '1.4s';

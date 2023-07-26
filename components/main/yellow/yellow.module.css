@@ -2,7 +2,7 @@
     width: 1920px; /*반응*/
     height: 1259px; /*반응*/
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: flex-start;
     opacity: 0;
     transform: translateY(70px);
@@ -10,7 +10,7 @@
 .main_text {
     color: #424242;
     font-size: 42px; /*반응*/
-    font-family: 'pretendard-extrabold';
+    font-family: 'Pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
     margin-top: 412px; /*반응*/
@@ -19,7 +19,7 @@
 .open_question {
     color: #424242;
     font-size: 42px; /*반응*/
-    font-family: 'pretendard-extrabold';
+    font-family: 'Pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
     margin-top: 654px; /*반응*/
@@ -28,7 +28,7 @@
 .close_question {
     color: #424242;
     font-size: 42px; /*반응*/
-    font-family: 'pretendard-extrabold';
+    font-family: 'Pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
     margin-top: 835px; /*반응*/
@@ -42,7 +42,7 @@
     color: #424242;
     text-align: center;
     font-size: 33px; /*반응*/
-    font-family: 'pretendard-medium';
+    font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
 }
@@ -55,7 +55,7 @@
     color: #424242;
     text-align: center;
     font-size: 33px; /*반응*/
-    font-family: 'pretendard-medium';
+    font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
 }
@@ -68,7 +68,7 @@
     color: #424242;
     text-align: center;
     font-size: 33px; /*반응*/
-    font-family: 'pretendard-medium';
+    font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
 }
