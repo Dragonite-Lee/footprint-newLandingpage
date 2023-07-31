@@ -116,7 +116,7 @@
         font-size: calc(0.0171875 * 100vw - 1px);
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
     .container {
         width: 768px;
         height: 432px; /*반응*/

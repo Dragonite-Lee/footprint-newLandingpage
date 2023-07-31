@@ -13,7 +13,7 @@
     font-family: 'Pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
-    margin: 1364px auto; /*반응*/
+    margin: 1244px auto; /*반응*/
     margin-bottom: 0; /*반응*/
 }
 .a_text {
@@ -37,7 +37,7 @@
     }
     .q_text {
         font-size: calc(0.021875 * 100vw);
-        margin: calc(0.7104167 * 100vw) auto; /*반응*/
+        margin: calc(0.7104167 * 100vw - 120px) auto; /*반응*/
         margin-bottom: 0px;
     }
     .a_text {
@@ -46,7 +46,7 @@
         margin-bottom: 0px;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
     .container {
         width: 768px;
         height: 289px;

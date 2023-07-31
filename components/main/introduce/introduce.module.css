@@ -30,7 +30,7 @@
     font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
-    padding: 21px 462px; /*반응*/
+    padding: 21px 0px 0px 462px; /*반응*/
     white-space: pre-line;
 }
 .bot_text_mobile {
@@ -60,7 +60,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
     .container {
         width: 768px; /*반응*/
         height: 132px; /*반응*/

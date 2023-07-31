@@ -9,7 +9,7 @@
     font-style: normal;
     font-weight: 800;
     text-align: center;
-    padding-top: 441px; /*반응*/
+    padding-top: 381px; /*반응*/
     opacity: 0;
     transform: translateY(70px);
 }
@@ -23,10 +23,10 @@
     }
     .text {
         font-size: calc(0.0265625 * 100vw); /*반응*/
-        padding-top: calc(0.2296944 * 100vw - 0.0133px); /*반응*/
+        padding-top: calc(0.2296944 * 100vw - 60.0133px); /*반응*/
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
     .container {
         width: 768px;
         height: 432px; /*반응*/

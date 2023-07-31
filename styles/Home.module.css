@@ -1,24 +1,30 @@
 .container {
     display: block;
     width: 1920px;
-    min-width: 280px;
     height: 100%;
-    background-image: url('../public/bg/bg_main_pc.png');
-    background-size: 1920px 10074px;
-    background-repeat: no-repeat;
+    min-width: 280px;
     margin: 0 auto;
     overflow: hidden;
-    padding-top: 80px;
+    position: relative;
   }
-  
+  .bg_main_pc {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 10074px;
+    z-index: -100;
+  }
   @media (max-width: 1920px) {
     .container {
       width: 100%;
       height: 100%;
-      background-size: 100% auto;
-      padding-top: calc(0.04167 * 100vw);
     }
-
+    .bg_main_pc {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 10074px;
+    }
   }
 
   @media (max-width: 1200px) {

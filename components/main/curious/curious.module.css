@@ -13,7 +13,7 @@
     font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
-    padding-top: 340px; /*반응*/
+    padding-top: 200px; /*반응*/
     margin-left: 600px; /*반응*/
 }
 .a_text {
@@ -36,7 +36,7 @@
     }
     .q_text {
         font-size: calc(0.0171875 * 100vw);
-        padding-top: calc(0.1770833 * 100vw); /*반응*/
+        padding-top: calc(0.1770833 * 100vw - 140px); /*반응*/
         margin-left: calc(0.3133611 * 100vw - 1.6533px);
     }
     .a_text {
@@ -45,7 +45,7 @@
         margin-left: calc(0.38229167 * 100vw);
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
     .container {
         width: 768px;
         height: 432px;

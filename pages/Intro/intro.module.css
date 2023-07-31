@@ -22,7 +22,7 @@
     }
 
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1080px) {
     .container {
       display: block;
       width: 768px;

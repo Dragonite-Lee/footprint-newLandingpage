@@ -166,7 +166,7 @@
 }
 
 /* 패드 모바일 버젼 */
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
     .navbar {
         background-color: white;
         width: 768px; /*반응*/
