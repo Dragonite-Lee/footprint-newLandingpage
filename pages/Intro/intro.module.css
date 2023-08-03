@@ -10,6 +10,7 @@
     margin-top: 80px;
     padding-top: 80px;
     position: relative;
+    /*4331.25로 줄어듬*/
   }
   
   @media (max-width: 1920px) {
