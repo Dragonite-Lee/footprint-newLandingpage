@@ -43,7 +43,7 @@ const Home: NextPage = () => {
 
       <div className={styles.container}>
           <Image src={bg_main_pc} alt='bg_main_pc' className={styles.bg_main_pc} />
-          <Introduce top_text='하늬님의 스토리 보러가기' bot_text={"국내 패션 커머스 기업에서 서버 개발자의 삶을 살아가고 있는 주인공 '하늬'는 딱히 좋아하고 \n잘하는 것도 없었어요. 기대감에 젖어 진학한 컴공과마저 적성에 맞지 않아 포기하려 하기도 했죠. \n그런 그녀가 서버 개발자의 삶을 선택하고 달성하기까지의 치열한 여정을 다루고 있습니다."} />
+          <Introduce top_text='하늬님의 스토리 보러가기' bot_text={"국내 패션 커머스 기업에서 서버 개발자의 삶을 살아가고 있는 주인공 ‘하늬'는 \n딱히 좋아하고 잘하는 것도 없었어요. \n\n기대감에 젖어 진학한 컴공과마저 적성에 맞지 않아 포기하려 하기도 했죠.\n\n그런 그녀가 서버 개발자의 삶을 선택하고 달성하기까지의 치열한 여정을 다루고 있습니다."} />
           <Yellow />
           <But />
           <Gray />

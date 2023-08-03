@@ -48,11 +48,6 @@ function Qna() {
             <div className={styles.qna_small_box}>
               <div className={styles.qna_title_box} onClick={qnaToggleHandler1}>
                   <div className={styles.qna_box_left}>
-                        {
-                            qnaToggle1
-                            ? <Image src={qna_index_up} alt="qna_index" className={styles.qna_index} />
-                            : <Image src={qna_index_down} alt="qna_index" className={styles.qna_index} />
-                        }
                       <div className={styles.qna_title}>
                         Q1. 뉴스레터를 구독하기 위한 요금은 얼마인가요?
                       </div>
@@ -92,11 +87,6 @@ function Qna() {
             <div className={styles.qna_small_box}>
               <div className={styles.qna_title_box} onClick={qnaToggleHandler2}>
                   <div className={styles.qna_box_left}>
-                        {
-                            qnaToggle2
-                            ? <Image src={qna_index_up} alt="qna_index" className={styles.qna_index} />
-                            : <Image src={qna_index_down} alt="qna_index" className={styles.qna_index} />
-                        }
                       <div className={styles.qna_title}>
                         Q2. 한 저자의 뉴스레터의 분량은 얼마인가요?
                       </div>
@@ -131,11 +121,6 @@ function Qna() {
             <div className={styles.qna_small_box}>
               <div className={styles.qna_title_box} onClick={qnaToggleHandler3}>
                   <div className={styles.qna_box_left}>
-                        {
-                            qnaToggle3
-                            ? <Image src={qna_index_up} alt="qna_index" className={styles.qna_index} />
-                            : <Image src={qna_index_down} alt="qna_index" className={styles.qna_index} />
-                        }
                       <div className={styles.qna_title}>
                         Q3. 구독을 했는데 뉴스레터가 오지 않아요.
                       </div>
@@ -153,8 +138,8 @@ function Qna() {
                   (
                       <>
                           <div className={styles.qna_content_box_pc}>
-                          뉴스레터는 스팸메일함, 혹은 프로모션함으로 자동 분류될 수도 있습니다. <br />
-                          스팸메일함에서 footprint story를 찾았다면 <span className={styles.bold}>해당 메일 주소(contact@footprintstory.kr)를 주소록에 친구 추가</span>해주세요.
+                          뉴스레터는 스팸메일함, 혹은 프로모션함으로 자동 분류될 수도 있습니다. 스팸메일함에서 footprint story를 찾았다면 <br />
+                          <span className={styles.bold}>해당 메일 주소(contact@footprintstory.kr)를 주소록에 친구 추가</span>해주세요.
                           </div>
                           <div className={styles.qna_content_box_tablet}>
                           뉴스레터는 스팸메일함, 혹은 프로모션함으로 자동 분류될 수도 있습니다. <br />
@@ -175,11 +160,6 @@ function Qna() {
             <div className={styles.qna_small_box}>
               <div className={styles.qna_title_box} onClick={qnaToggleHandler4}>
                   <div className={styles.qna_box_left}>
-                        {
-                            qnaToggle4
-                            ? <Image src={qna_index_up} alt="qna_index" className={styles.qna_index} />
-                            : <Image src={qna_index_down} alt="qna_index" className={styles.qna_index} />
-                        }
                       <div className={styles.qna_title}>
                         Q4. 지나간 저자들의 스토리는 어디에서 읽을 수 있나요?
                       </div>
@@ -199,8 +179,8 @@ function Qna() {
                           <div className={styles.qna_content_box_pc}>
                             저희는 현재 아카이브를 따로 제공하고 있지 않습니다.<br />
                             그래서 여러분께 발행된 저자 분들의 스토리는 <span className={styles.bold}>메일 보관함에 따로 저장해 주셔야 합니다.</span><br />
-                            뉴스레터로 발행되었던 지난 저자들의 스토리는 추후 메인 서비스가 출시되면 구매할 수 있는 <span className={styles.bold}>전자책으로 업로드 될 예정이니, </span><br />
-                            메인 서비스가 출시될 때까지 조금만 기다려 주세요!
+                            뉴스레터로 발행되었던 지난 저자들의 스토리는 추후 메인 서비스가 출시되면 구매할 수 있는<br />
+                            <span className={styles.bold}>전자책으로 업로드 될 예정이니, </span>메인 서비스가 출시될 때까지 조금만 기다려 주세요!
                           </div>
                           <div className={styles.qna_content_box_tablet}>
                             저희는 현재 아카이브를 따로 제공하고 있지 않습니다.<br />

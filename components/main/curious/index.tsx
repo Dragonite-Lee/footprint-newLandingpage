@@ -1,9 +1,7 @@
 'use client'
 
 import styles from './curious.module.css'
-import curious_mobile from '../../../public/main/curious_mobile.png'
 
-import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 
 function Curious() {
@@ -27,7 +25,7 @@ function Curious() {
     const checkPosition = () => {
         if (curiousRef.current) {
           var posFromTop = curiousRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop + 500) {
+          if (winH > posFromTop + 100) {
             curiousRef.current.style.opacity = '1';
             curiousRef.current.style.transform = 'translateY(0px)'
             curiousRef.current.style.transition = '1.4s';
@@ -54,7 +52,6 @@ function Curious() {
               그 과정이 궁금하지 않나요?
           </div>
         </div>
-        <Image src={curious_mobile} alt="curious_mobile" className={styles.curious_mobile} />
     </div>
   )
 }

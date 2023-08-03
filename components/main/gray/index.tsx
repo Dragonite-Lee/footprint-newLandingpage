@@ -1,9 +1,7 @@
 'use client'
 
 import styles from './gray.module.css'
-import gray_mobile from '../../../public/main/gray_mobile.png'
 
-import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 
 function Gray() {
@@ -27,7 +25,7 @@ function Gray() {
     const checkPosition = () => {
         if (grayRef.current) {
           var posFromTop = grayRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop + 500) {
+          if (winH > posFromTop + 100) {
             grayRef.current.style.opacity = '1';
             grayRef.current.style.transform = 'translateY(0px)'
             grayRef.current.style.transition = '1.4s';
@@ -55,7 +53,6 @@ function Gray() {
           자신에게 향해야 하는 것, 아닐까요?
           </div>
         </div>
-        <Image src={gray_mobile} alt="gray_mobile" className={styles.gray_mobile} />
     </div>
   )
 }

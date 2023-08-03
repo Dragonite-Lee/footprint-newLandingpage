@@ -77,7 +77,7 @@ function Header() {
         <div className={styles.navbar_right}>
           <Link href="/Intro">
             <div className={url === "/Intro" ? styles.navbar_intro_active : styles.navbar_intro}>
-              <span className='font_bold'>Footprint</span> 소개
+              <span className='font_bold'>footprint</span> 소개
             </div>
           </Link>
           <Link href="/Ongoing">
@@ -95,7 +95,7 @@ function Header() {
             </Link>
             <Link href="/Intro">
               <div className={styles.menu_intro} onClick={closeModal}>
-                <span className='font_bold'>Footprint</span> 소개
+                <span className='font_bold'>footprint</span> 소개
               </div>
             </Link>
             <Link href="/Ongoing">

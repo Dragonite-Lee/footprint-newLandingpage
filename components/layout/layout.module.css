@@ -43,7 +43,7 @@
     font-style: normal;
     font-size: 21px; /*반응*/
     color: #757575;
-    margin-left: 100px; /*반응*/
+    margin-left: 110px; /*반응*/
 }
 .navbar_intro_active {
     font-family: 'Pretendard-medium';
@@ -88,7 +88,7 @@
 }
 .footer_right_contact {
     padding-right: 60px; /*반응*/
-    padding-bottom: 101px; /*반응*/
+    padding-bottom: 102px; /*반응*/
 }
 .footer_right_contact_img {
     display: block;
@@ -118,7 +118,7 @@
 @media (max-width: 1920px) {
     .navbar {
         width: 100%;
-        height: calc(0.04167 * 100vw);
+        height: calc(0.04166 * 100vw);
         padding: 0 calc(0.1875 * 100vw);
     }
     .navbar_logo {
@@ -140,28 +140,28 @@
     }
     .footer {
         width: 100%;
-        height: calc(0.176389 * 100vw - 1.67px);
-        padding: 0 calc(0.190278 * 100vw - 3.33px);
+        height: calc(0.1755238 * 100vw - 0.0057px);
+        padding: 0 calc(0.195238 * 100vw - 12.857px);
     }
     .footer_left_img {
-        width: calc(0.16944 * 100vw + 2.67px);
+        width: calc(0.16785714 * 100vw + 5.7142px);
     }
     .footer_right_contact {
-        padding-right: calc(0.03125 * 100vw);
-        padding-bottom: calc(0.054861 * 100vw - 4.33px);
+        padding-right: calc(0.0317738 * 100vw - 1.0057);
+        padding-bottom: calc(0.052678571 * 100vw + 0.8571px);
     }
     .footer_right_contact_img {
-        width: calc(0.0556 * 100vw + 1.33px);
-        margin-bottom: calc(0.006944 * 100vw - 0.33px);
+        width: calc(0.05595238 * 100vw + 0.5714px);
+        margin-bottom: calc(0.007 * 100vw - 0.439px);
     }
     .instagram {
-        width: calc(0.059375 * 100vw + 1px);
+        width: calc(0.05938 * 100vw + 0.988px);
     }
     .facebook {
-        width: calc(0.05243056 * 100vw + 1.33px);
+        width: calc(0.052238 * 100vw + 1.703px);
     }
     .footer_right_bussiness_img {
-        width: calc(0.05694 * 100vw + 1.667px);
+        width: calc(0.05714285 * 100vw + 1.2857px);
     }
 }
 

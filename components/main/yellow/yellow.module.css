@@ -8,38 +8,34 @@
     transform: translateY(70px);
 }
 .main_text {
-    color: #424242;
     font-size: 42px; /*반응*/
     font-family: 'Pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
-    margin-top: 412px; /*반응*/
-    margin-bottom: 57px; /*반응*/
+    margin-top: 411px; /*반응 20 빼야함*/
+    margin-bottom: 52px; /*반응*/
 }
 .open_question {
-    color: #424242;
     font-size: 42px; /*반응*/
     font-family: 'Pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
-    margin-top: 654px; /*반응*/
+    margin-top: 653px; /*반응*/
     margin-right: 15px; /*반응*/
 }
 .close_question {
-    color: #424242;
     font-size: 42px; /*반응*/
     font-family: 'Pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
-    margin-top: 835px; /*반응*/
+    margin-top: 864px; /*반응*/
     margin-right: 353px; /*반응*/
     margin-left: 15px; /*반응*/
 }
 .first_question {
     width: 451px; /*반응*/
-    height: 49px; /*반응*/
+    height: 58px; /*반응*/
     background: rgba(255, 204, 0, 0.30);
-    color: #424242;
     text-align: center;
     font-size: 33px; /*반응*/
     font-family: 'Pretendard-medium';
@@ -48,11 +44,10 @@
 }
 .second_question {
     width: 524px; /*반응*/
-    height: 49px; /*반응*/
+    height: 58px; /*반응*/
     background: rgba(255, 204, 0, 0.30);
     margin-top: 17px;/*반응*/
     margin-left: 111px; /*반응*/
-    color: #424242;
     text-align: center;
     font-size: 33px; /*반응*/
     font-family: 'Pretendard-medium';
@@ -61,59 +56,55 @@
 }
 .third_question {
     width: 425px; /*반응*/
-    height: 49px; /*반응*/
+    height: 58px; /*반응*/
     background: rgba(255, 204, 0, 0.30);
     margin-top: 17px;/*반응*/
     margin-left: 332px; /*반응*/
-    color: #424242;
     text-align: center;
     font-size: 33px; /*반응*/
     font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
 }
-.yellow_mobile {
-    display: none;
-}
 @media (max-width: 1920px) {
     .container {
         width: 100%;
-        height: calc(0.655729167 * 100vw); /*반응*/
+        height: calc(0.65572619 * 100vw + 0.00571428px); /*반응*/
     }
     .main_text {
-        font-size: calc(0.021875 * 100vw); /*반응*/
-        margin-top: calc(0.2145833 * 100vw);
-        margin-bottom: calc(0.02863889 * 100vw + 2.0133px); /*반응*/
+        font-size: calc(0.021869 * 100vw + 0.011428px); /*반응*/
+        margin-top: calc(0.22447619 * 100vw - 19.99428px);
+        margin-bottom: calc(0.0215 * 100vw + 10.719px); /*반응*/
     }
     .open_question {
-        font-size: calc(0.021875 * 100vw); /*반응*/
-        margin-top: calc(0.340625 * 100vw);
-        margin-right: calc(0.0081527778 * 100vw - 0.6533px); 
+        font-size: calc(0.021869 * 100vw + 0.011428px); /*반응*/
+        margin-top: calc(0.3505238 * 100vw - 20.0057px);
+        margin-right: calc(0.007369 * 100vw + 0.8514px); 
     }
     .close_question {
-        font-size: calc(0.021875 * 100vw); /*반응*/
-        margin-top: calc(0.43456 * 100vw + 0.65333px);
-        margin-right: calc(0.1875 * 100vw);
-        margin-left: calc(0.0081527778 * 100vw - 0.6533px); 
+        font-size: calc(0.021869 * 100vw + 0.011428px); /*반응*/
+        margin-top: calc(0.420238 * 100vw + 52.1428px);
+        margin-right: calc(0.18385714 * 100vw - 0.005714px);
+        margin-left: calc(0.007369 * 100vw + 0.8514px); 
     }
     .first_question {
-        width: calc(0.234895833 * 100vw);
-        height: calc(0.025520833 * 100vw);
-        font-size: calc(0.0171875 * 100vw - 1px);
+        width: calc(0.23489 * 100vw + 0.005714px);
+        height: calc(0.036238 * 100vw - 11.57714px);
+        font-size: calc(0.01719 * 100vw - 0.005714px);
     } 
     .second_question {
-        width: calc(0.2729166667 * 100vw);
-        height: calc(0.025520833 * 100vw);
-        margin-top: calc(0.00886111 * 100vw - 0.0133px);
-        margin-left: calc(0.0581667 * 100vw - 0.6799px);
-        font-size: calc(0.0171875 * 100vw - 1px);
+        width: calc(0.2729166 * 100vw);
+        height: calc(0.036238 * 100vw - 11.57714px);
+        margin-top: calc(0.008857 * 100vw - 0.005714px);
+        margin-left: calc(0.057369 * 100vw + 0.851428px);
+        font-size: calc(0.01719 * 100vw - 0.005714px);
     }
     .third_question {
         width: calc(0.2213541667 * 100vw);
-        height: calc(0.025520833 * 100vw);
-        margin-top: calc(0.00886111 * 100vw - 0.0133px);
-        margin-left: calc(0.1732638889 * 100vw - 0.6667px);
-        font-size: calc(0.0171875 * 100vw - 1px);
+        height: calc(0.036238 * 100vw - 11.57714px);
+        margin-top: calc(0.008857 * 100vw - 0.005714px);
+        margin-left: calc(0.172464 * 100vw + 0.8685px);
+        font-size: calc(0.01719 * 100vw - 0.005714px);
     }
 }
 @media (max-width: 1080px) {

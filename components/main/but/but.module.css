@@ -9,12 +9,9 @@
     font-style: normal;
     font-weight: 800;
     text-align: center;
-    padding-top: 381px; /*반응*/
+    padding-top: 411px; /*반응 30빼야됨*/
     opacity: 0;
     transform: translateY(70px);
-}
-.but_mobile {
-    display: none;
 }
 @media (max-width: 1920px) {
     .container {
@@ -22,8 +19,8 @@
         height: calc(0.5625 * 100vw); /*반응*/
     }
     .text {
-        font-size: calc(0.0265625 * 100vw); /*반응*/
-        padding-top: calc(0.2296944 * 100vw - 60.0133px); /*반응*/
+        font-size: calc(0.0265595238 * 100vw + 0.005714px); /*반응*/
+        padding-top: calc(0.22969 * 100vw - 30.005714px); /*반응*/
     }
 }
 @media (max-width: 1080px) {

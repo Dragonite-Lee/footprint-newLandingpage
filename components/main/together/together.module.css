@@ -1,6 +1,6 @@
 .container {
     width: 1920px; /*반응*/
-    height: 596px; /*반응*/
+    height: 594px; /*반응*/
 }
 .interativeBox {
     opacity: 0;
@@ -13,7 +13,7 @@
     font-family: 'Pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
-    margin: 1244px auto; /*반응*/
+    margin: 1364px auto; /*반응*/
     margin-bottom: 0; /*반응*/
 }
 .a_text {
@@ -26,23 +26,20 @@
     margin: 38px auto; /*반응*/
     margin-bottom: 0px; /*반응*/
 }
-.together_mobile {
-    display: none;
-}
 @media (max-width: 1920px) {
     .container {
         width: 100%;
-        height: calc(0.31041667 * 100vw); /*반응*/
+        height: calc(0.30803571 * 100vw + 2.5714px); /*반응*/
         
     }
     .q_text {
-        font-size: calc(0.021875 * 100vw);
-        margin: calc(0.7104167 * 100vw - 120px) auto; /*반응*/
+        font-size: calc(0.02188 * 100vw - 0.011428px);
+        margin: calc(0.7104166 * 100vw) auto; /*반응*/
         margin-bottom: 0px;
     }
     .a_text {
-        font-size: calc(0.0171875 * 100vw);
-        margin: calc(0.01909722 * 100vw + 1.333px) auto;
+        font-size: calc(0.01719 * 100vw - 0.005714px);
+        margin: calc(0.0183095 * 100vw + 2.8457px) auto;
         margin-bottom: 0px;
     }
 }

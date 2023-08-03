@@ -1,7 +1,7 @@
 .container {
     width: 1920px; /*반응*/
-    height: 319px; /*반응*/
-    margin-top: 1584px; /*반응*/
+    height: 409px; /*반응*/
+    margin-top: 1664px; /*반응 80더함*/
     position: relative;
     z-index: 3;
 }
@@ -9,8 +9,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 53px; /*반응*/
-    padding-left: 462px; /*반응*/
+    margin-left: 446px; /*반응*/
+    padding-left: 30px;
+    width: 446px;
+    height: 78px;
+    border: 3px solid #FFCC00;
+    background-color: #FFCC00;
+    border-radius: 75px;
 }
 .top_text {
     color: #000;
@@ -30,33 +35,34 @@
     font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
-    padding: 21px 0px 0px 462px; /*반응*/
+    padding: 20px 0px 0px 462px; /*반응*/
     white-space: pre-line;
-}
-.bot_text_mobile {
-    display: none;
 }
 
 @media (max-width: 1920px) {
     .container {
         width: 100%; /*반응*/
-        height: calc(0.16614583 * 100vw); /*반응*/
-        margin-top: calc(0.825 * 100vw - 14px); /*반응*/
+        height: calc(0.2130238095 * 100vw - 0.005714px); /*반응*/
+        margin-top: calc(0.825 * 100vw + 80px); /*반응*/
     }
     .link_box {
-        padding-top: calc(0.027611 * 100vw - 0.0133px); /*반응*/
-        padding-left: calc(0.240625 * 100vw); /*반응*/
+        margin-left: calc(0.2215714285 * 100vw + 20.5825px);
+        padding-left: calc(0.015619 * 100vw + 0.011429px);
+        width: calc(0.2322857142 * 100vw + 0.011428px);
+        height: calc(0.040619 * 100vw + 0.011428px);
+        border: calc(0.0015476 * 100vw + 0.02857px) solid #FFCC00;
+        border-radius: calc(0.0390476 * 100vw + 0.02857px);
     }
     .top_text {
-        font-size: calc(0.0171875 * 100vw); /*반응*/
+        font-size: calc(0.017190 * 100vw - 0.005714px); /*반응*/
     }
     .chevron {
         width: calc(0.01875 * 100vw); /*반응*/
-        margin-left: calc(0.0114583 * 100vw - 1px); /*반응*/
+        margin-left: calc(0.0120595238 * 100vw - 2.15428px); /*반응*/
     }
     .bot_text {
         font-size: calc(0.0125 * 100vw); /*반응*/
-        padding: calc(0.0105833 * 100vw + 0.68px) calc(0.240625 * 100vw); /*반응*/
+        padding: calc(0.00773809 * 100vw + 5.142857px) calc(0.24063095 * 100vw - 0.011428px); /*반응*/
     }
 }
 
@@ -128,12 +134,7 @@
     .bot_text {
         display: none;
     }
-    .bot_text_mobile {
-        display: block;
-        width: 319px;
-        height: auto;
-        padding-left: 19px; /*반응*/
-    }
+ 
 }
 @media (max-width: 360px) {
     .container {
@@ -151,8 +152,5 @@
         width: calc(0.0387499 * 100vw + 0.05px);
         margin-left: calc(0.0305 * 100vw - 2.98px);
     }
-    .bot_text_mobile {
-        width: calc(0.8875 * 100vw - 0.5px);
-        padding-left: calc(0.05275 * 100vw + 0.0099px);
-    }
+
 }

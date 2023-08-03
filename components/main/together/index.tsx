@@ -1,9 +1,7 @@
 'use client'
 
 import styles from './together.module.css'
-import together_mobile from '../../../public/main/together_mobile.png'
 
-import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 
 function Together() {
@@ -27,7 +25,7 @@ function Together() {
     const checkPosition = () => {
         if (togetherRef.current) {
           var posFromTop = togetherRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop + 500) {
+          if (winH > posFromTop + 100) {
             togetherRef.current.style.opacity = '1';
             togetherRef.current.style.transform = 'translateY(0px)'
             togetherRef.current.style.transition = '1.4s';
@@ -51,11 +49,10 @@ function Together() {
               커리어 성장 과정과 그 안에서의 삶을
           </div>
           <div className={styles.a_text}>
-              생생한 스토리로 전달해, 여러분의 꿈을 향한 여정에<br/>
-              확신을 더해주는 동반자로서 함께할게요.
+              생생한 스토리로 전달해, 여러분의 꿈을 향한 여정에 확신을<br/>
+               더해주는 동반자로서 함께할게요.
           </div>
         </div>
-        <Image src={together_mobile} alt="together_mobile" className={styles.together_mobile} />
     </div>
   )
 }

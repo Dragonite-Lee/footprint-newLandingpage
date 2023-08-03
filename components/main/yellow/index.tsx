@@ -1,9 +1,7 @@
 'use client'
 
 import styles from './yellow.module.css'
-import yellow_mobile from '../../../public/main/yellow_mobile.png'
 
-import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 
 function Yellow() {
@@ -27,7 +25,7 @@ function Yellow() {
     const checkPosition = () => {
         if (yellowRef.current) {
           var posFromTop = yellowRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop + 500) {
+          if (winH > posFromTop + 100) {
             yellowRef.current.style.opacity = '1';
             yellowRef.current.style.transform = 'translateY(0px)'
             yellowRef.current.style.transition = '1.4s';
@@ -64,7 +62,6 @@ function Yellow() {
             </div>
         </div>
         <div className={styles.close_question}>&quot;</div>
-        <Image src={yellow_mobile} alt="yellow_mobile" className={styles.yellow_mobile} />
     </div>
   )
 }

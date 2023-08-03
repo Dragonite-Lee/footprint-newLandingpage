@@ -13,7 +13,7 @@
     font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
-    padding-top: 191px; /*반응*/
+    padding-top: 261px; /*반응 50빼야됨*/
     margin-left: 380px; /*반응*/
 }
 .a_text {
@@ -26,22 +26,19 @@
     margin-top: 67px;
     margin-left: 380px; /*반응*/
 }
-.gray_mobile {
-    display: none;
-}
 @media (max-width: 1920px) {
     .container {
         width: 100%;
         height: calc(0.5625 * 100vw); /*반응*/
     }
     .q_text {
-        font-size: calc(0.0171875 * 100vw);
-        padding-top: calc(0.1619722 * 100vw - 120.0133px); /*반응*/
+        font-size: calc(0.01719 * 100vw - 0.005714px);
+        padding-top: calc(0.16197619 * 100vw - 49.994px); /*반응*/
         margin-left: calc(0.1979166 * 100vw);
     }
     .a_text {
-        font-size: calc(0.021875 * 100vw);
-        margin-top: calc(0.0341944 * 100vw + 1.3467px);
+        font-size: calc(0.02188 * 100vw - 0.011428px);
+        margin-top: calc(0.0334 * 100vw + 2.8628px);
         margin-left: calc(0.1979166 * 100vw);
     }
 }
