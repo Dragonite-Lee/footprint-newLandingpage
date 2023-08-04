@@ -2,48 +2,60 @@
     display: block;
     width: 1920px;
     min-width: 280px;
-    height: 7700px;
-    background-image: url('../../public/bg/bg_intro_pc.png');
-    background-size: 1920px 7700px;
+    height: 100%;
     margin: 0 auto;
     overflow: hidden;
-    margin-top: 80px;
-    padding-top: 80px;
     position: relative;
     /*4331.25로 줄어듬*/
   }
-  
+  .bg_intro_pc {
+    display: block;
+    padding-top: 80px;
+    width: 100%;
+    height: 7700px;
+    z-index: -100;
+  }
+  .bg_intro_tablet {
+    display: none;
+  }
+  .bg_intro_mobile {
+    display: none;
+  }
+
   @media (max-width: 1920px) {
     .container {
       width: 100%;
-      height: calc(4.01041667 * 100vw - 9.09497px);
-      background-size: 100% calc(4.01041667 * 100vw - 9.09497px);
-      margin-top: calc(0.04167 * 100vw);
-      padding-top: calc(0.04167 * 100vw);
+      height: 100%;
     }
-
+    .bg_intro_pc {
+      padding-top: calc(0.04166 * 100vw);
+      height: calc(4.0104166 * 100vw - 9.094947px);
+    }
   }
   @media (max-width: 1080px) {
     .container {
-      display: block;
       width: 768px;
-      height: 3106px;
-      background-image: url('../../public/bg/bg_intro_tablet.png');
-      background-size: 768px 3106px;
-      margin: 0 auto;
-      overflow: hidden;
-      margin-top: 40px;
+      height: 100%;
+    }
+    .bg_intro_pc {
+      display: none;
+    }
+    .bg_intro_tablet {
+      display: block;
       padding-top: 40px;
+      width: 100%;
+      height: 3652px;
+      z-index: -100;
     }
   }
-
   @media (max-width: 768px) {
     .container {
       width: 100%;
-      height: calc(4.044278 * 100vw - 0.00533px);
-      background-size: 100% calc(4.044278 * 100vw - 0.00533px);
-      margin-top: calc(0.05211 * 100vw - 0.02133px);
+      height: 100%;
+    }
+    .bg_intro_tablet {
       padding-top: calc(0.05211 * 100vw - 0.02133px);
+      height: calc(4.75522 * 100vw - 0.01067px);
     }
   }
 
@@ -51,22 +63,23 @@
     .container {
       display: block;
       width: 360px;
-      height: 1476px;
-      background-image: url('../../public/bg/bg_intro_mobile.png');
-      background-size: 360px 1476px;
-      margin: 0 auto;
-      overflow: hidden;
-      margin-top: 0px;
-      padding-top: 0px;
+      height: 100%;
+    }
+    .bg_intro_tablet {
+      display: none;
+    }
+    .bg_intro_mobile {
+      display: block;
+      width: 100%;
+      height: 4333px;
+      z-index: -100;
     }
   }
 
   @media (max-width: 360px) {
     .container {
       width: 100%;
-      height: calc(4.044278 * 100vw - 0.00533px);
-      background-size: 100% calc(4.044278 * 100vw - 0.00533px);
-      margin-top: 0px;
-      padding-top: 0px;
+      height: 100%;
     }
+    /* 모바일 인트로 반응형 하고 ongoing부붐 모바일 하고 푸터 -> 헤더 모바일 해결하고 테블릿 모바일 main제작하기 */
   }

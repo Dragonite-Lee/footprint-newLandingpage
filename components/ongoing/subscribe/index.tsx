@@ -133,7 +133,6 @@ function Subscribe() {
             <div className={styles.agree_text}>
                 <span className='font_extrabold'>개인정보 수집</span> 및 <span className='font_extrabold'>이용</span>에 동의합니다.
             </div>
-            <Image src={privateImg} alt='privateImg' className={styles.privateImg} />
         </div>
         <div className={styles.agree} >
             {
@@ -144,20 +143,15 @@ function Subscribe() {
             <div className={styles.agree_text}>
                 <span className='font_extrabold'>광고성 정보 수신</span>에 동의합니다.
             </div>
-            <Image src={adverImg} alt='adverImg' className={styles.adverImg} />
         </div>
         <div className={styles.button_box}>
             <button className={styles.btn} onClick={emailOkCountDown}>
                 뉴스레터 구독하기
             </button>
-            <button className={styles.btn_mobile}>
-              <Image src={btn_inner_img} alt='btn_inner_img' className={styles.btn_inner_img} />
-            </button>
             <div className={styles.button_text}>
                 <span className='font_bold'>2달간의 스토리 제공 9800원<br/>
                 / 프롤로그 무료 이용 가능</span>
             </div>
-            <Image src={btn_text_img} alt='btn_text_img' className={styles.btn_text_img} />
         </div>
       </div>
       <div className={styles.logo_box}>

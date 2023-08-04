@@ -9,7 +9,7 @@
   }
   .bg_main_pc {
     position: absolute;
-    top: 0px;
+    top: 80px;
     width: 100%;
     height: 10164px;
     z-index: -100;
@@ -20,9 +20,7 @@
       height: 100%;
     }
     .bg_main_pc {
-      position: absolute;
-      top: 0px;
-      width: 100%;
+      top: calc(0.04166 * 100vw);
       height: calc(5.29375 * 100vw);
     }
   }

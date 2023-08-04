@@ -60,13 +60,7 @@
     color: #424242;
     margin-left: 100px; /*반응*/
 }
-.footer_mobile {
-    display: none;
-    position: relative;
-    z-index: 3;
-    overflow: hidden;
-}
-.footer {
+.footer_web {
     background-color: #FFE991;
     width: 1920px; /*반응*/
     height: 337px; /*반응*/
@@ -76,6 +70,9 @@
     align-items: center;
     padding: 0 362px;  /*반응*/
     overflow: hidden;
+}
+.footer_tablet {
+    display: none;
 }
 .footer_left_img {
     width: 328px; /*반응*/
@@ -88,13 +85,14 @@
 }
 .footer_right_contact {
     padding-right: 60px; /*반응*/
+    padding-top: 8px;
     padding-bottom: 102px; /*반응*/
 }
 .footer_right_contact_img {
     display: block;
     width: 108px; /*반응*/
     height: auto;
-    margin-bottom: 13px; /*반응*/
+    margin-bottom: 26px; /*반응*/
 }
 .instagram {
     display: block;
@@ -138,7 +136,7 @@
         font-size: calc(0.0104167 * 100vw + 1px);
         margin-left: calc(37.5/700 * 100vw - 1.8px); 
     }
-    .footer {
+    .footer_web {
         width: 100%;
         height: calc(0.1755238 * 100vw - 0.0057px);
         padding: 0 calc(0.195238 * 100vw - 12.857px);
@@ -148,11 +146,12 @@
     }
     .footer_right_contact {
         padding-right: calc(0.0317738 * 100vw - 1.0057);
+        padding-top: calc(0.0047619 * 100vw - 1.1428px);
         padding-bottom: calc(0.052678571 * 100vw + 0.8571px);
     }
     .footer_right_contact_img {
         width: calc(0.05595238 * 100vw + 0.5714px);
-        margin-bottom: calc(0.007 * 100vw - 0.439px);
+        margin-bottom: calc(0.010119 * 100vw + 6.5714px);
     }
     .instagram {
         width: calc(0.05938 * 100vw + 0.988px);
@@ -218,49 +217,54 @@
         font-size: 12px; /*반응*/
         margin-left: 40px;
     }
-    .footer {
+    .footer_web {
+        display: none;
+    }
+    .footer_tablet {
+        display: block;
         background-color: #FFE991;
         width: 768px; /*반응*/
-        height: 164px; /*반응*/
+        height: 151px; /*반응*/
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0px 79px 0px 89px;  /*반응*/
+        padding: 0px 72px 0px 89px;  /*반응*/
+        overflow: hidden;
     }
     .footer_left_img {
-        width: 184px; /*반응*/
+        width: 196px; /*반응*/
         height: auto;
     }
     .footer_right {
-        padding-top: 25px;
+        padding-top: 15px;
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
     }
     .footer_right_contact {
-        
-        padding-right: 22px; /*반응*/
-        padding-bottom: 63.16px; /*반응*/
+        padding-right: 17px; /*반응*/
+        padding-top: 6px;
+        padding-bottom: 66.29px; /*반응*/
     }
     .footer_right_contact_img {
         display: block;
         width: 62px; /*반응*/
         height: auto;
-        margin-bottom: 6px; /*반응*/
+        margin-bottom: 9px; /*반응*/
     }
     .instagram {
         display: block;
-        width: 62px; /*반응*/
+        width: 67px; /*반응*/
         height: auto;
     }
     .facebook {
         display: block;
-        width: 55px; /*반응*/
+        width: 58px; /*반응*/
         height: auto;
     }
     .footer_right_bussiness_img {
-        width: 67px; /*반응*/
+        width: 74px; /*반응*/
         height: auto;
     }
 }
@@ -288,33 +292,34 @@
         font-size: calc(0.0166 * 100vw - 0.8px);
         margin-left: calc(0.051055 * 100vw + 0.78933px);
     }
-    .footer {
+    .footer_tablet {
         width: 100%; /*반응*/
-        height: calc(0.21355 * 100vw - 0.01066px);
-        padding: 0px calc(0.10122 * 100vw + 1.26133px) 0px calc(0.11588 * 100vw - 0.00266px);  /*반응*/
+        height: calc(0.19466 * 100vw + 1.4959px);
+        padding: 0px calc(0.09566 * 100vw - 1.47199px) 0px calc(0.11588 * 100vw - 0.00266px);  /*반응*/
     }
     .footer_left_img {
-        width: calc(0.24044 * 100vw - 0.66133px);
+        width: calc(0.25522 * 100vw - 0.01067px);
     }
     .footer_right {
-        padding-top: calc(0.03255 * 100vw - 0.00266px);
+        padding-top: calc(0.0166 * 100vw + 2.199px);
     }
     .footer_right_contact {
-        padding-right: calc(0.031611 * 100vw - 2.27733px);
-        padding-bottom: calc(0.08366 * 100vw - 1.0959px);
+        padding-right: calc(0.0221 * 100vw + 0.01867px);
+        padding-top: calc(0.011 * 100vw - 2.533px);
+        padding-bottom: calc(0.086277 * 100vw + 0.02867px);
     }
     .footer_right_contact_img {
-        width: calc(0.077 * 100vw + 2.266px);
-        margin-bottom: calc(0.0083 * 100vw - 0.4px);
+        width: calc(0.080722 * 100vw + 0.00533px);
+        margin-bottom: calc(0.011 * 100vw + 0.467px);
     }
     .instagram {
-        width: calc(0.079944 * 100vw + 0.60266px);
+        width: calc(0.08722 * 100vw + 0.0133px);
     }
     .facebook {
-        width: calc(0.074388 * 100vw - 2.13066px);
+        width: calc(0.0755 * 100vw + 0.01599px);
     }
     .footer_right_bussiness_img {
-        width: calc(0.0888 * 100vw - 1.266px);
+        width: calc(0.09633 * 100vw + 0.01599px);
     }
 }
 
@@ -323,7 +328,7 @@
     .navbar {
         display: none;
     }
-    .footer {
+    .footer_web {
         display: none;
     }
     .footer_mobile {
