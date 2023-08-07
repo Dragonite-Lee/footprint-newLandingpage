@@ -149,8 +149,8 @@ function Subscribe() {
                 뉴스레터 구독하기
             </button>
             <div className={styles.button_text}>
-                <span className='font_bold'>2달간의 스토리 제공 9800원<br/>
-                / 프롤로그 무료 이용 가능</span>
+                2달간의 스토리 제공 9800원<br/>
+                / 프롤로그 무료 이용 가능
             </div>
         </div>
       </div>

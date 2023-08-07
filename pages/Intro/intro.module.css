@@ -6,6 +6,7 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    z-index: -2;
     /*4331.25로 줄어듬*/
   }
   .bg_intro_pc {
@@ -81,5 +82,7 @@
       width: 100%;
       height: 100%;
     }
-    /* 모바일 인트로 반응형 하고 ongoing부붐 모바일 하고 푸터 -> 헤더 모바일 해결하고 테블릿 모바일 main제작하기 */
+    .bg_intro_mobile {
+      height: calc(12.03612499 * 100vw - 0.00499px);
+    }
   }

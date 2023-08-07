@@ -18,6 +18,9 @@
   .bg_ongoing_tablet {
     display: none;
   }
+  .bg_ongoing_mobile {
+    display: none;
+  }
   @media (max-width: 1920px) {
     .container {
       width: 100%;
@@ -33,9 +36,6 @@
     .container {
       width: 768px;
       height: 100%;
-      margin: 0 auto;
-      overflow: hidden;
-      position: relative;
     }
     .bg_ongoing_pc {
       display: none;
@@ -62,22 +62,28 @@
 
   @media (max-width: 588px) {
     .container {
-      display: block;
       width: 360px;
-      height: 1702px;
-      background-image: url('../../public/bg/bg_ongoing_mobile.png');
-      background-size: 360px 1702px;
-      margin: 0 auto;
-      overflow: hidden;
-      margin-top: 0px;
+      height: 100%;
+    }
+    .bg_ongoing_tablet {
+      display: none;
+    }
+    .bg_ongoing_mobile {
+      display: block;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 6065px;
+      z-index: -100;
     }
   }
 
   @media (max-width: 360px) {
     .container {
       width: 100%;
-      height: calc(4.1443749 * 100vw + 210.025px);
-      background-size: 100% calc(4.1443749 * 100vw + 210.025px);
-      margin-top: 0px;
+      height: 100%;
+    }
+    .bg_ongoing_mobile {
+      height: calc(16.847125 * 100vw + 0.03499px);
     }
   }

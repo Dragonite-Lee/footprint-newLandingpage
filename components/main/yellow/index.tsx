@@ -1,8 +1,11 @@
 'use client'
 
 import styles from './yellow.module.css'
+import yellow_main_text from '../../../public/main/yellow_main_text.png'
+import yellow_sub_text from '../../../public/main/yellow_sub_text.png'
 
 import { useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 function Yellow() {
   
@@ -50,6 +53,7 @@ function Yellow() {
             꿈에 대한 확신을 얻기 위해서 <br/>
             다른 사람에게 질문을 해요.
             </div>
+            
             
             <div className={styles.first_question}>
                 지금 제 선택이 올바를까요?

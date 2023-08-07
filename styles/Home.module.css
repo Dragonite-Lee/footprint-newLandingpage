@@ -14,6 +14,12 @@
     height: 10164px;
     z-index: -100;
   }
+  .bg_main_tablet {
+    display: none;
+  }
+  .bg_main_mobile {
+    display: none;
+  }
   @media (max-width: 1920px) {
     .container {
       width: 100%;
@@ -27,15 +33,18 @@
 
   @media (max-width: 1080px) {
     .container {
-      display: block;
       width: 768px;
       height: 100%;
-      background-image: url('../public/bg/bg_main_tablet.png');
-      background-size: 768px 4337px;
-      margin: 0 auto;
-      overflow: hidden;
-      margin-top: 40px;
-      padding-top: 0px;
+    }
+    .bg_main_pc {
+      display: none;
+    }
+    .bg_main_tablet {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      height: 5686px;
+      z-index: 100;
     }
   }
 
@@ -43,22 +52,26 @@
     .container {
       width: 100%;
       height: 100%;
-      background-size: 100% auto;
-      margin-top: calc(0.05222 * 100vw - 0.1067px);
-      padding-top: 0px;
+    }
+    .bg_main_tablet {
+      top: calc(0.05211 * 100vw - 0.02133px);
+      height: calc(7.40366 * 100vw - 0.01599px);
     }
   }
   @media (max-width: 588px) {
     .container {
-      display: block;
       width: 360px;
       height: 100%;
-      background-image: url('../public/bg/bg_main_mobile.png');
-      background-size: 360px 2040px;
-      margin: 0 auto;
-      overflow: hidden;
-      margin-top: 0px;
-      padding-top: 0px;
+    }
+    .bg_main_tablet {
+      display: none;
+    }
+    .bg_main_mobile {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 5694px;
+      z-index: -100;
     }
   }
 
@@ -66,8 +79,8 @@
     .container {
       width: 100%;
       height: 100%;
-      background-size: 100% auto;
-      margin-top: 0px;
-      padding-top: 0px;
+    }
+    .bg_main_mobile {
+      height: calc(15.81675 * 100vw - 0.03px);
     }
   }

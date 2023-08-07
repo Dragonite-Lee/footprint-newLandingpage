@@ -9,6 +9,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from "next/navigation"
 import { useEffect, useRef, useState } from 'react';
+import { setTimeout } from 'timers'
  
 function Header() {
 
@@ -29,7 +30,9 @@ function Header() {
       menu_white.current.style.transition = 'transform 1s ease';
       menu_wrap.current.style.zIndex = '7'; 
     };
-    setMenuCurrent(true);
+    setTimeout(() => {
+      setMenuCurrent(true);
+    }, 500);
   }
 
   const closeModal = () => {
@@ -42,7 +45,9 @@ function Header() {
       menu_white.current.style.transition = 'transform 1s ease';
       menu_wrap.current.style.zIndex = '7';
     };
-    setMenuCurrent(false);
+    setTimeout(() => {
+      setMenuCurrent(false);
+    }, 500);
   }
 
   const closeBlackModal = (e: React.MouseEvent<HTMLElement>) => {
@@ -56,7 +61,9 @@ function Header() {
         menu_white.current.style.transition = 'transform 1s ease';
         menu_wrap.current.style.zIndex = '7';
       }
-      setMenuCurrent(false);
+      setTimeout(() => {
+        setMenuCurrent(false);
+      }, 500);
     }
   }
   
@@ -91,15 +98,17 @@ function Header() {
         <div className={styles.menu_black_tab} ref={menu_black} onClick={(e) => closeBlackModal(e)}>
           <div className={styles.menu_white_tab} ref={menu_white}>
             <Link href="/">
-              <Image src={navbarLogo} className={styles.menu_home} alt='navbarLogo' onClick={closeModal}/>
+              <div className={`${styles.menu_title} ${styles.top_index}`} onClick={closeModal}>
+                <span className='font_bold'>footprint</span>
+              </div>
             </Link>
             <Link href="/Intro">
-              <div className={styles.menu_intro} onClick={closeModal}>
+              <div className={styles.menu_title} onClick={closeModal}>
                 <span className='font_bold'>footprint</span> 소개
               </div>
             </Link>
             <Link href="/Ongoing">
-              <div className={styles.menu_ongoing} onClick={closeModal}>
+              <div className={styles.menu_title} onClick={closeModal}>
                 연재 중인 스토리
               </div>
             </Link>

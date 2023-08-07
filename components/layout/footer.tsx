@@ -1,3 +1,5 @@
+'use client'
+
 import styles from './layout.module.css'
 import facebook from '../../public/layout/facebook.png'
 import instagram from '../../public/layout/instagram.png'
@@ -9,10 +11,47 @@ import footer_right_bussiness_tablet from '../../public/layout/footer_right_buss
 import footer_right_contact_tablet from '../../public/layout/footer_right_contact_tablet.png'
 import instagram_tablet from '../../public/layout/instagram_tablet.png'
 import facebook_tablet from '../../public/layout/facebook_tablet.png'
+import footer_back from '../../public/layout/footer_back.png'
+import footer_mobile_intro from '../../public/layout/footer_mobile_intro.png'
+import footer_mobile_bussiness from '../../public/layout/footer_mobile_bussiness.png'
+import mobile_instagram from '../../public/layout/mobile_instagram.png'
+import mobile_facebook from '../../public/layout/mobile_facebook.png'
 
 import Image from 'next/image';
+import { useState, useRef } from 'react'
  
 function Footer() {
+
+  const [footerHome, setFooterHome] = useState<boolean>(false);
+  const [footerIntro, setFooterIntro] = useState<boolean>(false);
+  const [footerOngoing, setFooterOngoing] = useState<boolean>(false);
+
+  const footer_main = useRef<HTMLDivElement>(null);
+  const footer_home = useRef<HTMLDivElement>(null);
+  const footer_intro = useRef<HTMLDivElement>(null);
+  const footer_ongoing = useRef<HTMLDivElement>(null);
+
+  const footerMobileStateHandler = (e: React.MouseEvent<HTMLElement>) => {
+    if (e.target == footer_home.current && footer_main.current) {
+      setFooterHome(true);
+      footer_main.current.style.display = "none";
+    } else if (e.target == footer_intro.current && footer_main.current) {
+      setFooterIntro(true);
+      footer_main.current.style.display = "none";
+    } else if (e.target == footer_ongoing.current && footer_main.current) {
+      setFooterOngoing(true);
+      footer_main.current.style.display = "none";
+    };
+  }
+
+  const footerMobileStateBackHandler = () => {
+    if (footer_main.current) {
+      setFooterHome(false);
+      setFooterIntro(false);
+      setFooterOngoing(false);
+      footer_main.current.style.display = "flex";
+    }
+  }
 
   return (
     <>
@@ -45,6 +84,53 @@ function Footer() {
             <Image src={footer_right_bussiness_tablet} className={styles.footer_right_bussiness_img} alt='footer_right_bussiness이미지' />
           </div>
         </div>
+      </footer>
+      <footer className={styles.footer_mobile}>
+        <div className={styles.footer_main_content} ref={footer_main}>
+          <div className={styles.main_home} onClick={(e) => footerMobileStateHandler(e)} ref={footer_home}>
+            풋프린트
+          </div>
+          <div className={styles.main_intro} onClick={(e) => footerMobileStateHandler(e)} ref={footer_intro}>
+            Contact us
+          </div>
+          <div className={styles.main_ongoing} onClick={(e) => footerMobileStateHandler(e)} ref={footer_ongoing}>
+            협력사
+          </div>
+        </div>
+        {
+          footerHome && (
+            <div className={styles.sub_back}>
+              <div className={styles.sub_back_title} onClick={footerMobileStateBackHandler}>
+                <Image src={footer_back} className={styles.footer_back} alt='footer_back' />
+                <div className={styles.sub_title}>풋프린트</div>
+              </div>
+              <Image src={footer_mobile_intro} className={styles.footer_mobile_intro} alt='footer_mobile_intro' />
+            </div>
+          )
+        }
+        {
+          footerIntro && (
+            <div className={styles.sub_back}>
+              <div className={styles.sub_back_title} onClick={footerMobileStateBackHandler}>
+                <Image src={footer_back} className={styles.footer_back} alt='footer_back' />
+                <div className={styles.sub_title}>Contact us</div>
+              </div>
+              <Image src={mobile_instagram} className={styles.mobile_instagram} alt='mobile_instagram' onClick={() => {window.open('https://www.instagram.com/footprint_story/')}} />
+              <Image src={mobile_facebook} className={styles.mobile_facebook} alt='mobile_facebook' onClick={() => {window.open('https://www.facebook.com/footprintcareers?mibextid=ZbWKwL')}} />
+            </div>
+          )
+        }
+        {
+          footerOngoing && (
+            <div className={styles.sub_back}>
+              <div className={styles.sub_back_title} onClick={footerMobileStateBackHandler}>
+                <Image src={footer_back} className={styles.footer_back} alt='footer_back' />
+                <div className={styles.sub_title}>협력사</div>
+              </div>
+              <Image src={footer_mobile_bussiness} className={styles.footer_mobile_bussiness} alt='footer_mobile_bussiness' />
+            </div>
+          )
+        }
       </footer>
     </>
   )

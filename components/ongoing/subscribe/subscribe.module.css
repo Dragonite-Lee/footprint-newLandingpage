@@ -402,193 +402,161 @@
 @media (max-width: 588px) {
     .container {
         width: 360px;
-        height: 134px;
-        margin-bottom: 1376px;
-        margin-top: 253px;
+        height: 189px;
+        margin-bottom: 5125px;
+        margin-top: 751px;
     }
     .subscribe_box {
-        margin-right: 4px;
+        margin: 0 auto;
     }
     .input {
-        width: 180px;
-        height: 24px;
-        padding-left: 10px;
-        margin-bottom: 5px;
+        width: 300px;
+        height: 29px;
+        padding-left: 22px;
+        margin-bottom: 12px;
         border-radius: 5px;
         border: 1px solid #FDBE01;
-        font-size: 10px;
+        font-size: 12px;
     }
     .agree {
-        margin-bottom: 6px;
+        margin-bottom: 7px;
     }
     .agree_check {
-        width: 6px;
+        width: 12px;
     }
     .agree_text {
-        display: none;
-    }
-    .privateImg {
-        display: block;
-        width: 86px;
-        height: auto;
-        margin-left: 4px;
-    }
-    .adverImg {
-        display: block;
-        width: 74px;
-        height: auto;
-        margin-left: 4px;
+        font-size: 12px;/*반응*/
+        margin-left: 10px;/*반응*/
     }
     .button_box {
-        margin-top: 8px;
+        margin-top: 20px; /*반응*/
     }
     .btn {
-        display: none;
-    }
-    .btn_mobile {
-        display: block;
-        width: 85px;
-        height: 21px;
-        border-radius: 5px;
-        border: 1px solid #FFCC00; /*반응*/
-        margin-right: 10px;
-        background-color: #FFCC00;
-    }
-    .btn_inner_img {
-        width: 65px;
-        height: auto;
+        width: 128px; /*반응*/
+        height: 38px; /*반응*/
+        border-radius: 36px; /*반응*/
+        border: 3px solid #FFCC00; /*반응*/
+        margin-right: 10px; /*반응*/
+        font-size: 15px; /*반응*/
+        filter: drop-shadow(1px 1px 1px rgba(176, 132, 0, 0.50));
     }
     .button_text {
-        display: none;
-    }
-    .btn_text_img {
-        display: block;
-        width: 72px;
-        height: auto;
+        font-size: 12px; /*반응*/
     }
     .logo_img {
-        width: 96px;
+        display: none;
     }
     .BlackModalContainer {
         width: 360px;
     }
     .modalContainer {
-        width: 296px;
-        height: 109px;
+        width: 313px;
+        height: 142px;
         border-radius: 8px;
     }
     .modal_top {
-        font-size: 10px;
-        padding: 11px 0px 9px 0px;
+        font-size: 15px;
+        padding: 10px 0px;
     }
     .modal_bot {
-        border-top: 0.5px solid black;
-        padding-top: 6px;
+        border-top: 1px solid black;
+        padding-top: 8.94px;
     }
     .modal_kakao {
-        width: 20px;
-        margin-left: 93.5px;
+        width: 25px;
+        margin-left: 91.03px;
     }
     .modal_twitter {
-        width: 20px;
-        margin-left: 10px;
+        width: 25px;
+        margin-left: 12.53px;
     }
     .modal_facebook {
-        width: 20px;
-        margin-left: 10px;
+        width: 25px;
+        margin-left: 12.53px;
     }
     .modal_linkcopy {
-        width: 20px;
-        margin-left: 10px;
+        width: 25px;
+        margin-left: 12.53px;
     }
     .modal_close {
-        font-size: 10px;
-        right: 20px;
+        font-size: 15px;
+        right: 33px;
     }
 }
 @media (max-width: 360px) {
     .container {
         width: 100%;
-        height: calc(0.382 * 100vw - 3.52px);
-        margin-bottom: calc(3.82212499 * 100vw + 0.035px);
-        margin-top: calc(0.70287499 * 100vw - 0.0349px);
-    }
-    .subscribe_box {
-        margin-right: calc(0.011125 * 100vw - 0.005px);
+        height: calc(0.525 * 100vw);
+        margin-bottom: calc(14.2361249 * 100vw - 0.00499px);
+        margin-top: calc(2.086 * 100vw + 0.04px);
     }
     .input {
-        width: calc(0.5 * 100vw);
-        height: calc(0.06662499 * 100vw + 0.015px);
-        padding-left: calc(0.03025 * 100vw - 0.89px);
-        margin-bottom: calc(0.014 * 100vw - 0.04px);
-        border-radius: calc(0.014 * 100vw - 0.04px);
+        width: calc(0.83337499 * 100vw - 0.01499px);
+        height: calc(0.0805 * 100vw + 0.0199px);
+        padding-left: calc(0.061125 * 100vw - 0.005px);
+        margin-bottom: calc(0.061125 * 100vw + 0.0299px);
+        border-radius: calc(0.01387499 * 100vw + 0.005px);
         border: 1px solid #FDBE01;
+        font-size: calc(0.033375 * 100vw - 0.015px);
     }
     .agree {
-        margin-bottom: calc(0.02362499 * 100vw - 2.5049px);
+        margin-bottom: calc(0.030625 * 100vw - 4.025px);
     }
     .agree_check {
-        width: calc(0.016625 * 100vw + 0.01499px);
+        width: calc(0.033375 * 100vw - 0.015px);
     }
-    .privateImg {
-        width: calc(0.2375 * 100vw + 0.5px);
-        margin-left: calc(0.011125 * 100vw - 0.005px);
-    }
-    .adverImg {
-        width: calc(0.2125 * 100vw - 2.5px);
-        margin-left: calc(0.011125 * 100vw - 0.005px);
+    .agree_text {
+        font-size: calc(0.033375 * 100vw - 0.015px);
+        margin-left: calc(0.0277499 * 100vw + 0.01px);/*반응*/
     }
     .button_box {
-        margin-top: calc(0.029125 * 100vw - 2.485px);
+        margin-top: calc(0.056875 * 100vw - 0.475px); /*반응*/
     }
-    .btn_mobile {
-        width: calc(0.236125 * 100vw - 0.0049px);
-        height: calc(0.058375 * 100vw - 0.015px);
-        border-radius: calc(0.014 * 100vw - 0.04px);
-        margin-right: calc(0.0277499 * 100vw + 0.01px);
+    .btn {
+        width: calc(0.3555 * 100vw + 0.02px); /*반응*/
+        height: calc(0.1055 * 100vw + 0.0199px); /*반응*/
+        border-radius: calc(0.1 * 100vw); /*반응*/
+        border: calc(0.0125 * 100vw - 1.5px) solid #FFCC00; /*반응*/
+        margin-right: calc(0.0277499 * 100vw + 0.01px); /*반응*/
+        font-size: calc(0.041625 * 100vw + 0.01499px); /*반응*/
     }
-    .btn_inner_img {
-        width: calc(0.175 * 100vw + 2px);
-    }
-    .btn_text_img {
-        width: calc(0.2 * 100vw);
-    }
-    .logo_img {
-        width: calc(0.266625 * 100vw + 0.015px);
+    .button_text {
+        font-size: calc(0.033375 * 100vw - 0.015px);
     }
     .BlackModalContainer {
         width: 100%;
     }
     .modalContainer {
-        width: calc(0.82225 * 100vw - 0.0099px);
-        height: calc(0.3027499 * 100vw + 0.01px);
-        border-radius: calc(0.01833 * 100vw - 0.08px);
+        width: calc(0.87775 * 100vw - 2.99px);
+        height: calc(0.3945 * 100vw - 0.02px);
+        border-radius: calc(0.02225 * 100vw - 0.01px);
     }
     .modal_top {
-        padding: calc(0.10625 * 100vw - 27.25px) 0px calc(0.1 * 100vw - 27px) 0px;
+        font-size: calc(0.041625 * 100vw + 0.01499px); /*반응*/
+        padding: calc(0.025 * 100vw + 1px) 0px;
     }
     .modal_bot {
-        border-top: calc(0.007625 * 100vw - 1.745px) solid black;
-        padding-top: calc(0.025 * 100vw - 3px);
+        border-top: 1px solid black;
+        padding-top: calc(0.02487499 * 100vw - 0.01499px);
     }
     .modal_kakao {
-        width: calc(0.0625 * 100vw - 2.5px);
-        margin-left: calc(0.25625 * 100vw + 1.25px);
+        width: calc(0.069499 * 100vw - 0.0199px);
+        margin-left: calc(0.252875 * 100vw - 0.005px);
     }
     .modal_twitter {
-        width: calc(0.0625 * 100vw - 2.5px);
-        margin-left: calc(0.021249 * 100vw + 2.35px);
+        width: calc(0.069499 * 100vw - 0.0199px);
+        margin-left: calc(0.03474999 * 100vw + 0.02px);
     }
     .modal_facebook {
-        width: calc(0.0625 * 100vw - 2.5px);
-        margin-left: calc(0.021249 * 100vw + 2.35px);
+        width: calc(0.069499 * 100vw - 0.0199px);
+        margin-left: calc(0.03474999 * 100vw + 0.02px);
     }
     .modal_linkcopy {
-        width: calc(0.0625 * 100vw - 2.5px);
-        margin-left: calc(0.021249 * 100vw + 2.35px);
+        width: calc(0.069499 * 100vw - 0.0199px);
+        margin-left: calc(0.03474999 * 100vw + 0.02px);
     }
     .modal_close {
-        font-size: 10px;
-        right: calc(0.1055 * 100vw - 17.9799px);
+        font-size: calc(0.041625 * 100vw + 0.01499px); /*반응*/
+        right: calc(0.10137499 * 100vw - 3.49499px);
     }
 }

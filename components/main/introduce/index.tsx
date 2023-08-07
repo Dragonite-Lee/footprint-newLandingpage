@@ -6,9 +6,11 @@ import Image from 'next/image';
 
 interface IntroduecProps {
   top_text: string
-  bot_text: string
+  bot_text_pc: string
+  bot_text_tablet: string
+  bot_text_mobile: string
 }
-function Introduce({top_text, bot_text}: IntroduecProps) {
+function Introduce({top_text, bot_text_pc, bot_text_tablet, bot_text_mobile}: IntroduecProps) {
   
   return (
     <div className={styles.container}>
@@ -18,10 +20,15 @@ function Introduce({top_text, bot_text}: IntroduecProps) {
           <Image src={chevron_right} alt="화살표" className={styles.chevron} />
         </div>
       </Link>
-        <div className={styles.bot_text}>
-          {bot_text}
+        <div className={styles.bot_text_pc}>
+          {bot_text_pc}
         </div>
-      
+        <div className={styles.bot_text_tablet}>
+          {bot_text_tablet}
+        </div>
+        <div className={styles.bot_text_mobile}>
+          {bot_text_mobile}
+        </div>
     </div>
   )
 }

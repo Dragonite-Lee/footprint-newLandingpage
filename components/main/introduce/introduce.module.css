@@ -29,7 +29,8 @@
     height: auto;
     margin-left: 21px; /*반응*/
 }
-.bot_text {
+.bot_text_pc {
+    display: block;
     color: #000;
     font-size: 24px; /*반응*/
     font-family: 'Pretendard-medium';
@@ -37,6 +38,12 @@
     font-weight: 500;
     padding: 20px 0px 0px 462px; /*반응*/
     white-space: pre-line;
+}
+.bot_text_tablet {
+    display: none;
+}
+.bot_text_mobile {
+    display: none;
 }
 
 @media (max-width: 1920px) {
@@ -60,7 +67,7 @@
         width: calc(0.01875 * 100vw); /*반응*/
         margin-left: calc(0.0120595238 * 100vw - 2.15428px); /*반응*/
     }
-    .bot_text {
+    .bot_text_pc {
         font-size: calc(0.0125 * 100vw); /*반응*/
         padding: calc(0.00773809 * 100vw + 5.142857px) calc(0.24063095 * 100vw - 0.011428px); /*반응*/
     }
@@ -69,88 +76,127 @@
 @media (max-width: 1080px) {
     .container {
         width: 768px; /*반응*/
-        height: 132px; /*반응*/
-        margin-top: 661px; /*반응*/
+        height: 294px; /*반응*/
+        margin-top: 711px; /*40더함 반응*/
     }
     .link_box {
-        padding-top: 0px; /*반응*/
-        padding-left: 141px; /*반응*/
+        margin-left: 140px;
+        padding-left: 30px;
+        width: 269px;
+        height: 52px;
+        border: 3px solid #FFCC00;
+        border-radius: 36px;
+        filter: drop-shadow(1px 1px 1px rgba(176, 132, 0, 0.50));
     }
     .top_text {
-        padding-top: 10px;
-        font-size: 21px; /*반응*/
+        font-size: 18px; /*반응*/
     }
     .chevron {
         width: 19px; /*반응*/
-        padding-top: 10px;
-        margin-left: 8px; /*반응*/
+        margin-left: 10px; /*반응*/
     }
-    .bot_text {
-        font-size: 12px; /*반응*/
-        padding: 10px 141px; /*반응*/
+    .bot_text_pc {
+        display: none;
+    }
+    .bot_text_tablet {
+        display: block;
+        color: #000;
+        font-size: 15px; /*반응*/
+        font-family: 'Pretendard-medium';
+        font-style: normal;
+        font-weight: 500;
+        padding: 20px 0px 0px 140px; /*반응*/
+        white-space: pre-line;
     }
 }
 
   @media (max-width: 768px) {
     .container {
         width: 100%; /*반응*/
-        height: calc(0.1718722 * 100vw - 0.010666px); /*반응*/
-        margin-top: calc(0.860667 * 100vw - 18.00799px); /*반응*/
+        height: calc(0.382833 * 100vw - 0.01599px); /*반응*/
+        margin-top: calc(0.92577 * 100vw + 0.00267px); /*40더함 반응*/
     }
     .link_box {
-        padding-left: calc(0.183611 * 100vw - 5.0133px); /*반응*/
+        margin-left: calc(0.182277 * 100vw + 0.01067px);
+        padding-left: calc(0.039055 * 100vw + 0.00533px);
+        width: calc(0.350277 * 100vw - 0.0133px);
+        height: calc(0.067722 * 100vw - 0.01067px);
+        border: calc(0.00388 * 100vw + 0.0133px) solid #FFCC00;
+        border-radius: calc(0.04688 * 100vw - 0.01067px);
     }
     .top_text {
-        font-size: calc(0.027344 * 100vw - 0.000533px); /*반응*/
-        padding-top: calc(0.01122 * 100vw + 1.38133px);
+        font-size: calc(0.02344 * 100vw - 0.00533px); /*반응*/
     }
     .chevron {
-        width: calc(0.024778 * 100vw - 0.02933px); /*반응*/
-        margin-left: calc(0.01161 * 100vw - 0.91733px); /*반응*/
-        padding-top: calc(0.01122 * 100vw + 1.38133px);
+        width: calc(0.024722 * 100vw + 0.0133px); /*반응*/
+        margin-left: calc(0.014055 * 100vw - 0.79467px); /*반응*/
     }
-    .bot_text {
-        font-size: calc(0.015611 * 100vw + 0.01067px); /*반응*/
-        padding: calc(0.01122 * 100vw + 1.38133px) calc(0.187833 * 100vw - 8.256px); /*반응*/
+    .bot_text_tablet {
+        font-size: calc(0.01955 * 100vw - 0.01867px); /*반응*/
+        padding: calc(0.026055 * 100vw - 0.01067px) 0px 0px calc(0.182277 * 100vw + 0.01067px); /*반응*/
     }
 }
 
 @media (max-width: 580px) {
     .container {
         width: 360px; /*반응*/
-        height: 55px; /*반응*/
-        margin-top: 338px; /*반응*/
+        height: 337px; /*반응*/
+        margin-top: 981px; /*반응*/
     }
     .link_box {
-        padding-left: 19px; /*반응*/
+        margin-left: 21px;
+        padding-left: 10px;
+        width: 193px;
+        height: 38px;
+        border: 3px solid #FFCC00;
+        border-radius: 36px;
+        filter: drop-shadow(1px 1px 1px rgba(176, 132, 0, 0.50));
     }
     .top_text {
-        font-size: 12px; /*반응*/
+        font-size: 15px; /*반응*/
     }
     .chevron {
-        width: 14px; /*반응*/
-        margin-left: 8px; /*반응*/
+        width: 13.96px; /*반응*/
+        margin-left: 10px; /*반응*/
     }
-    .bot_text {
+    .bot_text_tablet {
         display: none;
+    }
+    .bot_text_mobile {
+        display: block;
+        color: #000;
+        font-size: 15px; /*반응*/
+        font-family: 'Pretendard-medium';
+        font-style: normal;
+        font-weight: 500;
+        padding: 20px 0px 0px 31px; /*반응*/
+        white-space: pre-line;
     }
  
 }
 @media (max-width: 360px) {
     .container {
-        width: 360px; /*반응*/
-        height: calc(0.15275 * 100vw + 0.00999px);
-        margin-top: calc(0.938875 * 100vw + 0.00499px);
+        width: 100%; /*반응*/
+        height: calc(0.93612499 * 100vw - 0.00499px); /*반응*/
+        margin-top: calc(2.725 * 100vw); /*반응*/
     }
     .link_box {
-        padding-left: calc(0.05275 * 100vw + 0.0099px);
+        margin-left: calc(0.058375 * 100vw - 0.015px);
+        padding-left: calc(0.0277499 * 100vw + 0.01px);
+        width: calc(0.53612499 * 100vw - 0.00499px);
+        height: calc(0.1055 * 100vw + 0.0199px);
+        border: calc(0.00388 * 100vw + 0.0133px) solid #FFCC00;
+        border-radius: calc(0.1 * 100vw);
     }
     .top_text {
-        font-size: calc(0.033375 * 100vw - 0.015px);
+        font-size: calc(0.041625 * 100vw + 0.01499px); /*반응*/
     }
     .chevron {
-        width: calc(0.0387499 * 100vw + 0.05px);
-        margin-left: calc(0.0305 * 100vw - 2.98px);
+        width: calc(0.038875 * 100vw - 0.035px); /*반응*/
+        margin-left: calc(0.03199 * 100vw - 1.5199px); /*반응*/
     }
-
+    .bot_text_mobile {
+        font-size: calc(0.041625 * 100vw + 0.01499px); /*반응*/
+        padding: calc(0.05562499 * 100vw - 0.02499px) 0px 0px calc(0.058375 * 100vw - 0.015px);
+    }
 }
