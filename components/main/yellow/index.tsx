@@ -53,8 +53,6 @@ function Yellow() {
             꿈에 대한 확신을 얻기 위해서 <br/>
             다른 사람에게 질문을 해요.
             </div>
-            
-            
             <div className={styles.first_question}>
                 지금 제 선택이 올바를까요?
             </div>
@@ -66,6 +64,8 @@ function Yellow() {
             </div>
         </div>
         <div className={styles.close_question}>&quot;</div>
+        <Image src={yellow_main_text} alt='yellow_main_text' className={styles.yellow_main_text} />
+        <Image src={yellow_sub_text} alt='yellow_sub_text' className={styles.yellow_sub_text} />
     </div>
   )
 }

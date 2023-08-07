@@ -77,7 +77,7 @@
     .container {
         width: 768px; /*반응*/
         height: 294px; /*반응*/
-        margin-top: 711px; /*40더함 반응*/
+        margin-top: 731px; /*40더함 반응*/
     }
     .link_box {
         margin-left: 140px;
@@ -114,7 +114,7 @@
     .container {
         width: 100%; /*반응*/
         height: calc(0.382833 * 100vw - 0.01599px); /*반응*/
-        margin-top: calc(0.92577 * 100vw + 0.00267px); /*40더함 반응*/
+        margin-top: calc(0.951833 * 100vw - 0.008px); /*40더함 반응*/
     }
     .link_box {
         margin-left: calc(0.182277 * 100vw + 0.01067px);

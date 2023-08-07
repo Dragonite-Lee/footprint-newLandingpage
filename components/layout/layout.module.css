@@ -53,14 +53,14 @@
     font-weight: 500;
     font-style: normal;
     font-size: 21px; /*반응*/
-    color: #424242;
+    color: #000;
 }
 .navbar_ongoing_active {
     font-family: 'Pretendard-medium';
     font-weight: 500;
     font-style: normal;
     font-size: 21px; /*반응*/
-    color: #424242;
+    color: #000;
     margin-left: 100px; /*반응*/
 }
 .footer_web {

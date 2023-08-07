@@ -7,24 +7,25 @@
     transform: translateY(70px);
 }
 .q_text {
-    color: #424242;
-    text-align: justify;
+    text-align: center;
     font-size: 33px; /*반응*/
     font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
     padding-top: 300px; /*반응 40빼야됨*/
-    margin-left: 599px; /*반응*/
+    margin: 0 auto;
+}
+.q_text_small {
+    display: none;
 }
 .a_text {
-    color: #424242;
-    text-align: justify;
+    text-align: center;
     font-size: 42px; /*반응*/
     font-family: 'Pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
     margin-top: 18px;
-    margin-left: 734px; /*반응*/
+    margin: 0 auto;
 }
 @media (max-width: 1920px) {
     .container {
@@ -34,12 +35,10 @@
     .q_text {
         font-size: calc(0.01719 * 100vw - 0.005714px);
         padding-top: calc(0.1770833 * 100vw - 40px); /*반응*/
-        margin-left: calc(0.31197619 * 100vw + 0.005714px);
     }
     .a_text {
         font-size: calc(0.02188 * 100vw - 0.011428px);
         margin-top: calc(0.00788 * 100vw + 2.868px);
-        margin-left: calc(0.3822857 * 100vw + 0.0114285px);
     }
 }
 @media (max-width: 1080px) {
@@ -48,59 +47,63 @@
         height: 432px;
     }
     .q_text {
+        display: none;
+    }
+    .q_text_small {
+        display: block;
+        text-align: center;
+        font-family: 'Pretendard-medium';
         font-size: 15px;
-        padding-top: 172px;
-        margin-left: 220px;
+        font-style: normal;
+        font-weight: 500;
+        margin-top: 127px;/*20더함*/
     }
     .a_text {
-        font-size: 21px;
-        margin-top: 10px;
-        margin-left: 271px;
+        font-size: 27px;
+        margin-top: 80px;
+        margin-left: 0px;
+        text-align: center;
     }
 }
 @media (max-width: 768px) {
     .container {
         width: 100%;
-        height: calc(0.5625 * 100vw); /*반응*/
+        height: calc(0.7375 * 100vw - 0.5px);
     }
-    .q_text {
-        font-size: calc(0.019533 * 100vw - 0.00159px);
-        padding-top: calc(0.223944 * 100vw - 25.01067px); /*반응*/
-        margin-left: calc(0.28644 * 100vw + 0.01067px);
+    .q_text_small {
+        font-size: calc(0.01955 * 100vw - 0.01867px);
+        margin-top: calc(0.1393 * 100vw + 19.99199px);/*20더함*/
     }
     .a_text {
-        font-size: calc(0.027344 * 100vw - 0.000533px);
-        margin-top: calc(0.014056 * 100vw - 0.79467px);
-        margin-left: calc(0.35289 * 100vw - 0.01867px);
+        font-size: calc(0.035166 * 100vw - 0.00799px);
+        margin-top: calc(0.105722 * 100vw - 1.19467px);
     }
 }
 @media (max-width: 588px) {
     .container {
         width: 360px;
-        height: 202px;
+        height: 498px;
     }
-    .q_text {
-        display: none;
+    .q_text_small {
+        font-size: 15px;
+        margin-top: 99px; /*20줄임*/
     }
     .a_text {
-        display: none;
-    }
-    .curious_mobile {
-        display: block;
-        width: 131px;
-        height: auto;
-        padding-top: 90px;
-        margin-left: 96px;
+        font-size: 27px;
+        margin-top: 60px;
     }
 }
 @media (max-width: 360px) {
     .container {
         width: 100%;
-        height: calc(0.56112499 * 100vw - 0.00499px); /*반응*/
+        height: calc(1.383375 * 100vw - 0.015px);
     }
-    .curious_mobile {
-        width: calc(0.3625 * 100vw + 0.5px); /*반응*/
-        padding-top: calc(0.25 * 100vw); /*반응*/
-        margin-left: calc(0.266625 * 100vw + 0.015px); /*반응*/
+    .q_text_small {
+        font-size: calc(0.041625 * 100vw + 0.01499px);
+        margin-top: calc(0.330499 * 100vw - 19.979px); /*20줄임*/
+    }
+    .a_text {
+        font-size: calc(0.075 * 100vw);
+        margin-top: calc(0.1582499 * 100vw + 3.03px);
     }
 }

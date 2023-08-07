@@ -1,17 +1,19 @@
 .container {
     width: 1920px; /*반응*/
     height: 1080px; /*반응*/
+    opacity: 0;
+    transform: translateY(70px);
 }
 .text {
-    color: #424242;
     font-size: 51px;
     font-family: 'Pretendard-extrabold'; /*반응*/
     font-style: normal;
     font-weight: 800;
     text-align: center;
     padding-top: 411px; /*반응 30빼야됨*/
-    opacity: 0;
-    transform: translateY(70px);
+}
+.but_text {
+    display: none;
 }
 @media (max-width: 1920px) {
     .container {
@@ -30,7 +32,7 @@
     }
     .text {
         font-size: 27px; /*반응*/
-        padding-top: 170px; /*반응*/
+        padding-top: 150px; /*반응*/
     }
 }
 @media (max-width: 768px) {
@@ -39,33 +41,31 @@
         height: calc(0.5625 * 100vw); /*반응*/
     }
     .text {
-        font-size: calc(0.035156 * 100vw + 0.000533px); /*반응*/
-        padding-top: calc(0.22133 * 100vw - 0.0159px); /*반응*/
+        font-size: calc(0.035156 * 100vw - 0.00799px); /*반응*/
+        padding-top: calc(0.280388 * 100vw - 65.33867px); /*반응*/
     }
 }
 @media (max-width: 588px) {
     .container {
         width: 360px;
-        height: 202px; /*반응*/
+        height: 282px; /*반응*/
     }
     .text {
         display: none;
     }
-    .but_mobile {
+    .but_text {
         display: block;
-        width: 142px;
+        width: 238px;
         height: auto;
         margin: 0 auto;
-        padding-top: 85px;
     }
 }
 @media (max-width: 360px) {
     .container {
         width: 100%;
-        height: calc(0.56112499 * 100vw - 0.00499px); /*반응*/
+        height: calc(0.9195 * 100vw - 49.019px); /*반응*/
     }
-    .but_mobile {
-        width: calc(0.3875 * 100vw + 2.5px);
-        padding-top: calc(0.236125 * 100vw - 0.00499px);
+    .but_text {
+        width: calc(0.6625 * 100vw - 0.5px);
     }
 }

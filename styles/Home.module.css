@@ -8,6 +8,7 @@
     position: relative;
   }
   .bg_main_pc {
+    display: block;
     position: absolute;
     top: 80px;
     width: 100%;
@@ -40,11 +41,12 @@
       display: none;
     }
     .bg_main_tablet {
+      display: block;
       position: absolute;
       top: 40px;
       width: 100%;
       height: 5686px;
-      z-index: 100;
+      z-index: -100;
     }
   }
 
@@ -67,6 +69,7 @@
       display: none;
     }
     .bg_main_mobile {
+      display: block;
       position: absolute;
       top: 0px;
       width: 100%;

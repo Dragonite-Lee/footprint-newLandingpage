@@ -30,7 +30,7 @@
 /* 1920px 이상 */
 .qna_small_box {
     width: 1200px; /*반응*/
-    margin: 0 auto;
+    margin-left: 362px; /*반응*/ 
     background: #FFFFFF;
     border: 2px solid #FDBE01; /*반응*/
     border-radius: 14px; /*반응*/
@@ -55,7 +55,6 @@
     font-style: normal;
     font-weight: 700;
     font-size: 33px; /*반응*/
-    color: #424242;
 }
 
 .chevron {
@@ -69,7 +68,6 @@
     font-style: normal;
     font-weight: 500;
     font-size: 24px; /*반응*/
-    color: #424242;
 }
 .qna_content_box_tablet {
     display: none;
@@ -107,6 +105,7 @@
     .qna_small_box {
         width: calc(0.625 * 100vw);
         border: 2px solid #FDBE01; /*반응*/
+        margin-left: calc(0.19389 * 100vw - 10.27428px);
         border-radius: calc(0.0072857 * 100vw + 0.011428px);
         margin-bottom: calc(0.016369 * 100vw - 6.4285px);
         padding: 0 calc(0.0047619 * 100vw + 0.85714px);
@@ -139,7 +138,6 @@
         height: 4px;
         margin-top: 58px;
         margin-left: 90px;
-
     }
     .qna_text {
         font-size: 33px;
@@ -154,6 +152,7 @@
     .qna_small_box {
         width: 568px; /*반응*/
         border: 1px solid #FDBE01; /*반응*/
+        margin-left: 90px;
         border-radius: 14px; /*반응*/
         margin-bottom: 20px;
         padding: 0 4px;
@@ -161,14 +160,14 @@
     .qna_title_box {
         width: 100%;
         height: 32px; /*반응*/
-        padding: 8px 4.22px;
+        padding: 8px 0px 8px 10px;
     }
     .qna_index {
         width: 20px; /*반응*/
         margin-right: 10px; /*반응*/
     }
     .qna_title {
-        font-size: 18px; /*반응*/
+        font-size: 16px; /*반응*/
     }
     .chevron {
         width: 11.3px; /*반응*/
@@ -179,13 +178,13 @@
     }
     .qna_content_box_tablet {
         display: block;
-        padding: 8px 0px;
+        padding: 8px 0px 8px 10px;
         border-top: 1px solid #FDBE01; /*반응*/
         font-size: 15px; /*반응*/
         font-family: 'Pretendard-medium';
         font-style: normal;
         font-weight: 500;
-        color: #424242;
+
     }
 }
 @media (max-width: 768px) {
@@ -213,6 +212,7 @@
     }
     .qna_small_box {
         width: calc(0.7389 * 100vw + 0.533px);
+        margin-left: calc(0.11667 * 100vw + 0.4px);
         border: calc(0.001278 * 100vw + 0.01867px) solid #FDBE01; /*반응*/
         border-radius: calc(0.01833 * 100vw - 0.08px);
         margin-bottom: calc(0.026056 * 100vw - 0.01067px);
@@ -221,21 +221,21 @@
     .qna_title_box {
         width: 100%;
         height: calc(0.044 * 100vw - 2.133px);
-        padding: calc(0.01044 * 100vw - 0.02133px) calc(0.01088 * 100vw - 4.14267px);
+        padding: calc(0.01044 * 100vw - 0.02133px) 0px calc(0.01044 * 100vw - 0.02133px) calc(0.00877 * 100vw + 3.2586px);
     }
     .qna_index {
         width: calc(0.02611 * 100vw - 0.0533px);
         margin-right: calc(0.01305 * 100vw - 0.0267px);
     }
     .qna_title {
-        font-size: calc(0.023467 * 100vw - 0.0224px);
+        font-size: calc(0.020833 * 100vw);
     }
     .chevron {
         width: calc(0.01483 * 100vw - 0.0919px);
         padding-bottom: 3px;
     }
     .qna_content_box_tablet {
-        padding: calc(0.01044 * 100vw - 0.02px) 0px;
+        padding: calc(0.01044 * 100vw - 0.02px) 0px calc(0.01044 * 100vw - 0.02px) calc(0.00877 * 100vw + 3.2586px);
         border-top: calc(0.001278 * 100vw + 0.01867px) solid #FDBE01; /*반응*/
         font-size: calc(0.01955 * 100vw - 0.01867px); /*반응*/
     }
@@ -244,44 +244,39 @@
     .container {
         width: 360px;
         height: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 95px;
     }
     .qna_bar {
         width: 8px;
         height: 2px;
-        margin-top: 20px;
-        margin-left: 22px;
-    }
-    .qna_text {
-        font-size: 15px;
+        margin-top: 0px;
         margin-left: 20px;
     }
-    .qna_text_small {
-        font-size: 14px;
+    .qna_text {
+        font-size: 18px;
+        margin-left: 20px;
     }
     .qna_box {
-        margin-top: 10px;
+        margin-top: 7px;
     }
     .qna_small_box {
-        width: 306px; /*반응*/
+        width: 320px; /*반응*/
+        margin-left: 20px;
         border: 1px solid #FDBE01; /*반응*/
-        border-radius: 8px; /*반응*/
-        margin-bottom: 20px;
+        border-radius: 5px; /*반응*/
+        margin-bottom: 15px;
         padding: 4px 5px;
     }
     .qna_title_box {
         width: 100%;
         height: 22px; /*반응*/
-        padding: 8px 0px;
-    }
-    .qna_index {
-        display: none;
+        padding: 0px 0px 0px 5px;
     }
     .qna_title {
-        font-size: 12.5px; /*반응*/
+        font-size: 13px; /*반응*/
     }
     .chevron {
-        width: 7px; /*반응*/
+        width: 10px; /*반응*/
         padding-bottom: 4px;
     }
     .qna_content_box_pc {
@@ -292,69 +287,54 @@
     }
     .qna_content_box_mobile {
         display: block;
-        padding: 8px 0px;
+        padding: 8px 0px 8px 5px;
         border-top: 1px solid #FDBE01; /*반응*/
         font-size: 13px; /*반응*/
         font-family: 'Pretendard-medium';
         font-style: normal;
         font-weight: 500;
-        color: #424242;
     }
 }
 @media (max-width: 360px) {
     .container {
         width: 100%;
         height: 100%;
-        margin-bottom: calc(0.125 * 100 - 5px);
+        margin-bottom: 95px;
     }
     .qna_bar {
-        width: calc(0.125 * 100 - 1px);
-        height: calc(0.00625 * 100 - 0.25px);
-        margin-top: calc(0.00625 * 100 - 0.25px);
-        margin-left: calc(0.061125 * 100 - 0.005px);
+        width: 8px;
+        height: 2px;
+        margin-top: 0px;
+        margin-left: 20px;
     }
     .qna_text {
-        font-size: calc(0.025 * 100 + 6px);
-        margin-left: calc(0.061125 * 100 - 0.005px);
-    }
-    .qna_text_small {
-        font-size: calc(0.025 * 100 + 5px);
+        font-size: 18px;
+        margin-left: 20px;
     }
     .qna_box {
-        margin-top: calc(0.023625 * 100vw + 1.4949px);
+        margin-top: 7px;
     }
     .qna_small_box {
-        width: calc(0.8375 * 100vw + 5.5px);
-        border: calc(0.001278 * 100vw + 0.01867px) solid #FDBE01; /*반응*/
-        border-radius: calc(0.08525 * 100vw - 22.69px); /*반응*/
-        margin-bottom: calc(0.055499 * 100vw + 0.02px);
-        padding: calc(0.011125 * 100vw - 0.005px) calc(0.028749 * 100vw - 7.3499px);
+        width: 320px; /*반응*/
+        margin-left: 20px;
+        border-radius: 5px; /*반응*/
+        margin-bottom: 15px;
+        padding: 4px 5px;
     }
     .qna_title_box {
         width: 100%;
-        height: calc(0.0625 * 100vw - 0.5px);
-        padding: calc(0.02225 * 100vw - 0.01px) 0px;
-    }
-    .qna_index {
-        display: none;
+        height: 22px; /*반응*/
+        padding: 0px 0px 0px 5px;
     }
     .qna_title {
-        font-size: calc(0.03125 * 100vw + 1.25px)
+        font-size: 13px; /*반응*/
     }
     .chevron {
-        width: calc(0.025 * 100vw - 3px);
-        padding-bottom: 5px;
-    }
-    .qna_content_box_pc {
-        display: none;
-    }
-    .qna_content_box_tablet {
-        display: none;
+        width: 10px; /*반응*/
+        padding-bottom: 4px;
     }
     .qna_content_box_mobile {
-        display: block;
-        padding: calc(0.02225 * 100vw - 0.01px) 0px;
-        border-top: calc(0.001278 * 100vw + 0.01867px) solid #FDBE01; /*반응*/
-        font-size: calc(0.036112499 * 100vw - 0.000499px); /*반응*/
+        padding: 8px 0px 8px 5px;
+        font-size: 13px; /*반응*/
     }
 }

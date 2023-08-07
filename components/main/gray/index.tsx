@@ -1,8 +1,10 @@
 'use client'
 
 import styles from './gray.module.css'
+import gray_text from '../../../public/main/gray_text.png'
 
 import { useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 function Gray() {
   
@@ -52,6 +54,7 @@ function Gray() {
           질문의 방향이 다른 사람이 아닌 <br/>
           자신에게 향해야 하는 것, 아닐까요?
           </div>
+          <Image src={gray_text} alt='gray_text' className={styles.gray_text} />
         </div>
     </div>
   )

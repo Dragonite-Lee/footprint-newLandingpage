@@ -143,7 +143,8 @@ function Qna() {
                           </div>
                           <div className={styles.qna_content_box_tablet}>
                           뉴스레터는 스팸메일함, 혹은 프로모션함으로 자동 분류될 수도 있습니다. <br />
-                          스팸메일함에서 footprint story를 찾았다면 <span className={styles.bold}>해당 메일 주소(contact@footprintstory.kr)를 </span><br />
+                          스팸메일함에서 footprint story를 찾았다면 <br />
+                          <span className={styles.bold}>해당 메일 주소(contact@footprintstory.kr)를 </span>
                           <span className={styles.bold}>주소록에 친구 추가해주세요.</span>
                           </div>
                           <div className={styles.qna_content_box_mobile}>
