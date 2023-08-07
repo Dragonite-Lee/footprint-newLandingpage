@@ -26,11 +26,10 @@ function Header() {
       menu_black.current.style.zIndex = '7';
       menu_white.current.style.transform = 'translateX(0%)';
       menu_white.current.style.transition = 'transform 1s ease';
-      // menu_wrap.current.style.zIndex = '6'; 
     };
     setTimeout(() => {
       setMenuCurrent(true);
-    }, 500);
+    }, 300);
   }
 
   const closeModal = () => {
@@ -47,7 +46,7 @@ function Header() {
         menu_wrap.current.style.zIndex = '8';
       }
       setMenuCurrent(false);
-    }, 500);
+    }, 300);
   }
 
   const closeBlackModal = (e: React.MouseEvent<HTMLElement>) => {
@@ -65,7 +64,7 @@ function Header() {
           menu_wrap.current.style.zIndex = '8';
         }
         setMenuCurrent(false);
-      }, 500);
+      }, 300);
     }
   }
   
