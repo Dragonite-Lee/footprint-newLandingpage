@@ -141,7 +141,7 @@
     .container {
         width: 360px; /*반응*/
         height: 337px; /*반응*/
-        margin-top: 981px; /*반응*/
+        margin-top: 998px; /*반응*/
     }
     .link_box {
         margin-left: 21px;
@@ -178,7 +178,7 @@
     .container {
         width: 100%; /*반응*/
         height: calc(0.93612499 * 100vw - 0.00499px); /*반응*/
-        margin-top: calc(2.725 * 100vw); /*반응*/
+        margin-top: calc(2.772125 * 100vw + 0.0349px); /*반응*/
     }
     .link_box {
         margin-left: calc(0.058375 * 100vw - 0.015px);

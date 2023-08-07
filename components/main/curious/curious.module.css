@@ -86,7 +86,7 @@
     }
     .q_text_small {
         font-size: 15px;
-        margin-top: 99px; /*20줄임*/
+        margin-top: 139px; /*20줄임*/
     }
     .a_text {
         font-size: 27px;
@@ -100,7 +100,7 @@
     }
     .q_text_small {
         font-size: calc(0.041625 * 100vw + 0.01499px);
-        margin-top: calc(0.330499 * 100vw - 19.979px); /*20줄임*/
+        margin-top: calc(0.330499 * 100vw + 24.979px); /*20줄임*/
     }
     .a_text {
         font-size: calc(0.075 * 100vw);

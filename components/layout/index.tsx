@@ -15,7 +15,7 @@ function Layout({ children }: AppLayoutProps) {
 
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <main className={styles.main}>{children}</main>
       <Footer />
     </div>

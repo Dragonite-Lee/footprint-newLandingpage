@@ -49,6 +49,7 @@
     .container {
         width: 360px;
         height: 282px; /*반응*/
+        margin-top: 205.1px;
     }
     .text {
         display: none;
@@ -64,6 +65,7 @@
     .container {
         width: 100%;
         height: calc(0.9195 * 100vw - 49.019px); /*반응*/
+        margin-top: calc(0.5447499 * 100vw + 9.0099px);
     }
     .but_text {
         width: calc(0.6625 * 100vw - 0.5px);

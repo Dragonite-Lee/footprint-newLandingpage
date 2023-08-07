@@ -16,19 +16,17 @@ function Header() {
   let url: string = usePathname();
   const menu_black = useRef<HTMLDivElement>(null);
   const menu_white = useRef<HTMLDivElement>(null);
-  const menu_mobile = useRef<HTMLDivElement>(null);
   const menu_wrap = useRef<HTMLDivElement>(null);
   const [menuCurrent, setMenuCurrent] = useState<boolean>(false);
 
   const openModal = () => {
-    if(menu_black.current && menu_white.current && menu_wrap.current && menu_mobile.current) {
+    if(menu_black.current && menu_white.current && menu_wrap.current) {
       menu_black.current.style.background = 'rgba(0,0,0,0.3)';
       menu_black.current.style.transition = 'background 1s ease';
-      menu_black.current.style.zIndex = '5';
-      menu_white.current.style.zIndex = '5';
+      menu_black.current.style.zIndex = '7';
       menu_white.current.style.transform = 'translateX(0%)';
       menu_white.current.style.transition = 'transform 1s ease';
-      menu_wrap.current.style.zIndex = '7'; 
+      // menu_wrap.current.style.zIndex = '6'; 
     };
     setTimeout(() => {
       setMenuCurrent(true);
@@ -36,32 +34,36 @@ function Header() {
   }
 
   const closeModal = () => {
-    if(menu_black.current && menu_white.current && menu_mobile.current && menu_wrap.current) {
+    if(menu_black.current && menu_white.current && menu_wrap.current) {
       menu_black.current.style.background = 'rgba(0,0,0,0)';
       menu_black.current.style.transition = 'background 1s ease';
-      menu_black.current.style.zIndex = '-5'; 
-      menu_white.current.style.zIndex = '2';
+      menu_white.current.style.zIndex = '7';
       menu_white.current.style.transform = 'translateX(200%)';
       menu_white.current.style.transition = 'transform 1s ease';
-      menu_wrap.current.style.zIndex = '7';
     };
     setTimeout(() => {
+      if(menu_black.current && menu_wrap.current) {
+        menu_black.current.style.zIndex = '4'; 
+        menu_wrap.current.style.zIndex = '8';
+      }
       setMenuCurrent(false);
     }, 500);
   }
 
   const closeBlackModal = (e: React.MouseEvent<HTMLElement>) => {
     if (e.target === menu_black.current) {
-      if(menu_black.current && menu_white.current && menu_mobile.current && menu_wrap.current) {
+      if(menu_black.current && menu_white.current && menu_wrap.current) {
         menu_black.current.style.background = 'rgba(0,0,0,0)';
         menu_black.current.style.transition = 'background 1s ease';
-        menu_black.current.style.zIndex = '-5';
-        menu_white.current.style.zIndex = '2';
+        menu_white.current.style.zIndex = '8';
         menu_white.current.style.transform = 'translateX(200%)';
         menu_white.current.style.transition = 'transform 1s ease';
-        menu_wrap.current.style.zIndex = '7';
       }
       setTimeout(() => {
+        if(menu_black.current && menu_wrap.current) {
+          menu_black.current.style.zIndex = '4'; 
+          menu_wrap.current.style.zIndex = '8';
+        }
         setMenuCurrent(false);
       }, 500);
     }
@@ -94,7 +96,7 @@ function Header() {
           </Link>
         </div>
       </header>
-      <header className={styles.navbar_mobile} ref={menu_mobile}>
+      <header>
         <div className={styles.menu_black_tab} ref={menu_black} onClick={(e) => closeBlackModal(e)}>
           <div className={styles.menu_white_tab} ref={menu_white}>
             <Link href="/">

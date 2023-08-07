@@ -1,6 +1,6 @@
 .main {
     position: relative;
-    z-index: 3;
+    z-index: 5;
 }
 /* 웹 1920px 이상 */
 .navbar {
@@ -415,24 +415,18 @@
         height: auto;
     }
     /*header_mobile*/
-    .navbar_mobile {
-        display: block;
-        width: 360px;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        overflow: hidden;
-        z-index: 5;
-    }
+
     .menu_black_tab {
         width: 360px;
         margin: 0 auto;
         height: calc(var(--vh, 1vh) * 100);
         background: rgba(0,0,0,0);
         position: fixed;
-        z-index: -2;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+        z-index: -4;
     }
     .menu_white_tab {
         transform: translateX(200%);
@@ -440,7 +434,7 @@
         height: calc(var(--vh, 1vh) * 100);
         background-color: #fff;
         position: absolute;
-        z-index: -2;
+        z-index: 4;
         top: 0;
         right: 0;
         display: flex;
@@ -459,12 +453,13 @@
         padding-left: 25px;
     }
     .header_wrap {
-        width: 100%;
+        width: 360px;
+        height: 56px;
         position: fixed;
         top: 0;
-        z-index: 5;
-        transform: translate3d(0,0,0);
-        -webkit-transform: translateZ(0);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 8;
     }
     .h_menu {
         width: 32px;
