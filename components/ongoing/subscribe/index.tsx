@@ -170,7 +170,7 @@ function Subscribe() {
               </div>
               <div className={styles.modal_bot}>
                 <div>
-                <Image src={modal_kakao} alt='modal_kakao' className={styles.modal_kakao} onClick={handleKakaoButton}/>
+                  <Image src={modal_kakao} alt='modal_kakao' className={styles.modal_kakao} onClick={handleKakaoButton}/>
                 </div>
                 <TwitterShareButton url={url} className={styles.modal_twitter_btn}>
                   <Image src={modal_twitter} alt='modal_twitter' className={styles.modal_twitter} />

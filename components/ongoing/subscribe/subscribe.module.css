@@ -445,7 +445,7 @@
         border-radius: 36px; /*반응*/
         border: 3px solid #FFCC00; /*반응*/
         margin-right: 10px; /*반응*/
-        font-size: 14px; /*반응*/
+        font-size: 13.5px; /*반응*/
         filter: drop-shadow(1px 1px 1px rgba(176, 132, 0, 0.50));
     }
     .button_text {
@@ -505,7 +505,7 @@
         margin-bottom: calc(0.061125 * 100vw + 0.0299px);
         border-radius: calc(0.01387499 * 100vw + 0.005px);
         border: 1px solid #FDBE01;
-        font-size: calc(0.033375 * 100vw - 0.015px);
+        font-size: calc(0.0375 * 100vw);
     }
     .agree {
         margin-bottom: calc(0.030625 * 100vw - 4.025px);
