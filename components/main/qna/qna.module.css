@@ -44,6 +44,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 8px 20px;
+    cursor: pointer;
 }
 .qna_box_left {
     display: flex;

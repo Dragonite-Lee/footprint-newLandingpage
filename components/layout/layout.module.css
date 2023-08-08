@@ -1,7 +1,3 @@
-.main {
-    position: relative;
-    z-index: 5;
-}
 /* 웹 1920px 이상 */
 .navbar {
     background-color: white;
@@ -17,7 +13,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 4;
+    z-index: 8;
     overflow: hidden;
 }
 .navbar_left {
@@ -32,6 +28,7 @@
     display: block;
     width: 131px; /*반응*/
     height: auto;
+    cursor: pointer;
 }
 .navbar_intro {
     font-family: 'Pretendard-medium';
@@ -39,6 +36,12 @@
     font-style: normal;
     font-size: 21px; /*반응*/
     color: #757575;
+    cursor: pointer;
+}
+.navbar_intro:hover {
+    font-family: 'pretendard-bold';
+    font-style: normal;
+    font-weight: 700;
 }
 .navbar_ongoing {
     font-family: 'Pretendard-medium';
@@ -47,6 +50,12 @@
     font-size: 21px; /*반응*/
     color: #757575;
     margin-left: 110px; /*반응*/
+    cursor: pointer;
+}
+.navbar_ongoing:hover {
+    font-family: 'pretendard-bold';
+    font-style: normal;
+    font-weight: 700;
 }
 .navbar_intro_active {
     font-family: 'Pretendard-medium';
@@ -104,11 +113,13 @@
     display: block;
     width: 115px; /*반응*/
     height: auto;
+    cursor: pointer;
 }
 .facebook {
     display: block;
     width: 102px; /*반응*/
     height: auto;
+    cursor: pointer;
 }
 .footer_right_bussiness_img {
     width: 111px; /*반응*/
@@ -167,6 +178,12 @@
     }
     .footer_right_bussiness_img {
         width: calc(0.05714285 * 100vw + 1.2857px);
+    }
+    .menu_black_tab {
+        display: none;
+    }
+    .header_wrap {
+        display: none;
     }
 }
 
@@ -331,6 +348,10 @@
 
 /* 모바일 버젼 */
 @media (max-width: 588px) {
+    .main {
+        position: relative;
+        z-index: 5;
+    }
     .navbar {
         display: none;
     }
@@ -360,14 +381,17 @@
     }
     .main_home {
         padding-right: 10px;
+        cursor: pointer;
     }
     .main_intro {
         padding: 0px 10px;
         border-left: 1px solid #888989;
         border-right: 1px solid #888989;
+        cursor: pointer;
     }
     .main_ongoing {
         padding-left: 10px;
+        cursor: pointer;
     }
     .main_home:hover, .main_intro:hover, .main_ongoing:hover {
         color: black;
@@ -408,15 +432,18 @@
         width: 64px;
         height: auto;
         margin-bottom: 8px;
+        cursor: pointer;
     }
     .mobile_facebook {
         display: block;
         width: 55px;
         height: auto;
+        cursor: pointer;
     }
     /*header_mobile*/
 
     .menu_black_tab {
+        display: block;
         width: 360px;
         margin: 0 auto;
         height: calc(var(--vh, 1vh) * 100);
@@ -453,6 +480,7 @@
         padding-left: 25px;
     }
     .header_wrap {
+        display: block;
         width: 360px;
         height: 56px;
         position: fixed;

@@ -38,6 +38,7 @@
 .agree_check {
     width: 30px;/*반응*/
     height: auto;
+    cursor: pointer;
 }
 .agree_text {
     font-size: 33px;/*반응*/
@@ -66,6 +67,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    cursor: pointer;
 }
 .button_text {
     color: #757575;
@@ -147,6 +149,7 @@
     top: 50%; 
     right: 20px;
     transform: translate(0, -50%);
+    cursor: pointer;
 }
 
 
