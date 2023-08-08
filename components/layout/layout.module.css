@@ -367,6 +367,8 @@
         width: 360px; /*반응*/
         height: 146px; /*반응*/
         margin: 0 auto;
+        position: relative;
+        z-index: 6;
     }
     .footer_main_content {
         color: #888989;
@@ -408,6 +410,7 @@
     .footer_back {
         width: 10px;
         height: auto;
+        cursor: pointer;
     }
     .sub_title {
         color: #000;

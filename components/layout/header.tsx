@@ -105,7 +105,7 @@ function Header() {
             </Link>
             <Link href="/Intro">
               <div className={styles.menu_title} onClick={closeModal}>
-                <span className='font_bold'>footprint</span> 소개
+                <span className='font_bold'>브랜드</span> 소개
               </div>
             </Link>
             <Link href="/Ongoing">

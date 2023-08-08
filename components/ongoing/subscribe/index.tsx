@@ -124,21 +124,21 @@ function Subscribe() {
     <div className={styles.container}>
       <div className={styles.subscribe_box}>
         <input type="email" placeholder="이메일 주소" className={styles.input} value={email} onChange={emailHandler} />
-        <div className={styles.agree} >
+        <div className={styles.agree} onClick={() => agreePrivateHandler()} >
             {
                 agreePrivate 
-                ? <Image src={agree_yes} alt='agree' className={styles.agree_check} onClick={() => agreePrivateHandler()} />
-                : <Image src={agree_no} alt='agree' className={styles.agree_check} onClick={() => agreePrivateHandler()} />
+                ? <Image src={agree_yes} alt='agree' className={styles.agree_check} />
+                : <Image src={agree_no} alt='agree' className={styles.agree_check} />
             }
             <div className={styles.agree_text}>
                 <span className='font_extrabold'>개인정보 수집</span> 및 <span className='font_extrabold'>이용</span>에 동의합니다.
             </div>
         </div>
-        <div className={styles.agree} >
+        <div className={styles.agree} onClick={() => agreeAdverHandler()}>
             {
                 agreeAdver 
-                ? <Image src={agree_yes} alt='agree' className={styles.agree_check} onClick={() => agreeAdverHandler()} />
-                : <Image src={agree_no} alt='agree' className={styles.agree_check} onClick={() => agreeAdverHandler()} />
+                ? <Image src={agree_yes} alt='agree' className={styles.agree_check} />
+                : <Image src={agree_no} alt='agree' className={styles.agree_check} />
             }
             <div className={styles.agree_text}>
                 <span className='font_extrabold'>광고성 정보 수신</span>에 동의합니다.
@@ -149,8 +149,8 @@ function Subscribe() {
                 뉴스레터 구독하기
             </button>
             <div className={styles.button_text}>
-                2달간의 스토리 제공 9800원<br/>
-                / 프롤로그 무료 이용 가능
+                프롤로그 메일 무료 이용,<br/>
+                두 달간 전달되는 스토리 9,800원
             </div>
         </div>
       </div>

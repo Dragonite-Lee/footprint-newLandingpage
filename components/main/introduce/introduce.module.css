@@ -5,13 +5,13 @@
     position: relative;
     z-index: 3;
 }
-.link_box {
+.link_box { 
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-left: 446px; /*반응*/
     padding-left: 30px;
-    width: 446px;
+    width: 311px;
     height: 78px;
     border: 3px solid #FFCC00;
     background-color: #FFCC00;
@@ -28,7 +28,7 @@
 .chevron {
     width: 36px; /*반응*/
     height: auto;
-    margin-left: 21px; /*반응*/
+    margin-left: 16px; /*반응*/
 }
 .bot_text_pc {
     display: block;
@@ -56,7 +56,7 @@
     .link_box {
         margin-left: calc(0.2215714285 * 100vw + 20.5825px);
         padding-left: calc(0.015619 * 100vw + 0.011429px);
-        width: calc(0.2322857142 * 100vw + 0.011428px);
+        width: calc(0.16197619 * 100vw + 0.005714px);
         height: calc(0.040619 * 100vw + 0.011428px);
         border: calc(0.0015476 * 100vw + 0.02857px) solid #FFCC00;
         border-radius: calc(0.0390476 * 100vw + 0.02857px);
@@ -66,7 +66,7 @@
     }
     .chevron {
         width: calc(0.01875 * 100vw); /*반응*/
-        margin-left: calc(0.0120595238 * 100vw - 2.15428px); /*반응*/
+        margin-left: calc(0.00833 * 100vw); /*반응*/
     }
     .bot_text_pc {
         font-size: calc(0.0125 * 100vw); /*반응*/
@@ -82,8 +82,8 @@
     }
     .link_box {
         margin-left: 140px;
-        padding-left: 30px;
-        width: 269px;
+        padding-left: 13px;
+        width: 173px;
         height: 52px;
         border: 3px solid #FFCC00;
         border-radius: 36px;
@@ -94,7 +94,7 @@
     }
     .chevron {
         width: 19px; /*반응*/
-        margin-left: 10px; /*반응*/
+        margin-left: 14px; /*반응*/
     }
     .bot_text_pc {
         display: none;
@@ -119,8 +119,8 @@
     }
     .link_box {
         margin-left: calc(0.182277 * 100vw + 0.01067px);
-        padding-left: calc(0.039055 * 100vw + 0.00533px);
-        width: calc(0.350277 * 100vw - 0.0133px);
+        padding-left: calc(0.016944 * 100vw - 0.0133px);
+        width: calc(0.225277 * 100vw - 0.0133px);
         height: calc(0.067722 * 100vw - 0.01067px);
         border: calc(0.00388 * 100vw + 0.0133px) solid #FFCC00;
         border-radius: calc(0.04688 * 100vw - 0.01067px);
@@ -130,7 +130,7 @@
     }
     .chevron {
         width: calc(0.024722 * 100vw + 0.0133px); /*반응*/
-        margin-left: calc(0.014055 * 100vw - 0.79467px); /*반응*/
+        margin-left: calc(0.01666 * 100vw + 1.199px); /*반응*/
     }
     .bot_text_tablet {
         font-size: calc(0.01955 * 100vw - 0.01867px); /*반응*/
@@ -146,8 +146,8 @@
     }
     .link_box {
         margin-left: 21px;
-        padding-left: 10px;
-        width: 193px;
+        padding-left: 17px;
+        width: 149px;
         height: 38px;
         border: 3px solid #FFCC00;
         border-radius: 36px;
@@ -158,7 +158,7 @@
     }
     .chevron {
         width: 13.96px; /*반응*/
-        margin-left: 10px; /*반응*/
+        margin-left: 17px; /*반응*/
     }
     .bot_text_tablet {
         display: none;
@@ -183,8 +183,8 @@
     }
     .link_box {
         margin-left: calc(0.058375 * 100vw - 0.015px);
-        padding-left: calc(0.0277499 * 100vw + 0.01px);
-        width: calc(0.53612499 * 100vw - 0.00499px);
+        padding-left: calc(0.0472499 * 100vw - 0.0099px);
+        width: calc(0.413875 * 100vw + 0.00499px);
         height: calc(0.1055 * 100vw + 0.0199px);
         border: calc(0.00388 * 100vw + 0.0133px) solid #FFCC00;
         border-radius: calc(0.1 * 100vw);
@@ -194,7 +194,7 @@
     }
     .chevron {
         width: calc(0.038875 * 100vw - 0.035px); /*반응*/
-        margin-left: calc(0.03199 * 100vw - 1.5199px); /*반응*/
+        margin-left: calc(0.048625 * 100vw - 0.505px); /*반응*/
     }
     .bot_text_mobile {
         font-size: calc(0.041625 * 100vw + 0.01499px); /*반응*/

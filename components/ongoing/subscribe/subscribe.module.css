@@ -61,7 +61,7 @@
     border: 3px solid #FFCC00; /*반응*/
     background-color: #FFCC00;
     margin-right: 40px; /*반응*/
-    color: #FFF;
+    color: #000;
     font-size: 33px; /*반응*/
     font-family: 'Pretendard-bold';
     font-style: normal;
@@ -90,6 +90,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
+    overflow: hidden;
 }
 .modalContainer {
     width: 608px;
@@ -123,21 +124,25 @@
     width: 60px;
     height: auto;
     margin-left: 161px;
+    cursor: pointer;
 }
 .modal_twitter {
     width: 60px;
     height: auto;
     margin-left: 15px;
+    cursor: pointer;
 }
 .modal_facebook {
     width: 60px;
     height: auto;
     margin-left: 15px;
+    cursor: pointer;
 }
 .modal_linkcopy {
     width: 60px;
     height: auto;
     margin-left: 15px;
+    cursor: pointer;
 }
 .modal_close {
     font-size: 24px;
