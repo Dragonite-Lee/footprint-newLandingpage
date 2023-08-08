@@ -469,9 +469,7 @@
         right: 0;
         display: flex;
         flex-direction: column;
-    }
-    .top_index {
-        margin-top: 77px;
+        padding-top: 75px;
     }
     .menu_title {
         color: #000;
@@ -479,7 +477,7 @@
         font-size: 15px;
         font-style: normal;
         font-weight: 500;
-        margin-bottom: 4px;
+        margin-bottom: 31px;
         padding-left: 25px;
     }
     .header_wrap {
@@ -502,7 +500,7 @@
         z-index: 10;
     }
     .c_menu {
-        width: 32px;
+        width: 35px;
         height: auto;
         position: absolute;
         top: 24px;
@@ -565,6 +563,7 @@
     }
     .menu_white_tab {
         width: calc(0.47775 * 100vw + 0.0099px);
+        padding-top: calc(0.208375 * 100vw - 0.015px);
     }
     .menu_home {
         width: calc(0.225 * 100vw - 1px);
@@ -580,14 +579,15 @@
         margin-top: 17px;/*수정필요*/
         padding-left: calc(0.069499 * 100vw - 0.019px);
     }
+    .menu_title {
+        margin-bottom: calc(0.08325 * 100vw + 1.0299px);
+        font-size: calc(0.041625 * 100vw + 0.01499px);
+        padding-left: calc(0.069499 * 100vw - 0.0199px);
+    }
     .h_menu {
-        width: calc(0.036125 * 100vw - 0.005px);
-        top: calc(0.0167499 * 100vw - 0.0299px);
-        right: calc(0.044375 * 100vw + 0.02499px);
+        width: calc(0.088875 * 100vw + 0.005px);
     }
     .c_menu {
-        width: calc(0.036125 * 100vw - 0.005px);
-        top: calc(0.0167499 * 100vw - 0.0299px);
-        right: calc(0.044375 * 100vw + 0.02499px);
+        width: calc(0.09725 * 100vw - 0.01px);
     }
 }

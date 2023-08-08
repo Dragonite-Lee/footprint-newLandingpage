@@ -99,7 +99,7 @@ function Header() {
         <div className={styles.menu_black_tab} ref={menu_black} onClick={(e) => closeBlackModal(e)}>
           <div className={styles.menu_white_tab} ref={menu_white}>
             <Link href="/">
-              <div className={`${styles.menu_title} ${styles.top_index}`} onClick={closeModal}>
+              <div className={styles.menu_title} onClick={closeModal}>
                 <span className='font_bold'>footprint</span>
               </div>
             </Link>
