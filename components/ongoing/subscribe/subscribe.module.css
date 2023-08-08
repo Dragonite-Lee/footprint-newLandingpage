@@ -440,12 +440,12 @@
         margin-top: 20px; /*반응*/
     }
     .btn {
-        width: 128px; /*반응*/
+        width: 138px; /*반응*/
         height: 38px; /*반응*/
         border-radius: 36px; /*반응*/
         border: 3px solid #FFCC00; /*반응*/
-        margin-right: 10px; /*반응*/
-        font-size: 13.5px; /*반응*/
+        margin-right: 7px; /*반응*/
+        font-size: 14px; /*반응*/
         filter: drop-shadow(1px 1px 1px rgba(176, 132, 0, 0.50));
     }
     .button_text {
@@ -499,13 +499,13 @@
         margin-top: calc(2.086 * 100vw + 0.04px);
     }
     .input {
-        width: calc(0.83337499 * 100vw - 0.01499px);
+        width: calc(0.383375 * 100vw - 0.015px);
         height: calc(0.0805 * 100vw + 0.0199px);
         padding-left: calc(0.061125 * 100vw - 0.005px);
         margin-bottom: calc(0.061125 * 100vw + 0.0299px);
         border-radius: calc(0.01387499 * 100vw + 0.005px);
         border: 1px solid #FDBE01;
-        font-size: calc(0.0375 * 100vw);
+        font-size: calc(0.03887499 * 100vw + 0.05px);
     }
     .agree {
         margin-bottom: calc(0.030625 * 100vw - 4.025px);
