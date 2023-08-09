@@ -63,6 +63,7 @@
     height: auto;
 }
 .qna_content_box_pc {
+    display: none;
     padding: 15px 0px 15px 31px;
     border-top: 3px solid #FDBE01; /*반응*/
     font-family: 'Pretendard-medium';
@@ -161,7 +162,7 @@
     .qna_title_box {
         width: 100%;
         height: 32px; /*반응*/
-        padding: 8px 0px 8px 10px;
+        padding: 8px 10px;
     }
     .qna_index {
         width: 20px; /*반응*/
@@ -178,14 +179,13 @@
         display: none;
     }
     .qna_content_box_tablet {
-        display: block;
+        display: none;
         padding: 8px 0px 8px 10px;
         border-top: 1px solid #FDBE01; /*반응*/
         font-size: 15px; /*반응*/
         font-family: 'Pretendard-medium';
         font-style: normal;
         font-weight: 500;
-
     }
 }
 @media (max-width: 768px) {
@@ -222,7 +222,7 @@
     .qna_title_box {
         width: 100%;
         height: calc(0.044 * 100vw - 2.133px);
-        padding: calc(0.01044 * 100vw - 0.02133px) 0px calc(0.01044 * 100vw - 0.02133px) calc(0.00877 * 100vw + 3.2586px);
+        padding: calc(0.01044 * 100vw - 0.02133px) calc(0.00877 * 100vw + 3.2586px);
     }
     .qna_index {
         width: calc(0.02611 * 100vw - 0.0533px);
@@ -267,12 +267,12 @@
         border: 1px solid #FDBE01; /*반응*/
         border-radius: 5px; /*반응*/
         margin-bottom: 15px;
-        padding: 4px 5px; /*titlebox가 26인데 22이므로 4만*/
+        padding: 2px 5px; /*titlebox가 26인데 22이므로 4만*/
     }
     .qna_title_box {
         width: 100%;
-        height: 22px; /*반응*/
-        padding: 0px 5px;
+        height: 24px; /*반응*/
+        padding: 0px 2px;
     }
     .qna_title {
         font-size: 13px; /*반응*/
@@ -288,10 +288,10 @@
         display: none;
     }
     .qna_content_box_mobile {
-        display: block;
-        padding: 8px 0px 8px 5px;
+        display: none;
+        padding: 8px 2px;
         border-top: 1px solid #FDBE01; /*반응*/
-        font-size: 13px; /*반응*/
+        font-size: 12px; /*반응*/
         font-family: 'Pretendard-medium';
         font-style: normal;
         font-weight: 500;
@@ -306,11 +306,11 @@
     .qna_bar {
         width: calc(0.02078 * 100vw + 0.04267px);
         height: calc(0.00522 * 100vw - 0.01067px);
-        margin-left: calc(0.055499 * 100vw + 0.02px);
+        margin-left: calc(0.055499 * 100vw - 4.02px);
     }
     .qna_text {
         font-size: calc(0.05 * 100vw);
-        margin-left: calc(0.055499 * 100vw + 0.02px);
+        margin-left: calc(0.055499 * 100vw - 4.02px);
     }
     .qna_box {
         margin-top: calc(0.02087499 * 100vw - 0.51489px);
@@ -319,12 +319,12 @@
         width: calc(0.888875 * 100vw + 0.00499px); /*반응*/
         border-radius: calc(0.01387499 * 100vw + 0.005px); /*반응*/
         margin-bottom: calc(0.0415 * 100vw + 0.0599px);
-        padding: calc(0.0075 * 100vw + 1.299px) calc(0.00749 * 100vw - 2.3px);
+        padding: calc(0.0075 * 100vw + 1.299px) calc(0.00749 * 100vw - 1.3px);
     }
     .qna_title_box {
         width: 100%;
         height: calc(0.0625 * 100vw - 0.5px); /*반응*/
-        padding: 0px calc(0.02125 * 100vw - 2.65px) 0px calc(0.02125 * 100vw - 2.65px);
+        padding: 0px calc(0.02125 * 100vw - 4.65px);
     }
     .qna_title {
         font-size: calc(0.036125 * 100vw - 0.005px); /*반응*/
@@ -334,7 +334,7 @@
         padding-bottom: 4px;
     }
     .qna_content_box_mobile {
-        padding: calc(0.03025 * 100vw - 2.89px) 0px calc(0.03025 * 100vw - 2.89px) calc(0.02125 * 100vw - 2.65px);
+        padding: calc(0.03025 * 100vw - 2.89px) calc(0.02125 * 100vw - 4.65px);
         font-size: calc(0.036125 * 100vw - 0.005px); /*반응*/
     }
 }

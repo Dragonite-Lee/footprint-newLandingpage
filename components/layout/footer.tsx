@@ -12,6 +12,7 @@ import footer_right_contact_tablet from '../../public/layout/footer_right_contac
 import instagram_tablet from '../../public/layout/instagram_tablet.png'
 import facebook_tablet from '../../public/layout/facebook_tablet.png'
 import footer_back from '../../public/layout/footer_back.png'
+import footer_front from '../../public/layout/footer_front.png'
 import footer_mobile_intro from '../../public/layout/footer_mobile_intro.png'
 import footer_mobile_bussiness from '../../public/layout/footer_mobile_bussiness.png'
 import mobile_instagram from '../../public/layout/mobile_instagram.png'
@@ -87,14 +88,23 @@ function Footer() {
       </footer>
       <footer className={styles.footer_mobile}>
         <div className={styles.footer_main_content} ref={footer_main}>
-          <div className={styles.main_home} onClick={(e) => footerMobileStateHandler(e)} ref={footer_home}>
-            풋프린트
+          <div onClick={(e) => footerMobileStateHandler(e)} className={styles.footer_top}>
+            <div className={styles.main_text} ref={footer_home}>
+              풋프린트
+            </div>
+            <Image src={footer_front} className={styles.footer_front} alt='footer_back' />
           </div>
-          <div className={styles.main_intro} onClick={(e) => footerMobileStateHandler(e)} ref={footer_intro}>
-            Contact us
+          <div onClick={(e) => footerMobileStateHandler(e)} className={styles.footer_top}>
+            <div className={styles.main_text} ref={footer_intro}>
+              Contact us
+            </div>
+            <Image src={footer_front} className={styles.footer_front} alt='footer_back' />
           </div>
-          <div className={styles.main_ongoing} onClick={(e) => footerMobileStateHandler(e)} ref={footer_ongoing}>
-            협력사
+          <div onClick={(e) => footerMobileStateHandler(e)} className={styles.footer_top}>
+            <div className={styles.main_text} ref={footer_ongoing}>
+              협력사
+            </div>
+            <Image src={footer_front} className={styles.footer_front} alt='footer_back' />
           </div>
         </div>
         {

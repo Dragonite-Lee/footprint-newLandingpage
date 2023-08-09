@@ -112,7 +112,7 @@
     }
     .curious_text {
         width: calc(0.85 * 100vw - 1px);
-        margin-top: calc(1.11675 * 100vw - 80.03px); /*80뺌*/
+        margin-top: calc(1.11675 * 100vw - 60.03px); /*80뺌*/
     }
     .a_text_small {
         font-size: calc(0.041625 * 100vw + 0.0149px);
