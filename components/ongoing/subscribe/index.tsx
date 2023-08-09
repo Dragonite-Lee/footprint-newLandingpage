@@ -4,16 +4,11 @@ import styles from './subscribe.module.css'
 import mainlogo from '../../../public/main/title_logo.png'
 import agree_no from '../../../public/main/agree_no.png'
 import agree_yes from '../../../public/main/agree_yes.png'
-import privateImg from '../../../public/ongoing/private.png'
-import adverImg from '../../../public/ongoing/adver.png'
-import btn_text_img from '../../../public/ongoing/btn_text.png'
-import btn_inner_img from '../../../public/ongoing/btn_inner_text.png'
-import modal_text from '../../../public/ongoing/modal_text.png'
 import modal_kakao from '../../../public/ongoing/modal_kakao.png'
 import modal_twitter from '../../../public/ongoing/modal_twitter.png'
 import modal_facebook from '../../../public/ongoing/modal_facebook.png'
 import modal_linkcopy from '../../../public/ongoing/modal_linkcopy.png'
-import modal_close from '../../../public/ongoing/modal_close.png'
+import useInterval from '../../../hook/useInterval'
 
 import Image from 'next/image'
 import { usePathname } from "next/navigation"
@@ -30,8 +25,23 @@ function Subscribe() {
   const [agreePrivate, setAgreePrivate] = useState<boolean>(false);
   const [agreeAdver, setAgreeAdver] = useState<boolean>(false);
   const [email, setEmail] = useState<string>('');
+  const [auth, setAuth] = useState<string>('');
   const [emailValid, setEmailValid] = useState<boolean>(false);
-  const [completeModal, setCompleteModal] = useState<boolean>(true);
+  const [completeModal, setCompleteModal] = useState<boolean>(false);
+  //이메일 보내는 로직 state
+  const [emailState, setEmailState] = useState<boolean>(false); 
+    //true  이메일 적는 란 false 인증번호 입력 란
+  const [authState, setAuthState] = useState<boolean>(false);
+  const [authNot, setAuthNot] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+    //위에서 부터 입력해주신 메일 / 인증번호 틀림 / 잠시만 기다려주세요
+  const [getUSer, setGetUser] = useState<boolean>(false);
+    //등록된 회원
+  const [timePlay, setTimePlay] = useState<boolean>(false);
+  const [authTime, setAuthTime] = useState<number>(0);
+  // *인증시간을 직접적으로 나타내는 부분
+  const authTimeMin = parseInt(String(authTime / 60));
+  const authTimeSec = String(authTime % 60).length === 1 ? '0' + (authTime % 60) : authTime % 60;
   let url: string = usePathname();
 
   const sendData: SendData = {
@@ -48,6 +58,9 @@ function Subscribe() {
   }
   const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value)
+  }
+  const authHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setAuth(e.target.value)
   }
 
   const closeCompleteModal = () => {
@@ -82,23 +95,69 @@ function Subscribe() {
       alert('뉴스레터 발송을 위한 최소한의 개인정보를 수집하며, 동의하지 않을 경우 구독 서비스를 이용할 수 없습니다.')
     } else if (agreeAdver === false) {
       alert('뉴스레터에서 광고성 정보만 따로 보내는 것이 어렵기 때문에, 동의하지 않을 경우 서비스 이용이 제한될 수 있습니다.')
-    } else {
-        //api전송 email, agree
+    } else if (emailValid === true && agreePrivate === true && agreeAdver === true) {
+      setEmailState(false);
+      setLoading(true);  
+      //api전송 email, agree
         await axios.post(`https://footprintstory.kr/api/members`,JSON.stringify(sendData),{
             headers: {
                 "Content-Type": `application/json`,
             }
         })
         .then(async function(res) {
-            await setCompleteModal(true);
-            console.log(res);
+            await setGetUser(res.data.sent);
+            if (res.data.sent == true) {
+              alert("등록된 회원입니다.!");
+              setEmailState(true);
+            } else if (res.data.sent == false) {
+              //시간 재생 및 이메일 전송 됐단 문구띄움
+              setAuthState(true);
+              setLoading(false); 
+              setAuthTime(180);
+              setTimePlay(true);
+            }
         })
         .catch((err) => {
-            alert('구독에 실패했어요!! \n다시 입력해주세요.');
-            console.log(err);
+            alert('이메일 전송에 실패했어요!! \n다시 입력해주세요.');
+            setEmailState(true);
+            setLoading(false);
         })
-    }
-}
+      }
+  }
+
+  const authNumberIsSuccess = async () => {
+    await axios.post(`https://footprintstory.kr/api/members/code`,JSON.stringify(auth),{
+        headers: {
+            "Content-Type": `application/json`,
+        }
+    })
+    .then(function(res) {
+        if (res.data.joined === true) {//백엔드에서 ok응답
+          setCompleteModal(true);
+          setEmailState(true);
+          setAuthNot(false);
+          setTimePlay(false);
+          setGetUser(true);
+
+        } else if (res.data.joined === false) {
+          setAuthNot(true);
+        }
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+};
+  // *인증시간을 시작하며, 인증시간 종료 후 alert띄우고 새로고침
+  useInterval(() => {
+    if (timePlay) {
+      setAuthTime((authTime) => authTime - 1);
+      if (authTime === 1) {
+        setTimePlay(false);
+        alert('인증시간이 종료되었습니다. 재전송 후 인증바랍니다.'); 
+        window.location.reload();
+      }
+    };
+  }, 1000);
 
   useEffect(() => {
     const regexEmail = /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
@@ -122,38 +181,75 @@ function Subscribe() {
   return (
     <>
     <div className={styles.container}>
-      <div className={styles.subscribe_box}>
-        <input type="email" placeholder="이메일 주소" className={styles.input} value={email} onChange={emailHandler} />
-        <div className={styles.agree} onClick={() => agreePrivateHandler()} >
+      {
+        emailState
+        ? (
+          <div className={styles.subscribe_box}>
+            <input type="email" placeholder="이메일 주소" className={styles.input} value={email} onChange={emailHandler} />
+            <div className={styles.agree} onClick={() => agreePrivateHandler()} >
+                {
+                    agreePrivate 
+                    ? <Image src={agree_yes} alt='agree' className={styles.agree_check} />
+                    : <Image src={agree_no} alt='agree' className={styles.agree_check} />
+                }
+                <div className={styles.agree_text}>
+                    <span className='font_extrabold'>개인정보 수집</span> 및 <span className='font_extrabold'>이용</span>에 동의합니다.
+                </div>
+            </div>
+            <div className={styles.agree} onClick={() => agreeAdverHandler()}>
+                {
+                    agreeAdver 
+                    ? <Image src={agree_yes} alt='agree' className={styles.agree_check} />
+                    : <Image src={agree_no} alt='agree' className={styles.agree_check} />
+                }
+                <div className={styles.agree_text}>
+                    <span className='font_extrabold'>광고성 정보 수신</span>에 동의합니다.
+                </div>
+            </div>
+            <div className={styles.button_box}>
+                <button className={styles.btn} onClick={emailOkCountDown}>
+                    뉴스레터 구독하기
+                </button>
+                <div className={styles.button_text}>
+                    프롤로그 메일 무료 이용,<br/>
+                    두 달간 전달되는 스토리 9,800원
+                </div>
+            </div>
+          </div>
+        )
+        : (
+          <div className={styles.auth_box}>
+            <input type="text" placeholder="인증번호" className={styles.input} value={auth} onChange={authHandler} />
             {
-                agreePrivate 
-                ? <Image src={agree_yes} alt='agree' className={styles.agree_check} />
-                : <Image src={agree_no} alt='agree' className={styles.agree_check} />
+              authState && (
+                <div className={styles.auth_text} >
+                  입력해주신 이메일 주소로 인증번호를 보내드렸습니다.
+                </div>
+              )
             }
-            <div className={styles.agree_text}>
-                <span className='font_extrabold'>개인정보 수집</span> 및 <span className='font_extrabold'>이용</span>에 동의합니다.
-            </div>
-        </div>
-        <div className={styles.agree} onClick={() => agreeAdverHandler()}>
             {
-                agreeAdver 
-                ? <Image src={agree_yes} alt='agree' className={styles.agree_check} />
-                : <Image src={agree_no} alt='agree' className={styles.agree_check} />
+              authNot && (
+                <div className={styles.auth_text} >
+                  <span className={styles.bold}>인증번호가 일치하지 않습니다. 다시 입력해주세요.</span>
+                </div>
+              )
             }
-            <div className={styles.agree_text}>
-                <span className='font_extrabold'>광고성 정보 수신</span>에 동의합니다.
+            <div className={styles.button_box}>
+                <button className={styles.btn} onClick={authNumberIsSuccess}>
+                    인증번호 확인
+                </button>
+                {
+                  loading && (
+                    <div className={styles.auth_button_text}>
+                      잠시만 기다려주세요
+                    </div>
+                  )
+                }
             </div>
-        </div>
-        <div className={styles.button_box}>
-            <button className={styles.btn} onClick={emailOkCountDown}>
-                뉴스레터 구독하기
-            </button>
-            <div className={styles.button_text}>
-                프롤로그 메일 무료 이용,<br/>
-                두 달간 전달되는 스토리 9,800원
-            </div>
-        </div>
-      </div>
+          </div>
+        )
+      }
+      
       <div className={styles.logo_box}>
         <Image src={mainlogo} alt="footprint logo"  className={styles.logo_img} />
       </div>

@@ -12,6 +12,11 @@
     position: relative;
     z-index: 3;
 }
+.auth_box {
+    margin-right: 60px; /*반응*/
+    position: relative;
+    z-index: 3;
+}
 .input {
     width: 730px; /*반응*/
     height: 77px; /*반응*/
@@ -47,7 +52,18 @@
     font-style: normal;
     font-weight: 500;
 }
-
+.auth_text {
+    font-size: 33px;/*반응*/
+    font-family: 'Pretendard-medium';
+    font-style: normal;
+    font-weight: 500;
+}
+.bold {
+    font-family: 'Pretendard-bold';
+    color: red;
+    font-style: normal;
+    font-weight: 700;
+}
 .button_box {
     display: flex;
     justify-content: flex-start;
@@ -70,6 +86,13 @@
     cursor: pointer;
 }
 .button_text {
+    color: #757575;
+    font-size: 24px; /*반응*/
+    font-family: 'Pretendard-medium';
+    font-style: normal;
+    font-weight: 500;
+}
+.auth_button_text {
     color: #757575;
     font-size: 24px; /*반응*/
     font-family: 'Pretendard-medium';
@@ -168,6 +191,9 @@
     .subscribe_box {
         margin-right: calc(0.03125 * 100vw);
     }
+    .auth_box {
+        margin-right: calc(0.03125 * 100vw);
+    }
     .input {
         width: calc(0.38021428 * 100vw - 0.011428px);
         height: calc(0.0401071 * 100vw - 0.005714px);
@@ -184,6 +210,9 @@
         font-size: calc(0.017190476 * 100vw - 0.005714px);
         margin-left: calc(0.0104166 * 100vw);
     }
+    .auth_text {
+        font-size: calc(0.017190476 * 100vw - 0.005714px);
+    }
     .button_box {
         margin-top: calc(0.02090476 * 100vw - 0.1371428px);
     }
@@ -196,6 +225,9 @@
         font-size: calc(0.017190476 * 100vw - 0.005714px);
     }
     .button_text {
+        font-size: calc(0.0125 * 100vw);
+    }
+    .auth_button_text {
         font-size: calc(0.0125 * 100vw);
     }
     .logo_img {
@@ -248,6 +280,9 @@
     .subscribe_box {
         margin-right: 29px;
     }
+    .auth_box {
+        margin-right: 29px;
+    }
     .input {
         width: 357px;
         height: 36px;
@@ -267,6 +302,9 @@
         font-size: 15px;/*반응*/
         margin-left: 11px;/*반응*/
     }
+    .auth_text {
+        font-size: 15px;/*반응*/
+    }
     .button_box {
         margin-top: 20px; /*반응*/
     }
@@ -281,7 +319,9 @@
     }
     .button_text {
         font-size: 13px; /*반응*/
-        
+    }
+    .auth_button_text {
+        font-size: 13px; /*반응*/
     }
     .logo_img {
         width: 200px; /*반응*/
@@ -334,6 +374,9 @@
     .subscribe_box {
         margin-right: calc(0.0378 * 100vw - 0.0133px);
     }
+    .auth_box {
+        margin-right: calc(0.0378 * 100vw - 0.0133px);
+    }
     .input {
         width: calc(0.464833 * 100vw + 0.00799px);
         height: calc(0.0444 * 100vw + 1.867px);
@@ -353,6 +396,9 @@
         font-size: calc(0.01955 * 100vw - 0.0186px);
         margin-left: calc(0.01522 * 100vw - 0.69067px);
     }
+    .auth_text {
+        font-size: calc(0.01955 * 100vw - 0.0186px);
+    }
     .button_box {
         margin-top: calc(0.0277 * 100vw - 1.33px);
     }
@@ -365,6 +411,9 @@
         font-size: calc(0.02344 * 100vw - 0.00533px);
     }
     .button_text {
+        font-size: calc(0.0166 * 100vw + 0.199px);
+    }
+    .auth_button_text {
         font-size: calc(0.0166 * 100vw + 0.199px);
     }
     .logo_img {
@@ -417,6 +466,9 @@
     .subscribe_box {
         margin: 0 auto;
     }
+    .auth_box {
+        margin: 0 auto;
+    }
     .input {
         width: 300px;
         height: 29px;
@@ -436,6 +488,9 @@
         font-size: 12px;/*반응*/
         margin-left: 10px;/*반응*/
     }
+    .auth_text {
+        font-size: 12px;/*반응*/
+    }
     .button_box {
         margin-top: 20px; /*반응*/
     }
@@ -449,6 +504,9 @@
         filter: drop-shadow(1px 1px 1px rgba(176, 132, 0, 0.50));
     }
     .button_text {
+        font-size: 12px; /*반응*/
+    }
+    .auth_button_text {
         font-size: 12px; /*반응*/
     }
     .logo_img {
@@ -517,6 +575,9 @@
         font-size: calc(0.033375 * 100vw - 0.015px);
         margin-left: calc(0.0277499 * 100vw + 0.01px);/*반응*/
     }
+    .auth_text {
+        font-size: calc(0.033375 * 100vw - 0.015px);
+    }
     .button_box {
         margin-top: calc(0.056875 * 100vw - 0.475px); /*반응*/
     }
@@ -529,6 +590,9 @@
         font-size: calc(0.0385 * 100vw + 0.14px); /*반응*/
     }
     .button_text {
+        font-size: calc(0.033375 * 100vw - 0.015px);
+    }
+    .auth_button_text {
         font-size: calc(0.033375 * 100vw - 0.015px);
     }
     .BlackModalContainer {
