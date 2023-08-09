@@ -32,6 +32,16 @@
     font-style: normal;
     font-weight: 500;
 }
+.auth_timer {
+    position:absolute;
+    top: 10px;
+    right: 50px;
+    font-size: 33px; /*반응*/
+    font-family: 'Pretendard-medium';
+    font-style: normal;
+    font-weight: 500;
+    color: #BDBDBD;
+}
 .input::placeholder {color: #BDBDBD;}
 .input::-webkit-input-placeholder {color: #BDBDBD;}
 .input:-ms-input-placeholder {color: #BDBDBD;}
@@ -203,6 +213,11 @@
         border: 2px solid #FDBE01;
         font-size: calc(0.017190476 * 100vw - 0.005714px);
     }
+    .auth_timer {
+        top: calc(0.0047619 * 100vw + 0.85714px);
+        right: calc(0.026035714 * 100vw + 0.011428px);
+        font-size: calc(0.017190476 * 100vw - 0.005714px); /*반응*/
+    }
     .agree_check {
         width: calc(0.01571428 * 100vw - 0.171428px);
     }
@@ -290,6 +305,11 @@
         margin-bottom: 20px;
         border-radius: 5px;
         border: 1px solid #FDBE01;
+        font-size: 15px;
+    }
+    .auth_timer {
+        top: 6px;
+        right: 25px;
         font-size: 15px;
     }
     .agree {
@@ -386,6 +406,11 @@
         border: 1px solid #FDBE01;
         font-size: calc(0.01955 * 100vw - 0.0186px);
     }
+    .auth_timer {
+        top: calc(0.011722 * 100vw - 3.0067px);
+        right: calc(0.03255 * 100vw - 0.00267px);
+        font-size: calc(0.01955 * 100vw - 0.0186px);
+    }
     .agree {
         margin-bottom: calc(0.01422 * 100vw - 0.92267px);
     }
@@ -478,6 +503,11 @@
         border: 1px solid #FDBE01;
         font-size: 12px;
     }
+    .auth_timer {
+        top: 4px;
+        right: 22px;
+        font-size: 12px;
+    }
     .agree {
         margin-bottom: 7px;
     }
@@ -557,12 +587,17 @@
         margin-top: calc(2.086 * 100vw + 0.04px);
     }
     .input {
-        width: calc(0.383375 * 100vw - 0.015px);
+        width: calc(0.8333749 * 100vw - 0.01499px);
         height: calc(0.0805 * 100vw + 0.0199px);
         padding-left: calc(0.061125 * 100vw - 0.005px);
         margin-bottom: calc(0.061125 * 100vw + 0.0299px);
         border-radius: calc(0.01387499 * 100vw + 0.005px);
         border: 1px solid #FDBE01;
+        font-size: calc(0.03887499 * 100vw + 0.05px);
+    }
+    .auth_timer {
+        top: calc(0.011125 * 100vw - 2.005px);
+        right: calc(0.061125 * 100vw - 0.005px);
         font-size: calc(0.03887499 * 100vw + 0.05px);
     }
     .agree {

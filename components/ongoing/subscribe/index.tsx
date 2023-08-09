@@ -20,6 +20,10 @@ interface SendData {
   email: string
 }
 
+interface SendAuthData {
+  authenticCode: string
+}
+
 function Subscribe() {
 
   const [agreePrivate, setAgreePrivate] = useState<boolean>(false);
@@ -29,16 +33,18 @@ function Subscribe() {
   const [emailValid, setEmailValid] = useState<boolean>(false);
   const [completeModal, setCompleteModal] = useState<boolean>(false);
   //이메일 보내는 로직 state
-  const [emailState, setEmailState] = useState<boolean>(false); 
+  const [emailState, setEmailState] = useState<boolean>(true); 
     //true  이메일 적는 란 false 인증번호 입력 란
   const [authState, setAuthState] = useState<boolean>(false);
   const [authNot, setAuthNot] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
-    //위에서 부터 입력해주신 메일 / 인증번호 틀림 / 잠시만 기다려주세요
+    //위에서 부터 입력해주신 메일 / 인증번호 틀림 / loading부분
   const [getUSer, setGetUser] = useState<boolean>(false);
     //등록된 회원
   const [timePlay, setTimePlay] = useState<boolean>(false);
+  const [timeState, setTimeState] = useState<boolean>(false);
   const [authTime, setAuthTime] = useState<number>(0);
+    //타이머관련
   // *인증시간을 직접적으로 나타내는 부분
   const authTimeMin = parseInt(String(authTime / 60));
   const authTimeSec = String(authTime % 60).length === 1 ? '0' + (authTime % 60) : authTime % 60;
@@ -46,6 +52,10 @@ function Subscribe() {
 
   const sendData: SendData = {
     "email" : email
+  }
+
+  const sendAuthData: SendAuthData = {
+    "authenticCode" : auth
   }
 
   axios.defaults.withCredentials = true; // withCredentials 전역 설정
@@ -111,6 +121,7 @@ function Subscribe() {
               setEmailState(true);
             } else if (res.data.sent == false) {
               //시간 재생 및 이메일 전송 됐단 문구띄움
+              setTimeState(true);
               setAuthState(true);
               setLoading(false); 
               setAuthTime(180);
@@ -126,7 +137,7 @@ function Subscribe() {
   }
 
   const authNumberIsSuccess = async () => {
-    await axios.post(`https://footprintstory.kr/api/members/code`,JSON.stringify(auth),{
+    await axios.post(`https://footprintstory.kr/api/members/code`,JSON.stringify(sendAuthData),{
         headers: {
             "Content-Type": `application/json`,
         }
@@ -134,6 +145,7 @@ function Subscribe() {
     .then(function(res) {
         if (res.data.joined === true) {//백엔드에서 ok응답
           setCompleteModal(true);
+          setTimeState(false);
           setEmailState(true);
           setAuthNot(false);
           setTimePlay(false);
@@ -153,6 +165,7 @@ function Subscribe() {
       setAuthTime((authTime) => authTime - 1);
       if (authTime === 1) {
         setTimePlay(false);
+        setTimeState(false);
         alert('인증시간이 종료되었습니다. 재전송 후 인증바랍니다.'); 
         window.location.reload();
       }
@@ -220,6 +233,11 @@ function Subscribe() {
         : (
           <div className={styles.auth_box}>
             <input type="text" placeholder="인증번호" className={styles.input} value={auth} onChange={authHandler} />
+            {
+              timeState && (
+                <div className={styles.auth_timer}>{authTimeMin} : {authTimeSec}</div>
+              )
+            }
             {
               authState && (
                 <div className={styles.auth_text} >
