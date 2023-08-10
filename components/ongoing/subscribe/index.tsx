@@ -31,14 +31,13 @@ function Subscribe() {
   const [email, setEmail] = useState<string>('');
   const [auth, setAuth] = useState<string>('');
   const [emailValid, setEmailValid] = useState<boolean>(false);
-  const [completeModal, setCompleteModal] = useState<boolean>(false);
+  const [completeModal, setCompleteModal] = useState<boolean>(true);
   //이메일 보내는 로직 state
   const [emailState, setEmailState] = useState<boolean>(true); 
     //true  이메일 적는 란 false 인증번호 입력 란
-  const [authState, setAuthState] = useState<boolean>(false);
+  const [authState, setAuthState] = useState<boolean>(true);
   const [authNot, setAuthNot] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
-    //위에서 부터 입력해주신 메일 / 인증번호 틀림 / loading부분
+    //위에서 부터 입력해주신 메일 / 인증번호 틀림 
   const [getUSer, setGetUser] = useState<boolean>(false);
     //등록된 회원
   const [timePlay, setTimePlay] = useState<boolean>(false);
@@ -106,8 +105,8 @@ function Subscribe() {
     } else if (agreeAdver === false) {
       alert('뉴스레터에서 광고성 정보만 따로 보내는 것이 어렵기 때문에, 동의하지 않을 경우 서비스 이용이 제한될 수 있습니다.')
     } else if (emailValid === true && agreePrivate === true && agreeAdver === true) {
-      setEmailState(false);
-      setLoading(true);  
+      
+       
       //api전송 email, agree
         await axios.post(`https://footprintstory.kr/api/members`,JSON.stringify(sendData),{
             headers: {
@@ -118,20 +117,19 @@ function Subscribe() {
             await setGetUser(res.data.sent);
             if (res.data.sent == true) {
               alert("등록된 회원입니다.!");
-              setEmailState(true);
+        
             } else if (res.data.sent == false) {
               //시간 재생 및 이메일 전송 됐단 문구띄움
+              setEmailState(false);
               setTimeState(true);
-              setAuthState(true);
-              setLoading(false); 
               setAuthTime(180);
               setTimePlay(true);
             }
         })
         .catch((err) => {
             alert('이메일 전송에 실패했어요!! \n다시 입력해주세요.');
-            setEmailState(true);
-            setLoading(false);
+
+            
         })
       }
   }
@@ -148,10 +146,13 @@ function Subscribe() {
           setTimeState(false);
           setEmailState(true);
           setAuthNot(false);
+          setAuthState(true);
           setTimePlay(false);
           setGetUser(true);
-
+          setEmail('');
+          setAuth('');
         } else if (res.data.joined === false) {
+          setAuthState(false);
           setAuthNot(true);
         }
     })
@@ -159,6 +160,16 @@ function Subscribe() {
         console.log(err)
     })
 };
+
+  const resendHandler = () => {
+    setTimeState(false);
+    setEmailState(true);
+    setAuthNot(false);
+    setTimePlay(false);
+    setAuthTime(0);
+    setAuth('');
+    setAuthState(true);
+  }
   // *인증시간을 시작하며, 인증시간 종료 후 alert띄우고 새로고침
   useInterval(() => {
     if (timePlay) {
@@ -241,7 +252,7 @@ function Subscribe() {
             {
               authState && (
                 <div className={styles.auth_text} >
-                  입력해주신 이메일 주소로 인증번호를 보내드렸습니다.
+                  잠시만 기다려주세요. 메일 전송 중입니다.
                 </div>
               )
             }
@@ -256,13 +267,9 @@ function Subscribe() {
                 <button className={styles.btn} onClick={authNumberIsSuccess}>
                     인증번호 확인
                 </button>
-                {
-                  loading && (
-                    <div className={styles.auth_button_text}>
-                      잠시만 기다려주세요
-                    </div>
-                  )
-                }
+                  <div className={styles.auth_button_text} onClick={resendHandler}>
+                    재전송하기
+                  </div>
             </div>
           </div>
         )

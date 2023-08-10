@@ -106,8 +106,9 @@
     color: #757575;
     font-size: 24px; /*반응*/
     font-family: 'Pretendard-medium';
-    font-style: normal;
+    font-style: normal; 
     font-weight: 500;
+    text-decoration: underline;
 }
 .logo_img {
     width: 409px; /*반응*/
@@ -557,10 +558,15 @@
     .modal_bot {
         border-top: 1px solid black;
         padding-top: 8.94px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
     }
     .modal_kakao {
         width: 25px;
-        margin-left: 91.03px;
+        /* margin-left: 91.03px; */
+        margin-left: 0px;
     }
     .modal_twitter {
         width: 25px;
@@ -648,7 +654,7 @@
     }
     .modal_kakao {
         width: calc(0.069499 * 100vw - 0.0199px);
-        margin-left: calc(0.252875 * 100vw - 0.005px);
+        /* margin-left: calc(0.252875 * 100vw - 0.005px); */
     }
     .modal_twitter {
         width: calc(0.069499 * 100vw - 0.0199px);

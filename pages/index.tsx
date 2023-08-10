@@ -18,12 +18,12 @@ import bg_main_mobile from '../public/bg/bg_main_mobile.png'
 const Home: NextPage = () => {
   
   return (
-    <div>
+    <>
       <Head>
         <title>footprint story</title>
         <meta name='viewport' content="width=device-width, initial-scale=1" />
         <meta name="description" content="footprint story - 다양한 분야에 종사하고 있는 선배들의 커리어 성장기와 삶을 이야기에 담아 연재하는 서비스" />
-        <link rel="icon" href="public/layout/footPrint_favIcon.png" />
+        <link rel="icon" href="image/footPrint_favIcon.png" />
         <meta name='robots' content='all' />
         <meta name='keywords' content='현직자, 직업인, 스토리, 커리어, 취업, 진로, 꿈, 직장' />
         {/* open graph 설정 */}
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
           <Qna />
       </div>
     
-    </div>
+    </>
   )
 }
 
