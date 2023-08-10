@@ -12,8 +12,8 @@ import Curious from '../components/main/curious'
 import Together from '../components/main/together'
 import Qna from '../components/main/qna'
 import bg_main_pc from '../public/bg/bg_main_pc.png'
-import bg_main_tablet from '../public/bg/bg_main_tablet.png'
-import bg_main_mobile from '../public/bg/bg_main_mobile.png'
+import bg_main_tablet from '../public/bg/bg_main_tablet.webp'
+import bg_main_mobile from '../public/bg/bg_main_mobile.webp'
 
 const Home: NextPage = () => {
   

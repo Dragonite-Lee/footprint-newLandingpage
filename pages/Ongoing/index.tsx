@@ -1,7 +1,7 @@
 import styles from './ongoing.module.css'
 import Subscribe from '../../components/ongoing/subscribe'
-import bg_ongoing_pc from '../../public/bg/bg_ongoing_pc.png'
-import bg_ongoing_tablet from '../../public/bg/bg_ongoing_tablet.png'
+import bg_ongoing_pc from '../../public/bg/bg_ongoing_pc.webp'
+import bg_ongoing_tablet from '../../public/bg/bg_ongoing_tablet.webp'
 import bg_ongoing_mobile from '../../public/bg/bg_ongoing_mobile.png'
 
 import Image from 'next/image'

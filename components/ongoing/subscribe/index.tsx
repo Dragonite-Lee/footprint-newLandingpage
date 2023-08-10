@@ -31,7 +31,7 @@ function Subscribe() {
   const [email, setEmail] = useState<string>('');
   const [auth, setAuth] = useState<string>('');
   const [emailValid, setEmailValid] = useState<boolean>(false);
-  const [completeModal, setCompleteModal] = useState<boolean>(true);
+  const [completeModal, setCompleteModal] = useState<boolean>(false);
   //이메일 보내는 로직 state
   const [emailState, setEmailState] = useState<boolean>(true); 
     //true  이메일 적는 란 false 인증번호 입력 란
