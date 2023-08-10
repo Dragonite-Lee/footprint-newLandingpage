@@ -1,12 +1,24 @@
+'use client'
+
 import styles from './intro.module.css'
 import bg_intro_pc from '../../public/bg/bg_intro_pc.webp'
 import bg_intro_tablet from '../../public/bg/bg_intro_tablet.webp'
-import bg_intro_mobile from '../../public/bg/bg_intro_mobile.png'
+import bg_intro_mobile from '../../public/bg/bg_intro_mobile.webp'
 
 import Image from 'next/image';
 import Head from 'next/head';
+import { setTimeout } from 'timers'
 
 function Intro() {
+
+    if (typeof window !== 'undefined') {
+        window.onload = function() {
+          setTimeout(function() {
+            scrollTo(0,0);
+          }, 100);
+        }
+      }
+
     return (
         <>
             <Head>

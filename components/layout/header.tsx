@@ -80,7 +80,7 @@ function Header() {
     <>
       <header className={styles.navbar}>
         <Link href="/" className={styles.navbar_left}>
-          <Image src={navbarLogo} className={styles.navbar_logo} alt='navbar_logo이미지' />
+          <Image src={navbarLogo} className={styles.navbar_logo} alt='navbar_logo이미지' priority />
         </Link>
         <div className={styles.navbar_right}>
           <Link href="/Intro">

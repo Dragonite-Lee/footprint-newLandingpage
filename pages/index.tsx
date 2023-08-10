@@ -1,7 +1,9 @@
+'use client'
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image';
+import { setTimeout } from 'timers';
 
 import styles from '../styles/Home.module.css'
 import Introduce from '../components/main/introduce'
@@ -11,12 +13,20 @@ import Gray from '../components/main/gray'
 import Curious from '../components/main/curious'
 import Together from '../components/main/together'
 import Qna from '../components/main/qna'
-import bg_main_pc from '../public/bg/bg_main_pc.png'
+import bg_main_pc from '../public/bg/bg_main_pc.webp'
 import bg_main_tablet from '../public/bg/bg_main_tablet.webp'
 import bg_main_mobile from '../public/bg/bg_main_mobile.webp'
 
 const Home: NextPage = () => {
   
+  if (typeof window !== 'undefined') {
+    window.onload = function() {
+      setTimeout(function() {
+        scrollTo(0,0);
+      }, 100);
+    }
+  }
+
   return (
     <>
       <Head>

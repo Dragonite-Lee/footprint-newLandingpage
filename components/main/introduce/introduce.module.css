@@ -1,7 +1,7 @@
 .container {
     width: 1920px; /*반응*/
-    height: 409px; /*반응*/
-    margin-top: 1664px; /*반응 80더함*/
+    height: 393px; /*반응*/
+    margin-top: 1680px; /*반응 80더함*/
     position: relative;
     z-index: 3;
 }
@@ -50,8 +50,8 @@
 @media (max-width: 1920px) {
     .container {
         width: 100%; /*반응*/
-        height: calc(0.2130238095 * 100vw - 0.005714px); /*반응*/
-        margin-top: calc(0.825 * 100vw + 80px); /*반응*/
+        height: calc(0.21740476 * 100vw - 24.4171px); /*반응*/
+        margin-top: calc(0.875 * 100vw); /*반응*/
     }
     .link_box {
         margin-left: calc(0.2215714285 * 100vw + 20.5825px);

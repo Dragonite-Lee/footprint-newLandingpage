@@ -11,7 +11,6 @@ import modal_linkcopy from '../../../public/ongoing/modal_linkcopy.png'
 import useInterval from '../../../hook/useInterval'
 
 import Image from 'next/image'
-import { usePathname } from "next/navigation"
 import { FacebookShareButton, TwitterShareButton} from 'next-share'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
@@ -47,7 +46,6 @@ function Subscribe() {
   // *인증시간을 직접적으로 나타내는 부분
   const authTimeMin = parseInt(String(authTime / 60));
   const authTimeSec = String(authTime % 60).length === 1 ? '0' + (authTime % 60) : authTime % 60;
-  let url: string = usePathname();
 
   const sendData: SendData = {
     "email" : email
@@ -79,7 +77,7 @@ function Subscribe() {
   // kakao 공유하기 함수
     const handleKakaoButton = () => {
         window.Kakao.Share.sendScrap({
-            requestUrl: url,
+            requestUrl: 'https://footprintstory.kr',
         });
     };
 
@@ -190,7 +188,7 @@ function Subscribe() {
     } else {
         setEmailValid(false);
     }
-    console.log(emailValid);
+    // console.log(emailValid);
   },[email]);
 
   useEffect(()=>{
@@ -293,10 +291,10 @@ function Subscribe() {
                 <div>
                   <Image src={modal_kakao} alt='modal_kakao' className={styles.modal_kakao} onClick={handleKakaoButton}/>
                 </div>
-                <TwitterShareButton url={url} className={styles.modal_twitter_btn}>
+                <TwitterShareButton url={`https://footprintstory.kr`} className={styles.modal_twitter_btn}>
                   <Image src={modal_twitter} alt='modal_twitter' className={styles.modal_twitter} />
                 </TwitterShareButton>
-                <FacebookShareButton url={url} className={styles.modal_facebook_btn}>
+                <FacebookShareButton url={`https://footprintstory.kr`} className={styles.modal_facebook_btn}>
                   <Image src={modal_facebook} alt='modal_facebook' className={styles.modal_facebook} />
                 </FacebookShareButton>
                 <div>
