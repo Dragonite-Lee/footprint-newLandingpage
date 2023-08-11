@@ -34,7 +34,8 @@ function Subscribe() {
   //이메일 보내는 로직 state
   const [emailState, setEmailState] = useState<boolean>(true); 
     //true  이메일 적는 란 false 인증번호 입력 란
-  const [authState, setAuthState] = useState<boolean>(true);
+  const [authState, setAuthState] = useState<boolean>(false);
+  const [authLoading, setAuthLoading] = useState<boolean>(false);
   const [authNot, setAuthNot] = useState<boolean>(false);
     //위에서 부터 입력해주신 메일 / 인증번호 틀림 
   const [getUSer, setGetUser] = useState<boolean>(false);
@@ -96,6 +97,8 @@ function Subscribe() {
 
   // *이메일과 수신동의 백단에 보내주고 카운트다운 시작
   const emailOkCountDown = async () => {
+    setEmailState(false);
+    setAuthLoading(true);
     if(emailValid === false) {
         alert('이메일 형식을 확인해주세요');
     } else if (agreePrivate === false) {
@@ -103,8 +106,6 @@ function Subscribe() {
     } else if (agreeAdver === false) {
       alert('뉴스레터에서 광고성 정보만 따로 보내는 것이 어렵기 때문에, 동의하지 않을 경우 서비스 이용이 제한될 수 있습니다.')
     } else if (emailValid === true && agreePrivate === true && agreeAdver === true) {
-      
-       
       //api전송 email, agree
         await axios.post(`https://footprintstory.kr/api/members`,JSON.stringify(sendData),{
             headers: {
@@ -114,11 +115,13 @@ function Subscribe() {
         .then(async function(res) {
             await setGetUser(res.data.sent);
             if (res.data.sent == true) {
+              setEmailState(true);
+              setAuthLoading(false);
               alert("등록된 회원입니다.!");
-        
             } else if (res.data.sent == false) {
               //시간 재생 및 이메일 전송 됐단 문구띄움
-              setEmailState(false);
+              setAuthLoading(false);
+              setAuthState(true);
               setTimeState(true);
               setAuthTime(180);
               setTimePlay(true);
@@ -126,8 +129,8 @@ function Subscribe() {
         })
         .catch((err) => {
             alert('이메일 전송에 실패했어요!! \n다시 입력해주세요.');
-
-            
+            setEmailState(true);
+            setAuthLoading(false);
         })
       }
   }
@@ -143,13 +146,16 @@ function Subscribe() {
           setCompleteModal(true);
           setTimeState(false);
           setEmailState(true);
+          setAuthLoading(false);
+          setAuthState(false);
           setAuthNot(false);
-          setAuthState(true);
           setTimePlay(false);
           setGetUser(true);
           setEmail('');
           setAuth('');
+          setAuthTime(0);
         } else if (res.data.joined === false) {
+          setAuthLoading(false);
           setAuthState(false);
           setAuthNot(true);
         }
@@ -161,12 +167,13 @@ function Subscribe() {
 
   const resendHandler = () => {
     setTimeState(false);
+    setAuthLoading(false);
     setEmailState(true);
     setAuthNot(false);
     setTimePlay(false);
     setAuthTime(0);
     setAuth('');
-    setAuthState(true);
+    setAuthState(false);
   }
   // *인증시간을 시작하며, 인증시간 종료 후 alert띄우고 새로고침
   useInterval(() => {
@@ -248,9 +255,16 @@ function Subscribe() {
               )
             }
             {
-              authState && (
+              authLoading && (
                 <div className={styles.auth_text} >
                   잠시만 기다려주세요. 메일 전송 중입니다.
+                </div>
+              )
+            }
+            {
+              authState && (
+                <div className={styles.auth_text} >
+                  입력해주신 이메일 주소로 인증번호를 보내드렸습니다.
                 </div>
               )
             }

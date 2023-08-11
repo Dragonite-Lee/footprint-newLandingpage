@@ -101,6 +101,7 @@
     font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
+    cursor: pointer;
 }
 .auth_button_text {
     color: #757575;
