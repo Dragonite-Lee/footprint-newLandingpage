@@ -79,6 +79,17 @@ function Subscribe() {
     const handleKakaoButton = () => {
         window.Kakao.Share.sendScrap({
             requestUrl: 'https://footprintstory.kr',
+            templateId: 97122,
+            templateArgs: {
+              item_content : false,
+              title: "좋아하는 것이 없어도 괜찮아(feat. 서버 개발자 하늬)",
+              image_url : "public/image/footprint_hani.png",
+              description: "국내 대형 패션 커머스 기업에서 서버 개발자의 삶을 살아가고 있는 주인공 ‘하늬'의 커리어 성장기가 궁금하다면.",
+              link: 'https://footprintstory.kr',
+              profile_text: "footprintstory",
+              profile_image_url: "public/image/footPrint_favicon.png"
+            },
+            installTalk: true
         });
     };
 
