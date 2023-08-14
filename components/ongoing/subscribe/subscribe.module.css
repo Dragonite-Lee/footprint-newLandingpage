@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 11509px; /*반응*/
+    margin-bottom: 10922.36px; /*반응*/
     margin-top: 1303px; /*반응*/
 }
 .subscribe_box {
@@ -197,7 +197,7 @@
     .container {
         width: 100%;
         height: calc(0.295238 * 100vw + 0.1428px);
-        margin-bottom: calc(5.9942738 * 100vw - 0.005714px);
+        margin-bottom: calc(5.68872619 * 100vw + 0.005714px);
         margin-top: calc(0.6790119 * 100vw - 0.70285714px);
     }
     .subscribe_box {

@@ -7,12 +7,36 @@
     overflow: hidden;
     position: relative;
   }
-  .bg_main_pc {
+  .bg1_pc {
     display: block;
     position: absolute;
     top: 80px;
     width: 100%;
-    height: 10164px;
+    height: 2541px;
+    z-index: -100;
+  }
+  .bg2_pc {
+    display: block;
+    position: absolute;
+    top: 2621px;
+    width: 100%;
+    height: 2541px;
+    z-index: -100;
+  }
+  .bg3_pc {
+    display: block;
+    position: absolute;
+    top: 5162px;
+    width: 100%;
+    height: 2541px;
+    z-index: -100;
+  }
+  .bg4_pc {
+    display: block;
+    position: absolute;
+    top: 7703px;
+    width: 100%;
+    height: 2541px;
     z-index: -100;
   }
   .bg_main_tablet {
@@ -26,9 +50,21 @@
       width: 100%;
       height: 100%;
     }
-    .bg_main_pc {
+    .bg1_pc {
       top: calc(0.04166 * 100vw);
-      height: calc(5.29375 * 100vw);
+      height: calc(1.32344 * 100vw - 0.05714px);
+    }
+    .bg2_pc {
+      top: calc(1.3651071 * 100vw - 0.005714px);
+      height: calc(1.32344 * 100vw - 0.05714px);
+    }
+    .bg3_pc {
+      top: calc(2.6885357 * 100vw + 0.011428px);
+      height: calc(1.32344 * 100vw - 0.05714px);
+    }
+    .bg4_pc {
+      top: calc(4.01197619 * 100vw + 0.005714px);
+      height: calc(1.32344 * 100vw - 0.05714px);
     }
   }
 
@@ -37,7 +73,16 @@
       width: 768px;
       height: 100%;
     }
-    .bg_main_pc {
+    .bg1_pc {
+      display: none;
+    }
+    .bg2_pc {
+      display: none;
+    }
+    .bg3_pc {
+      display: none;
+    }
+    .bg4_pc {
       display: none;
     }
     .bg_main_tablet {

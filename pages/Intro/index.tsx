@@ -1,9 +1,12 @@
 'use client'
 
 import styles from './intro.module.css'
-import bg_intro_pc from '../../public/bg/bg_intro_pc.webp'
 import bg_intro_tablet from '../../public/bg/bg_intro_tablet.webp'
 import bg_intro_mobile from '../../public/bg/bg_intro_mobile.webp'
+import bg1_pc from '../../public/bg_pc/intro1.webp'
+import bg2_pc from '../../public/bg_pc/intro2.webp'
+import bg3_pc from '../../public/bg_pc/intro3.webp'
+import bg4_pc from '../../public/bg_pc/intro4.webp'
 
 import Image from 'next/image';
 import Head from 'next/head';
@@ -49,7 +52,11 @@ function Intro() {
                 <meta name="twitter:image" content="https://footprintstory.kr/images/image.png" /> 
             </Head>
             <div className={styles.container}>
-                <Image src={bg_intro_pc} alt='bg_intro_pc' className={styles.bg_intro_pc} />
+                <Image src={bg1_pc} alt='bg_intro_pc' className={styles.bg1_pc} />
+                <Image src={bg2_pc} alt='bg_intro_pc' className={styles.bg2_pc} />
+                <Image src={bg3_pc} alt='bg_intro_pc' className={styles.bg3_pc} />
+                <Image src={bg4_pc} alt='bg_intro_pc' className={styles.bg4_pc} />
+                {/* <Image src={bg_intro_pc} alt='bg_intro_pc' className={styles.bg_intro_pc} /> */}
                 <Image src={bg_intro_tablet} alt='bg_intro_tablet' className={styles.bg_intro_tablet} />
                 <Image src={bg_intro_mobile} alt='bg_intro_mobile' className={styles.bg_intro_mobile} />
             </div>

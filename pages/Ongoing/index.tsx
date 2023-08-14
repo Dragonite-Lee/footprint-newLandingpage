@@ -2,9 +2,13 @@
 
 import styles from './ongoing.module.css'
 import Subscribe from '../../components/ongoing/subscribe'
-import bg_ongoing_pc from '../../public/bg/bg_ongoing_pc.webp'
 import bg_ongoing_tablet from '../../public/bg/bg_ongoing_tablet.webp'
 import bg_ongoing_mobile from '../../public/bg/bg_ongoing_mobile.webp'
+import bg1_pc from '../../public/bg_pc/ongoing1.webp'
+import bg2_pc from '../../public/bg_pc/ongoing2.webp'
+import bg3_pc from '../../public/bg_pc/ongoing3.webp'
+import bg4_pc from '../../public/bg_pc/ongoing4.webp'
+import bg5_pc from '../../public/bg_pc/ongoing5.webp'
 
 import Image from 'next/image'
 import Head from 'next/head'
@@ -46,7 +50,11 @@ function Ongoing() {
                 <meta name="twitter:image" content="https://footprintstory.kr/images/image.png" /> 
             </Head>
             <div className={styles.container}>
-                <Image src={bg_ongoing_pc} alt='bg_ongoing_pc' className={styles.bg_ongoing_pc} />
+                <Image src={bg1_pc} alt='bg_ongoing_pc' className={styles.bg1_pc} />
+                <Image src={bg2_pc} alt='bg_ongoing_pc' className={styles.bg2_pc} />
+                <Image src={bg3_pc} alt='bg_ongoing_pc' className={styles.bg3_pc} />
+                <Image src={bg4_pc} alt='bg_ongoing_pc' className={styles.bg4_pc} />
+                <Image src={bg5_pc} alt='bg_ongoing_pc' className={styles.bg5_pc} />
                 <Image src={bg_ongoing_tablet} alt='bg_ongoing_tablet' className={styles.bg_ongoing_tablet} />
                 <Image src={bg_ongoing_mobile} alt='bg_ongoing_mobile' className={styles.bg_ongoing_mobile} />
                 <Subscribe />

@@ -9,11 +9,29 @@
     z-index: -2;
     /*4331.25로 줄어듬*/
   }
-  .bg_intro_pc {
+  .bg1_pc {
     display: block;
     padding-top: 80px;
     width: 100%;
-    height: 7700px;
+    height: 1925px;
+    z-index: -100;
+  }
+  .bg2_pc {
+    display: block;
+    width: 100%;
+    height: 1925px;
+    z-index: -100;
+  }
+  .bg3_pc {
+    display: block;
+    width: 100%;
+    height: 1925px;
+    z-index: -100;
+  }
+  .bg4_pc {
+    display: block;
+    width: 100%;
+    height: 1925px;
     z-index: -100;
   }
   .bg_intro_tablet {
@@ -28,9 +46,18 @@
       width: 100%;
       height: 100%;
     }
-    .bg_intro_pc {
+    .bg1_pc {
       padding-top: calc(0.04166 * 100vw);
-      height: calc(4.0104166 * 100vw - 9.094947px);
+      height: calc(1.00260714 * 100vw - 0.005714px);
+    }
+    .bg2_pc {
+      height: calc(1.00260714 * 100vw - 0.005714px);
+    }
+    .bg3_pc {
+      height: calc(1.00260714 * 100vw - 0.005714px);
+    }
+    .bg4_pc {
+      height: calc(1.00260714 * 100vw - 0.005714px);
     }
   }
   @media (max-width: 1080px) {
