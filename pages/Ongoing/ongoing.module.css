@@ -47,11 +47,34 @@
     height: 2086px;
     z-index: -100;
   }
-
-  .bg_ongoing_tablet {
+  .bg1_tablet {
     display: none;
   }
-  .bg_ongoing_mobile {
+  .bg2_tablet {
+    display: none;
+  }
+  .bg3_tablet {
+    display: none;
+  }
+  .bg4_tablet {
+    display: none;
+  }
+  .bg5_tablet {
+    display: none;
+  }
+  .bg1_mobile {
+    display: none;
+  }
+  .bg2_mobile {
+    display: none;
+  }
+  .bg3_mobile {
+    display: none;
+  }
+  .bg4_mobile {
+    display: none;
+  }
+  .bg5_mobile {
     display: none;
   }
   @media (max-width: 1920px) {
@@ -86,15 +109,59 @@
       width: 768px;
       height: 100%;
     }
-    .bg_ongoing_pc {
+    .bg1_pc {    
       display: none;
     }
-    .bg_ongoing_tablet {
+    .bg2_pc {
+      display: none;
+    }
+    .bg3_pc {
+      display: none;
+    }
+    .bg4_pc {
+      display: none;
+    }
+    .bg5_pc {
+      display: none;
+    }
+    .bg1_tablet {    
       display: block;
       position: absolute;
       top: 40px;
       width: 100%;
-      height: 5845px;
+      height: 1169px;
+      z-index: -100;
+    }
+    .bg2_tablet {
+      display: block;
+      position: absolute;
+      top: 1209px;
+      width: 100%;
+      height: 1169px;
+      z-index: -100;
+    }
+    .bg3_tablet {
+      display: block;
+      position: absolute;
+      top: 2378px;
+      width: 100%;
+      height: 1169px;
+      z-index: -100;
+    }
+    .bg4_tablet {
+      display: block;
+      position: absolute;
+      top: 3547px;
+      width: 100%;
+      height: 1169px;
+      z-index: -100;
+    }
+    .bg5_tablet {
+      display: block;
+      position: absolute;
+      top: 4716px;
+      width: 100%;
+      height: 1169px;
       z-index: -100;
     }
   }
@@ -103,9 +170,25 @@
       width: 100%;
       height: 100%;
     }
-    .bg_ongoing_tablet {
+    .bg1_tablet {    
       top: calc(0.05211 * 100vw - 0.02133px);
-      height: calc(7.61066 * 100vw + 0.00799px);
+      height: calc(1.52211 * 100vw + 0.01867px);
+    }
+    .bg2_tablet {
+      top: calc(0.05211 * 100vw - 0.02133px);
+      height: calc(1.52211 * 100vw + 0.01867px);
+    }
+    .bg3_tablet {
+      top: calc(3.096388 * 100vw - 0.0267px);
+      height: calc(1.52211 * 100vw + 0.01867px);
+    }
+    .bg4_tablet {
+      top: calc(4.618499 * 100vw - 0.00799px);
+      height: calc(1.52211 * 100vw + 0.01867px);
+    }
+    .bg5_tablet {
+      top: calc(6.140666 * 100vw - 0.032px);
+      height: calc(1.52211 * 100vw + 0.01867px);
     }
   }
 
@@ -114,15 +197,59 @@
       width: 360px;
       height: 100%;
     }
-    .bg_ongoing_tablet {
+    .bg1_tablet {    
       display: none;
     }
-    .bg_ongoing_mobile {
+    .bg2_tablet {
+      display: none;
+    }
+    .bg3_tablet {
+      display: none;
+    }
+    .bg4_tablet {
+      display: none;
+    }
+    .bg5_tablet {
+      display: none;
+    }
+    .bg1_mobile {    
       display: block;
       position: absolute;
       top: 0px;
       width: 100%;
-      height: 6065px;
+      height: 1213px;
+      z-index: -100;
+    }
+    .bg2_mobile {
+      display: block;
+      position: absolute;
+      top: 1213px;
+      width: 100%;
+      height: 1213px;
+      z-index: -100;
+    }
+    .bg3_mobile {
+      display: block;
+      position: absolute;
+      top: 2426px;
+      width: 100%;
+      height: 1213px;
+      z-index: -100;
+    }
+    .bg4_mobile {
+      display: block;
+      position: absolute;
+      top: 3639px;
+      width: 100%;
+      height: 1213px;
+      z-index: -100;
+    }
+    .bg5_mobile {
+      display: block;
+      position: absolute;
+      top: 4852px;
+      width: 100%;
+      height: 1213px;
       z-index: -100;
     }
   }
@@ -132,7 +259,23 @@
       width: 100%;
       height: 100%;
     }
-    .bg_ongoing_mobile {
-      height: calc(16.847125 * 100vw + 0.03499px);
+    .bg1_mobile {    
+      height: calc(3.369499 * 100vw - 0.0199px);
+    }
+    .bg2_mobile {
+      top: calc(3.369499 * 100vw - 0.0199px);
+      height: calc(3.369499 * 100vw - 0.0199px);
+    }
+    .bg3_mobile {
+      top: calc(6.73887499 * 100vw + 0.005px);
+      height: calc(3.369499 * 100vw - 0.0199px);
+    }
+    .bg4_mobile {
+      top: calc(10.108375 * 100vw - 0.015px);
+      height: calc(3.369499 * 100vw - 0.0199px);
+    }
+    .bg5_mobile {
+      top: calc(13.477875 * 100vw - 0.035px);
+      height: calc(3.369499 * 100vw - 0.0199px);
     }
   }
