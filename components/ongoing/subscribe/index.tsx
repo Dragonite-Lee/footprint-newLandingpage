@@ -17,6 +17,7 @@ import { useEffect, useState } from 'react'
 
 interface SendData {
   email: string
+  agreed: boolean
 }
 
 interface SendAuthData {
@@ -38,8 +39,6 @@ function Subscribe() {
   const [authLoading, setAuthLoading] = useState<boolean>(false);
   const [authNot, setAuthNot] = useState<boolean>(false);
     //위에서 부터 입력해주신 메일 / 인증번호 틀림 
-  const [getUSer, setGetUser] = useState<boolean>(false);
-    //등록된 회원
   const [timePlay, setTimePlay] = useState<boolean>(false);
   const [timeState, setTimeState] = useState<boolean>(false);
   const [authTime, setAuthTime] = useState<number>(0);
@@ -49,7 +48,8 @@ function Subscribe() {
   const authTimeSec = String(authTime % 60).length === 1 ? '0' + (authTime % 60) : authTime % 60;
 
   const sendData: SendData = {
-    "email" : email
+    "email" : email,
+    "agreed" : true
   }
 
   const sendAuthData: SendAuthData = {
@@ -108,8 +108,7 @@ function Subscribe() {
 
   // *이메일과 수신동의 백단에 보내주고 카운트다운 시작
   const emailOkCountDown = async () => {
-    setEmailState(false);
-    setAuthLoading(true);
+    
     if(emailValid === false) {
         alert('이메일 형식을 확인해주세요');
     } else if (agreePrivate === false) {
@@ -118,13 +117,14 @@ function Subscribe() {
       alert('뉴스레터에서 광고성 정보만 따로 보내는 것이 어렵기 때문에, 동의하지 않을 경우 서비스 이용이 제한될 수 있습니다.')
     } else if (emailValid === true && agreePrivate === true && agreeAdver === true) {
       //api전송 email, agree
+        setEmailState(false);
+        setAuthLoading(true);
         await axios.post(`https://footprintstory.kr/api/members`,JSON.stringify(sendData),{
             headers: {
                 "Content-Type": `application/json`,
             }
         })
         .then(async function(res) {
-            await setGetUser(res.data.sent);
             if (res.data.sent == true) {
               setEmailState(true);
               setAuthLoading(false);
@@ -161,7 +161,6 @@ function Subscribe() {
           setAuthState(false);
           setAuthNot(false);
           setTimePlay(false);
-          setGetUser(true);
           setEmail('');
           setAuth('');
           setAuthTime(0);
