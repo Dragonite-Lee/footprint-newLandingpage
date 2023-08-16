@@ -14,6 +14,7 @@ import Image from 'next/image'
 import { FacebookShareButton, TwitterShareButton} from 'next-share'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 interface SendData {
   email: string
@@ -26,6 +27,7 @@ interface SendAuthData {
 
 function Subscribe() {
 
+  const router = useRouter()
   const [agreePrivate, setAgreePrivate] = useState<boolean>(false);
   const [agreeAdver, setAgreeAdver] = useState<boolean>(false);
   const [email, setEmail] = useState<string>('');
@@ -193,7 +195,7 @@ function Subscribe() {
         setTimePlay(false);
         setTimeState(false);
         alert('인증시간이 종료되었습니다. 재전송 후 인증바랍니다.'); 
-        window.location.reload();
+        router.reload()
       }
     };
   }, 1000);
