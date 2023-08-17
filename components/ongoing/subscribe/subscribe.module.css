@@ -61,6 +61,7 @@
     font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
+    cursor: pointer;
 }
 .auth_text {
     font-size: 33px;/*반응*/
@@ -101,7 +102,6 @@
     font-family: 'Pretendard-medium';
     font-style: normal;
     font-weight: 500;
-    cursor: pointer;
 }
 .auth_button_text {
     color: #757575;
@@ -110,6 +110,7 @@
     font-style: normal; 
     font-weight: 500;
     text-decoration: underline;
+    cursor: pointer;
 }
 .logo_img {
     width: 409px; /*반응*/

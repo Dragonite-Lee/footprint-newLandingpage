@@ -1,9 +1,9 @@
 'use client'
 
 import styles from './layout.module.css'
-import navbarLogo from '../../public/layout/navbar_logo.png'
-import h_menu from '../../public/layout/h_menu.png'
-import c_menu from '../../public/layout/c_menu.png'
+import navbarLogo from '../../public/layoutImg/navbar_logo.png'
+import h_menu from '../../public/layoutImg/h_menu.png'
+import c_menu from '../../public/layoutImg/c_menu.png'
 
 import Link from 'next/link';
 import Image from 'next/image';
