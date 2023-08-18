@@ -2,21 +2,6 @@
 
 import styles from './ongoing.module.css'
 import Subscribe from '../../components/ongoing/subscribe'
-import bg1_pc from '../../public/bg_pc/ongoing1.png'
-import bg2_pc from '../../public/bg_pc/ongoing2.png'
-import bg3_pc from '../../public/bg_pc/ongoing3.png'
-import bg4_pc from '../../public/bg_pc/ongoing4.png'
-import bg5_pc from '../../public/bg_pc/ongoing5.png'
-import bg1_tablet from '../../public/bg_tablet/ongoing1.png'
-import bg2_tablet from '../../public/bg_tablet/ongoing2.png'
-import bg3_tablet from '../../public/bg_tablet/ongoing3.png'
-import bg4_tablet from '../../public/bg_tablet/ongoing4.png'
-import bg5_tablet from '../../public/bg_tablet/ongoing5.png'
-import bg1_mobile from '../../public/bg_mobile/ongoing1.png'
-import bg2_mobile from '../../public/bg_mobile/ongoing2.png'
-import bg3_mobile from '../../public/bg_mobile/ongoing3.png'
-import bg4_mobile from '../../public/bg_mobile/ongoing4.png'
-import bg5_mobile from '../../public/bg_mobile/ongoing5.png'
 
 import Image from 'next/image'
 import Head from 'next/head'
@@ -62,21 +47,21 @@ function Ongoing() {
                 <meta name="twitter:image" content="https://footprintstory.kr/images/image.png" /> 
             </Head>
             <div className={styles.container}>
-                <Image src={bg1_pc} alt='bg_ongoing_pc' className={styles.bg1_pc} />
-                <Image src={bg2_pc} alt='bg_ongoing_pc' className={styles.bg2_pc} />
-                <Image src={bg3_pc} alt='bg_ongoing_pc' className={styles.bg3_pc} />
-                <Image src={bg4_pc} alt='bg_ongoing_pc' className={styles.bg4_pc} />
-                <Image src={bg5_pc} alt='bg_ongoing_pc' className={styles.bg5_pc} />
-                <Image src={bg1_tablet} alt='bg_ongoing_tablet' className={styles.bg1_tablet} />
-                <Image src={bg2_tablet} alt='bg_ongoing_tablet' className={styles.bg2_tablet} />
-                <Image src={bg3_tablet} alt='bg_ongoing_tablet' className={styles.bg3_tablet} />
-                <Image src={bg4_tablet} alt='bg_ongoing_tablet' className={styles.bg4_tablet} />
-                <Image src={bg5_tablet} alt='bg_ongoing_tablet' className={styles.bg5_tablet} />
-                <Image src={bg1_mobile} alt='bg_ongoing_mobile' className={styles.bg1_mobile} />
-                <Image src={bg2_mobile} alt='bg_ongoing_mobile' className={styles.bg2_mobile} />
-                <Image src={bg3_mobile} alt='bg_ongoing_mobile' className={styles.bg3_mobile} />
-                <Image src={bg4_mobile} alt='bg_ongoing_mobile' className={styles.bg4_mobile} />
-                <Image src={bg5_mobile} alt='bg_ongoing_mobile' className={styles.bg5_mobile} />
+                <Image src='/bg_pc/ongoing1.png' alt='bg_ongoing_pc' className={styles.bg1_pc} width={1920} height={2659.8}/>
+                <Image src='/bg_pc/ongoing2.png' alt='bg_ongoing_pc' className={styles.bg2_pc} width={1920} height={2659.8}/>
+                <Image src='/bg_pc/ongoing3.png' alt='bg_ongoing_pc' className={styles.bg3_pc} width={1920} height={2659.8}/>
+                <Image src='/bg_pc/ongoing4.png' alt='bg_ongoing_pc' className={styles.bg4_pc} width={1920} height={2659.8}/>
+                <Image src='/bg_pc/ongoing5.png' alt='bg_ongoing_pc' className={styles.bg5_pc} width={1920} height={2086}/>
+                <Image src='/bg_tablet/ongoing1.png' alt='bg_ongoing_tablet' className={styles.bg1_tablet} width={768} height={1169}/>
+                <Image src='/bg_tablet/ongoing2.png' alt='bg_ongoing_tablet' className={styles.bg2_tablet} width={768} height={1169}/>
+                <Image src='/bg_tablet/ongoing3.png' alt='bg_ongoing_tablet' className={styles.bg3_tablet} width={768} height={1169}/>
+                <Image src='/bg_tablet/ongoing4.png' alt='bg_ongoing_tablet' className={styles.bg4_tablet} width={768} height={1169}/>
+                <Image src='/bg_tablet/ongoing5.png' alt='bg_ongoing_tablet' className={styles.bg5_tablet} width={768} height={1169}/>
+                <Image src='/bg_mobile/ongoing1.png' alt='bg_ongoing_mobile' className={styles.bg1_mobile} width={360} height={1213}/>
+                <Image src='/bg_mobile/ongoing2.png' alt='bg_ongoing_mobile' className={styles.bg2_mobile} width={360} height={1213}/>
+                <Image src='/bg_mobile/ongoing3.png' alt='bg_ongoing_mobile' className={styles.bg3_mobile} width={360} height={1213}/>
+                <Image src='/bg_mobile/ongoing4.png' alt='bg_ongoing_mobile' className={styles.bg4_mobile} width={360} height={1213}/>
+                <Image src='/bg_mobile/ongoing5.png' alt='bg_ongoing_mobile' className={styles.bg5_mobile} width={360} height={1213}/>
                 <Subscribe />
             </div>
         </>

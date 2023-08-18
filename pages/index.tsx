@@ -13,18 +13,6 @@ import Gray from '../components/main/gray'
 import Curious from '../components/main/curious'
 import Together from '../components/main/together'
 import Qna from '../components/main/qna'
-import bg1_pc from '../public/bg_pc/main1.png'
-import bg2_pc from '../public/bg_pc/main2.png'
-import bg3_pc from '../public/bg_pc/main3.png'
-import bg4_pc from '../public/bg_pc/main4.png'
-import bg1_tablet from '../public/bg_tablet/main1.png'
-import bg2_tablet from '../public/bg_tablet/main2.png'
-import bg3_tablet from '../public/bg_tablet/main3.png'
-import bg4_tablet from '../public/bg_tablet/main4.png'
-import bg1_mobile from '../public/bg_mobile/main1.png'
-import bg2_mobile from '../public/bg_mobile/main2.png'
-import bg3_mobile from '../public/bg_mobile/main3.png'
-import bg4_mobile from '../public/bg_mobile/main4.png'
 
 const Home: NextPage = () => {
   
@@ -67,18 +55,18 @@ const Home: NextPage = () => {
       </Head>
 
       <div className={styles.container}>
-          <Image src={bg1_pc} alt='bg_main_pc' className={styles.bg1_pc} />
-          <Image src={bg2_pc} alt='bg_main_pc' className={styles.bg2_pc} />
-          <Image src={bg3_pc} alt='bg_main_pc' className={styles.bg3_pc} />
-          <Image src={bg4_pc} alt='bg_main_pc' className={styles.bg4_pc} />
-          <Image src={bg1_tablet} alt='bg_main_tablet' className={styles.bg1_tablet} />
-          <Image src={bg2_tablet} alt='bg_main_tablet' className={styles.bg2_tablet} />
-          <Image src={bg3_tablet} alt='bg_main_tablet' className={styles.bg3_tablet} />
-          <Image src={bg4_tablet} alt='bg_main_tablet' className={styles.bg4_tablet} />
-          <Image src={bg1_mobile} alt='bg_main_mobile' className={styles.bg1_mobile} />
-          <Image src={bg2_mobile} alt='bg_main_mobile' className={styles.bg2_mobile} />
-          <Image src={bg3_mobile} alt='bg_main_mobile' className={styles.bg3_mobile} />
-          <Image src={bg4_mobile} alt='bg_main_mobile' className={styles.bg4_mobile} />
+          <Image src='/bg_pc/main1.png' alt='bg_main_pc' className={styles.bg1_pc} width={1920} height={2541}/>
+          <Image src='/bg_pc/main2.png' alt='bg_main_pc' className={styles.bg2_pc} width={1920} height={2541}/>
+          <Image src='/bg_pc/main3.png' alt='bg_main_pc' className={styles.bg3_pc} width={1920} height={2541}/>
+          <Image src='/bg_pc/main4.png' alt='bg_main_pc' className={styles.bg4_pc} width={1920} height={2541}/>
+          <Image src='/bg_tablet/main1.png' alt='bg_main_tablet' className={styles.bg1_tablet} width={768} height={1421.5}/>
+          <Image src='/bg_tablet/main2.png' alt='bg_main_tablet' className={styles.bg2_tablet} width={768} height={1421.5}/>
+          <Image src='/bg_tablet/main3.png' alt='bg_main_tablet' className={styles.bg3_tablet} width={768} height={1421.5}/>
+          <Image src='/bg_tablet/main4.png' alt='bg_main_tablet' className={styles.bg4_tablet} width={768} height={1421.5}/>
+          <Image src='/bg_mobile/main1.png' alt='bg_main_mobile' className={styles.bg1_mobile} width={360} height={1534.5}/>
+          <Image src='/bg_mobile/main2.png' alt='bg_main_mobile' className={styles.bg2_mobile} width={360} height={1534.5}/>
+          <Image src='/bg_mobile/main3.png' alt='bg_main_mobile' className={styles.bg3_mobile} width={360} height={1534.5}/>
+          <Image src='/bg_mobile/main4.png' alt='bg_main_mobile' className={styles.bg4_mobile} width={360} height={1534.5}/>
           <Introduce top_text='스토리 보러가기' 
             bot_text_pc={"국내 패션 커머스 기업에서 서버 개발자의 삶을 살아가고 있는 주인공 ‘하늬'는 \n딱히 좋아하고 잘하는 것도 없었어요. \n\n기대감에 젖어 진학한 컴공과마저 적성에 맞지 않아 포기하려 하기도 했죠.\n\n그런 그녀가 서버 개발자의 삶을 선택하고 달성하기까지의 치열한 여정을 다루고 있습니다."}
             bot_text_tablet={"국내 패션 커머스 기업에서 서버 개발자의 삶을 살아가고 있는 주인공 ‘하늬'는 \n딱히 좋아하고 잘하는 것도 없었어요. \n\n기대감에 젖어 진학한 컴공과마저 적성에 맞지 않아 포기하려 하기도 했죠.\n\n그런 그녀가 서버 개발자의 삶을 선택하고\n 달성하기까지의 치열한 여정을 다루고 있습니다."} 

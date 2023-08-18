@@ -1,18 +1,6 @@
 'use client'
 
 import styles from './intro.module.css'
-import bg1_pc from '../../public/bg_pc/intro1.png'
-import bg2_pc from '../../public/bg_pc/intro2.png'
-import bg3_pc from '../../public/bg_pc/intro3.png'
-import bg4_pc from '../../public/bg_pc/intro4.png'
-import bg1_tablet from '../../public/bg_tablet/intro1.png'
-import bg2_tablet from '../../public/bg_tablet/intro2.png'
-import bg3_tablet from '../../public/bg_tablet/intro3.png'
-import bg4_tablet from '../../public/bg_tablet/intro4.png'
-import bg1_mobile from '../../public/bg_mobile/intro1.png'
-import bg2_mobile from '../../public/bg_mobile/intro2.png'
-import bg3_mobile from '../../public/bg_mobile/intro3.png'
-import bg4_mobile from '../../public/bg_mobile/intro4.png'
 
 import Image from 'next/image';
 import Head from 'next/head';
@@ -58,18 +46,18 @@ function Intro() {
                 <meta name="twitter:image" content="https://footprintstory.kr/images/image.png" /> 
             </Head>
             <div className={styles.container}>
-                <Image src={bg1_pc} alt='bg_intro_pc' className={styles.bg1_pc} />
-                <Image src={bg2_pc} alt='bg_intro_pc' className={styles.bg2_pc} />
-                <Image src={bg3_pc} alt='bg_intro_pc' className={styles.bg3_pc} />
-                <Image src={bg4_pc} alt='bg_intro_pc' className={styles.bg4_pc} />
-                <Image src={bg1_tablet} alt='bg_intro_tablet' className={styles.bg1_tablet} />
-                <Image src={bg2_tablet} alt='bg_intro_tablet' className={styles.bg2_tablet} />
-                <Image src={bg3_tablet} alt='bg_intro_tablet' className={styles.bg3_tablet} />
-                <Image src={bg4_tablet} alt='bg_intro_tablet' className={styles.bg4_tablet} />
-                <Image src={bg1_mobile} alt='bg_intro_mobile' className={styles.bg1_mobile} />
-                <Image src={bg2_mobile} alt='bg_intro_mobile' className={styles.bg2_mobile} />
-                <Image src={bg3_mobile} alt='bg_intro_mobile' className={styles.bg3_mobile} />
-                <Image src={bg4_mobile} alt='bg_intro_mobile' className={styles.bg4_mobile} />
+                <Image src='/bg_pc/intro1.png' alt='bg_intro_pc' className={styles.bg1_pc} width={1920} height={1925}/>
+                <Image src='/bg_pc/intro2.png' alt='bg_intro_pc' className={styles.bg2_pc} width={1920} height={1925}/>
+                <Image src='/bg_pc/intro3.png' alt='bg_intro_pc' className={styles.bg3_pc} width={1920} height={1925}/>
+                <Image src='/bg_pc/intro4.png' alt='bg_intro_pc' className={styles.bg4_pc} width={1920} height={1925}/>
+                <Image src='/bg_tablet/intro1.png' alt='bg_intro_tablet' className={styles.bg1_tablet} width={768} height={913}/>
+                <Image src='/bg_tablet/intro2.png' alt='bg_intro_tablet' className={styles.bg2_tablet} width={768} height={913}/>
+                <Image src='/bg_tablet/intro3.png' alt='bg_intro_tablet' className={styles.bg3_tablet} width={768} height={913}/>
+                <Image src='/bg_tablet/intro4.png' alt='bg_intro_tablet' className={styles.bg4_tablet} width={768} height={913}/>
+                <Image src='/bg_mobile/intro1.png' alt='bg_intro_mobile' className={styles.bg1_mobile}  width={360} height={1083}/>
+                <Image src='/bg_mobile/intro2.png' alt='bg_intro_mobile' className={styles.bg2_mobile}  width={360} height={1083}/>
+                <Image src='/bg_mobile/intro3.png' alt='bg_intro_mobile' className={styles.bg3_mobile}  width={360} height={1083}/>
+                <Image src='/bg_mobile/intro4.png' alt='bg_intro_mobile' className={styles.bg4_mobile}  width={360} height={1084}/>
             </div>
         </>
     )
