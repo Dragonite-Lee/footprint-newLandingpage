@@ -31,15 +31,15 @@ function Qna() {
     if (window) {
       if (window.innerWidth >= 1080) {
         if (qnaContent1_pc.current) {
-          slideToggle(qnaContent1_pc, 200);
+          slideToggle(qnaContent1_pc, 300);
         }
       } else if (window.innerWidth >= 588) {
         if (qnaContent1_tablet.current) {
-          slideToggle(qnaContent1_tablet, 200);
+          slideToggle(qnaContent1_tablet, 300);
         }
       } else {
         if (qnaContent1_mobile.current) {
-          slideToggle(qnaContent1_mobile, 200);
+          slideToggle(qnaContent1_mobile, 300);
         }
       }
     }
@@ -49,15 +49,15 @@ function Qna() {
     if (window) {
       if (window.innerWidth >= 1080) {
         if (qnaContent2_pc.current) {
-          slideToggle(qnaContent2_pc, 200);
+          slideToggle(qnaContent2_pc, 300);
         }
       } else if (window.innerWidth >= 588) {
         if (qnaContent2_tablet.current) {
-          slideToggle(qnaContent2_tablet, 200);
+          slideToggle(qnaContent2_tablet, 300);
         }
       } else {
         if (qnaContent2_mobile.current) {
-          slideToggle(qnaContent2_mobile, 200);
+          slideToggle(qnaContent2_mobile, 300);
         }
       }
     }
@@ -67,15 +67,15 @@ function Qna() {
     if (window) {
       if (window.innerWidth >= 1080) {
         if (qnaContent3_pc.current) {
-          slideToggle(qnaContent3_pc, 200);
+          slideToggle(qnaContent3_pc, 300);
         }
       } else if (window.innerWidth >= 588) {
         if (qnaContent3_tablet.current) {
-          slideToggle(qnaContent3_tablet, 200);
+          slideToggle(qnaContent3_tablet, 300);
         }
       } else {
         if (qnaContent3_mobile.current) {
-          slideToggle(qnaContent3_mobile, 200);
+          slideToggle(qnaContent3_mobile, 300);
         }
       }
     }
@@ -85,21 +85,21 @@ function Qna() {
     if (window) {
       if (window.innerWidth >= 1080) {
         if (qnaContent4_pc.current) {
-          slideToggle(qnaContent4_pc, 200);
+          slideToggle(qnaContent4_pc, 300);
         }
       } else if (window.innerWidth >= 588) {
         if (qnaContent4_tablet.current) {
-          slideToggle(qnaContent4_tablet, 200);
+          slideToggle(qnaContent4_tablet, 300);
         }
       } else {
         if (qnaContent4_mobile.current) {
-          slideToggle(qnaContent4_mobile, 200);
+          slideToggle(qnaContent4_mobile, 300);
         }
       }
     }
   };
 
-  let slideUp = (target: RefObject<HTMLDivElement>, duration=200) => {
+  let slideUp = (target: RefObject<HTMLDivElement>, duration=300) => {
     if (target.current) {
       target.current.style.transitionProperty = 'height, margin, padding';
       target.current.style.transitionDuration = duration + 'ms';
@@ -112,10 +112,10 @@ function Qna() {
       target.current.style.paddingBottom = '0';
       target.current.style.marginTop = '0';
       target.current.style.marginBottom = '0';
+      target.current.style.display = 'none';
     }
     window.setTimeout( () => {
       if (target.current) {
-        target.current.style.display = 'none';
         target.current.style.removeProperty('height');
         target.current.style.removeProperty('padding-top');
         target.current.style.removeProperty('padding-bottom');
@@ -130,15 +130,15 @@ function Qna() {
 
   }
 
-  let slideDown = (target: RefObject<HTMLDivElement>, duration=200) => {
+  let slideDown = (target: RefObject<HTMLDivElement>, duration=300) => {
     if (target.current) {
       target.current.style.removeProperty('display');
     let display = window.getComputedStyle(target.current).display;
 
-    if (display === 'none')
-      display = 'block';
-
-    target.current.style.display = display;
+    // if (display === 'none')
+    //   display = 'block';
+      target.current.style.display = 'none';
+    // target.current.style.display = display;
     let height = target.current.offsetHeight;
     target.current.style.overflow = 'hidden';
     target.current.style.height = '0';
@@ -165,12 +165,12 @@ function Qna() {
       }
     }, duration);
   }
-   let slideToggle = (target: RefObject<HTMLDivElement>, duration = 200) => {
+   let slideToggle = (target: RefObject<HTMLDivElement>, duration = 300) => {
     if (target.current) {
       if (window.getComputedStyle(target.current).display === 'none') {
-        return slideDown(target, duration);
+        return slideDown(target, 1);
       } else {
-        return slideUp(target, duration);
+        return slideUp(target, 1);
       }
     }
   }
