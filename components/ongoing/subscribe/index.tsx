@@ -89,7 +89,7 @@ function Subscribe() {
               description: "국내 대형 패션 커머스 기업에서 서버 개발자의 삶을 살아가고 있는 주인공 ‘하늬'의 커리어 성장기가 궁금하다면.",
               link: 'https://footprintstory.kr',
               profile_text: "footprintstory",
-              profile_image_url: "public/image/footPrint_favicon.png"
+              profile_image_url: "public/image/favicon.png"
             },
             installTalk: true
         });
