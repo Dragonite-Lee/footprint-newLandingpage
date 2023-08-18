@@ -31,15 +31,15 @@ function Qna() {
     if (window) {
       if (window.innerWidth >= 1080) {
         if (qnaContent1_pc.current) {
-          slideToggle(qnaContent1_pc, 600);
+          slideToggle(qnaContent1_pc, 200);
         }
       } else if (window.innerWidth >= 588) {
         if (qnaContent1_tablet.current) {
-          slideToggle(qnaContent1_tablet, 600);
+          slideToggle(qnaContent1_tablet, 200);
         }
       } else {
         if (qnaContent1_mobile.current) {
-          slideToggle(qnaContent1_mobile, 600);
+          slideToggle(qnaContent1_mobile, 200);
         }
       }
     }
@@ -49,15 +49,15 @@ function Qna() {
     if (window) {
       if (window.innerWidth >= 1080) {
         if (qnaContent2_pc.current) {
-          slideToggle(qnaContent2_pc, 600);
+          slideToggle(qnaContent2_pc, 200);
         }
       } else if (window.innerWidth >= 588) {
         if (qnaContent2_tablet.current) {
-          slideToggle(qnaContent2_tablet, 600);
+          slideToggle(qnaContent2_tablet, 200);
         }
       } else {
         if (qnaContent2_mobile.current) {
-          slideToggle(qnaContent2_mobile, 600);
+          slideToggle(qnaContent2_mobile, 200);
         }
       }
     }
@@ -67,15 +67,15 @@ function Qna() {
     if (window) {
       if (window.innerWidth >= 1080) {
         if (qnaContent3_pc.current) {
-          slideToggle(qnaContent3_pc, 600);
+          slideToggle(qnaContent3_pc, 200);
         }
       } else if (window.innerWidth >= 588) {
         if (qnaContent3_tablet.current) {
-          slideToggle(qnaContent3_tablet, 600);
+          slideToggle(qnaContent3_tablet, 200);
         }
       } else {
         if (qnaContent3_mobile.current) {
-          slideToggle(qnaContent3_mobile, 600);
+          slideToggle(qnaContent3_mobile, 200);
         }
       }
     }
@@ -85,21 +85,21 @@ function Qna() {
     if (window) {
       if (window.innerWidth >= 1080) {
         if (qnaContent4_pc.current) {
-          slideToggle(qnaContent4_pc, 600);
+          slideToggle(qnaContent4_pc, 200);
         }
       } else if (window.innerWidth >= 588) {
         if (qnaContent4_tablet.current) {
-          slideToggle(qnaContent4_tablet, 600);
+          slideToggle(qnaContent4_tablet, 200);
         }
       } else {
         if (qnaContent4_mobile.current) {
-          slideToggle(qnaContent4_mobile, 600);
+          slideToggle(qnaContent4_mobile, 200);
         }
       }
     }
   };
 
-  let slideUp = (target: RefObject<HTMLDivElement>, duration=600) => {
+  let slideUp = (target: RefObject<HTMLDivElement>, duration=200) => {
     if (target.current) {
       target.current.style.transitionProperty = 'height, margin, padding';
       target.current.style.transitionDuration = duration + 'ms';
@@ -130,7 +130,7 @@ function Qna() {
 
   }
 
-  let slideDown = (target: RefObject<HTMLDivElement>, duration=500) => {
+  let slideDown = (target: RefObject<HTMLDivElement>, duration=200) => {
     if (target.current) {
       target.current.style.removeProperty('display');
     let display = window.getComputedStyle(target.current).display;
@@ -165,7 +165,7 @@ function Qna() {
       }
     }, duration);
   }
-   let slideToggle = (target: RefObject<HTMLDivElement>, duration = 500) => {
+   let slideToggle = (target: RefObject<HTMLDivElement>, duration = 200) => {
     if (target.current) {
       if (window.getComputedStyle(target.current).display === 'none') {
         return slideDown(target, duration);
