@@ -16,6 +16,6 @@
     "incremental": true,
     "typeRoots": ["./node_modules/@types", "./@types"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "component/layout/index.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "component/layout/index.tsx", "lib/fpixel.jsx"],
   "exclude": ["node_modules"]
 }

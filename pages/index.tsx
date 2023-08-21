@@ -64,6 +64,7 @@ const Home: NextPage = () => {
         <meta name="twitter:title" content="footprint story" /> 
         <meta name="twitter:description" content="footprint story - 다양한 분야에 종사하고 있는 선배들의 커리어 성장기와 삶을 이야기에 담아 연재하는 서비스" /> 
         <meta name="twitter:image" content="https://footprintstory.kr/images/shareLogo.png" /> 
+        
       </Head>
 
       <div className={styles.container}>

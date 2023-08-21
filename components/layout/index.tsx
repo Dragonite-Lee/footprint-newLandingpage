@@ -10,8 +10,6 @@ type AppLayoutProps = {
 
 function Layout({ children }: AppLayoutProps) {
 
-  
-
   return (
     <div>
       <Header />
