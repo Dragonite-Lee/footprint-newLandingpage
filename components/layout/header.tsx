@@ -19,6 +19,28 @@ function Header() {
   const menu_wrap = useRef<HTMLDivElement>(null);
   const [menuCurrent, setMenuCurrent] = useState<boolean>(false);
 
+  const zChangeOn = () => {
+    setMenuCurrent(true);
+  };
+  const zChangeOff = () => {
+    if(menu_black.current && menu_wrap.current && menu_white.current) {
+      menu_black.current.style.zIndex = '4'; 
+      menu_wrap.current.style.zIndex = '8';
+    }
+    setMenuCurrent(false);
+  };
+
+  const removeProperty = () => {
+    if(menu_black.current && menu_wrap.current && menu_white.current) {
+      menu_black.current.style.removeProperty('background');
+      menu_black.current.style.removeProperty('transition');
+      menu_white.current.style.removeProperty('transform');
+      menu_black.current.style.removeProperty('zIndex');
+      menu_white.current.style.removeProperty('zIndex');
+      menu_wrap.current.style.removeProperty('zIndex');
+    }
+  };
+
   const openModal = () => {
     if(menu_black.current && menu_white.current && menu_wrap.current) {
       menu_black.current.style.background = 'rgba(0,0,0,0.3)';
@@ -27,10 +49,9 @@ function Header() {
       menu_white.current.style.transform = 'translateX(0%)';
       menu_white.current.style.transition = 'transform 1s ease';
     };
-    setTimeout(() => {
-      setMenuCurrent(true);
-    }, 300);
-  }
+    let zChangeOnTimer = setTimeout(zChangeOn, 300);
+    clearTimeout(zChangeOnTimer);
+  };
 
   const closeModal = () => {
     if(menu_black.current && menu_white.current && menu_wrap.current) {
@@ -40,14 +61,12 @@ function Header() {
       menu_white.current.style.transform = 'translateX(200%)';
       menu_white.current.style.transition = 'transform 1s ease';
     };
-    setTimeout(() => {
-      if(menu_black.current && menu_wrap.current) {
-        menu_black.current.style.zIndex = '4'; 
-        menu_wrap.current.style.zIndex = '8';
-      }
-      setMenuCurrent(false);
-    }, 300);
-  }
+
+    let zChangeOffTimer = setTimeout(zChangeOff, 300);
+    clearTimeout(zChangeOffTimer);
+    let removeimer = setTimeout(removeProperty, 400);
+    clearTimeout(removeimer);
+  };
 
   const closeBlackModal = (e: React.MouseEvent<HTMLElement>) => {
     if (e.target === menu_black.current) {
@@ -58,15 +77,13 @@ function Header() {
         menu_white.current.style.transform = 'translateX(200%)';
         menu_white.current.style.transition = 'transform 1s ease';
       }
-      setTimeout(() => {
-        if(menu_black.current && menu_wrap.current) {
-          menu_black.current.style.zIndex = '4'; 
-          menu_wrap.current.style.zIndex = '8';
-        }
-        setMenuCurrent(false);
-      }, 300);
+
+      let zChangeOffTimer = setTimeout(zChangeOff, 300);
+      clearTimeout(zChangeOffTimer);
+      let removeimer = setTimeout(removeProperty, 400);
+      clearTimeout(removeimer);
     }
-  }
+  };
   
   useEffect(()=>{
     const setScreenSize = () => {
@@ -75,12 +92,17 @@ function Header() {
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
     setScreenSize();
-  },[])
+
+    return () => {
+      document.documentElement.style.removeProperty('--vh');
+    }
+  },[]);
+
   return (
     <>
       <header className={styles.navbar}>
         <Link href="/" className={styles.navbar_left}>
-          <Image src={navbarLogo} className={styles.navbar_logo} alt='navbar_logo이미지' priority />
+          <Image src={navbarLogo} className={styles.navbar_logo} alt='navbar_logo이미지' />
         </Link>
         <div className={styles.navbar_right}>
           <Link href="/Intro">

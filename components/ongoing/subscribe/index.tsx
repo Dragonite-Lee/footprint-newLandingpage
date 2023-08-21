@@ -47,35 +47,35 @@ function Subscribe() {
     //타이머관련
   // *인증시간을 직접적으로 나타내는 부분
   const authTimeMin = parseInt(String(authTime / 60));
-  const authTimeSec = String(authTime % 60).length === 1 ? '0' + (authTime % 60) : authTime % 60;
+  const authTimeSec = String(authTime % 60).length === 1 ? '0' + (authTime % 60) : (authTime % 60);
 
   const sendData: SendData = {
     "email" : email,
     "agreed" : true
-  }
+  };
 
   const sendAuthData: SendAuthData = {
     "authenticCode" : auth
-  }
+  };
 
   axios.defaults.withCredentials = true; // withCredentials 전역 설정
 
   const agreePrivateHandler = () => {
-    setAgreePrivate(!agreePrivate)
-  }
+    setAgreePrivate(!agreePrivate);
+  };
   const agreeAdverHandler = () => {
-    setAgreeAdver(!agreeAdver)
-  }
+    setAgreeAdver(!agreeAdver);
+  };
   const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value)
-  }
+    setEmail(e.target.value);
+  };
   const authHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAuth(e.target.value)
-  }
+    setAuth(e.target.value);
+  };
 
   const closeCompleteModal = () => {
     setCompleteModal(false);
-  }
+  };
 
   // kakao 공유하기 함수
     const handleKakaoButton = () => {
@@ -85,11 +85,11 @@ function Subscribe() {
             templateArgs: {
               item_content : false,
               title: "좋아하는 것이 없어도 괜찮아(feat. 서버 개발자 하늬)",
-              image_url : "public/image/hani_kakao.webp",
+              image_url : "public/layoutImg/hani_kakao.webp",
               description: "국내 대형 패션 커머스 기업에서 서버 개발자의 삶을 살아가고 있는 주인공 ‘하늬'의 커리어 성장기가 궁금하다면.",
               link: 'https://footprintstory.kr',
               profile_text: "footprintstory",
-              profile_image_url: "public/image/favicon.png"
+              profile_image_url: "public/layoutImg/favicon.png"
             },
             installTalk: true
         });
@@ -146,7 +146,7 @@ function Subscribe() {
             setAuthLoading(false);
         })
       }
-  }
+  };
 
   const authNumberIsSuccess = async () => {
     await axios.post(`https://footprintstory.kr/api/members/code`,JSON.stringify(sendAuthData),{
@@ -186,7 +186,7 @@ function Subscribe() {
     setAuthTime(0);
     setAuth('');
     setAuthState(false);
-  }
+  };
   // *인증시간을 시작하며, 인증시간 종료 후 alert띄우고 새로고침
   useInterval(() => {
     if (timePlay) {
@@ -201,7 +201,7 @@ function Subscribe() {
   }, 1000);
 
   useEffect(() => {
-    const regexEmail = /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+    const regexEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
     if(regexEmail.test(email)) {
         setEmailValid(true);
     } else {
@@ -217,7 +217,11 @@ function Subscribe() {
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
     setScreenSize();
-  },[])
+
+    return () => {
+      document.documentElement.style.removeProperty('--vh');
+    }
+  },[]);
 
   return (
     <>

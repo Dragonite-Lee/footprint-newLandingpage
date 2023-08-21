@@ -112,8 +112,7 @@ function Qna() {
       target.current.style.paddingBottom = '0';
       target.current.style.marginTop = '0';
       target.current.style.marginBottom = '0';
-      
-    }
+    };
     window.setTimeout( () => {
       if (target.current) {
         target.current.style.display = 'none';

@@ -6,7 +6,7 @@ import { useRef, useEffect } from 'react';
 
 function Curious() {
   
-  const curiousRef = useRef<HTMLDivElement>(null)
+  const curiousRef = useRef<HTMLDivElement>(null);
 
   const animation = () => {
     let winH: number;
@@ -14,7 +14,7 @@ function Curious() {
     const initModule = () => {
       winH = window.innerHeight;
       addEventHandlers();
-    }
+    };
    
     const addEventHandlers = () => {
       window.addEventListener("scroll", checkPosition);
@@ -31,14 +31,14 @@ function Curious() {
             curiousRef.current.style.transition = '1.4s';
           }
         }
-    }
+    };
    
     return {
       init: initModule
-    }
-  }
+    };
+  };
   useEffect(() => {
-    animation().init();
+    return () => animation().init();
   },[])
 
   return (

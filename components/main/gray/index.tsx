@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 function Gray() {
   
-  const grayRef = useRef<HTMLDivElement>(null)
+  const grayRef = useRef<HTMLDivElement>(null);
 
     const animation = () => {
         let winH: number;
@@ -16,7 +16,7 @@ function Gray() {
     const initModule = () => {
       winH = window.innerHeight;
       addEventHandlers();
-    }
+    };
    
     const addEventHandlers = () => {
       window.addEventListener("scroll", checkPosition);
@@ -33,15 +33,15 @@ function Gray() {
             grayRef.current.style.transition = '1.4s';
           }
         }
-    }
+    };
    
     return {
       init: initModule
-    }
-  }
+    };
+  };
   useEffect(() => {
-    animation().init();
-  },[])
+    return () => animation().init();
+  },[]);
 
   return (
     <div className={styles.container}>

@@ -16,17 +16,8 @@ import bg_mobile_intro4 from '../../public/bg_mobile/intro4.png'
 
 import Image from 'next/image';
 import Head from 'next/head';
-import { setTimeout } from 'timers'
 
 function Intro() {
-
-    if (typeof window !== 'undefined') {
-        window.onload = function() {
-          setTimeout(function() {
-            scrollTo(0,0);
-          }, 100);
-        }
-      }
 
     return (
         <>

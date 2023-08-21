@@ -1,26 +1,22 @@
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-interface IUseInterval {
-    (callback: () => void, interval: number): void;
-  }
-  
-  const useInterval: IUseInterval = (callback, interval) => {
-    const savedCallback = useRef<(() => void) | null>(null);
-    
-    useEffect(() => {
-      savedCallback.current = callback;
-    });
-  
-    useEffect(() => {
-      function tick() {
-        if (savedCallback.current) {
-          savedCallback.current();
-        }
-      }
-  
-      let id = setInterval(tick, interval);
-      return () => clearInterval(id);
-    }, [interval]);
-  };
+const useInterval = (callback: () => unknown, delay: number | null) => {
+  const savedCallback = useRef(callback);
 
-  export default useInterval;
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    if (delay == null) {
+      return;
+    }
+
+    const timeId = setInterval(() => savedCallback.current(), delay);
+
+    // eslint-disable-next-line consistent-return
+    return () => clearInterval(timeId);
+  }, [delay]);
+};
+
+export default useInterval;

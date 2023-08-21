@@ -16,7 +16,7 @@ function But() {
     const initModule = () => {
       winH = window.innerHeight;
       addEventHandlers();
-    }
+    };
    
     const addEventHandlers = () => {
       window.addEventListener("scroll", checkPosition);
@@ -33,14 +33,14 @@ function But() {
             butRef.current.style.transition = '1.4s';
           }
         }
-    }
+    };
    
     return {
       init: initModule
-    }
+    };
   }
   useEffect(() => {
-    animation().init();
+    return () => animation().init();
   },[])
   
   return (

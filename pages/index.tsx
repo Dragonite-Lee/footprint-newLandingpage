@@ -3,7 +3,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image';
-import { setTimeout } from 'timers';
+
 
 import styles from '../styles/Home.module.css'
 import Introduce from '../components/main/introduce'
@@ -27,14 +27,7 @@ import bg_mobile_main3 from '../public/bg_mobile/main3.png'
 import bg_mobile_main4 from '../public/bg_mobile/main4.png'
 
 const Home: NextPage = () => {
-  
-  if (typeof window !== 'undefined') {
-    window.onload = function() {
-      setTimeout(function() {
-        scrollTo(0,0);
-      }, 100);
-    }
-  }
+
 
   return (
     <>
@@ -68,15 +61,15 @@ const Home: NextPage = () => {
       </Head>
 
       <div className={styles.container}>
-          <Image src={bg_pc_main1} alt='bg_main_pc' className={styles.bg1_pc} width={1920} height={2541}/>
+          <Image src={bg_pc_main1} alt='bg_main_pc' className={styles.bg1_pc} width={1920} height={2541} priority/>
           <Image src={bg_pc_main2} alt='bg_main_pc' className={styles.bg2_pc} width={1920} height={2541}/>
           <Image src={bg_pc_main3} alt='bg_main_pc' className={styles.bg3_pc} width={1920} height={2541}/>
           <Image src={bg_pc_main4} alt='bg_main_pc' className={styles.bg4_pc} width={1920} height={2541}/>
-          <Image src={bg_tablet_main1} alt='bg_main_tablet' className={styles.bg1_tablet} width={768} height={1421.5}/>
+          <Image src={bg_tablet_main1} alt='bg_main_tablet' className={styles.bg1_tablet} width={768} height={1421.5} priority/>
           <Image src={bg_tablet_main2} alt='bg_main_tablet' className={styles.bg2_tablet} width={768} height={1421.5}/>
           <Image src={bg_tablet_main3} alt='bg_main_tablet' className={styles.bg3_tablet} width={768} height={1421.5}/>
           <Image src={bg_tablet_main4} alt='bg_main_tablet' className={styles.bg4_tablet} width={768} height={1421.5}/>
-          <Image src={bg_mobile_main1} alt='bg_main_mobile' className={styles.bg1_mobile} width={360} height={1534.5}/>
+          <Image src={bg_mobile_main1} alt='bg_main_mobile' className={styles.bg1_mobile} width={360} height={1534.5} priority/>
           <Image src={bg_mobile_main2} alt='bg_main_mobile' className={styles.bg2_mobile} width={360} height={1534.5}/>
           <Image src={bg_mobile_main3} alt='bg_main_mobile' className={styles.bg3_mobile} width={360} height={1534.5}/>
           <Image src={bg_mobile_main4} alt='bg_main_mobile' className={styles.bg4_mobile} width={360} height={1534.5}/>
@@ -88,7 +81,7 @@ const Home: NextPage = () => {
           <Yellow />
           <But />
           <Gray />
-          <Curious />
+          <Curious /> 
           <Together />
           <Qna />
       </div>
