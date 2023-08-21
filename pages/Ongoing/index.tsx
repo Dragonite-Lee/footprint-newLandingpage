@@ -20,9 +20,20 @@ import bg_mobile_ongoing5 from '../../public/bg_mobile/ongoing5.png'
 
 import Image from 'next/image'
 import Head from 'next/head'
+import { setTimeout, clearTimeout } from 'timers'
 
 
 function Ongoing() {
+
+    function timer() {
+        scrollTo(0,0);
+      };
+      if (typeof window !== 'undefined') {
+        window.onload = function() {
+          let onloadTimer = setTimeout(timer, 100);
+          clearTimeout(onloadTimer);
+        }
+      };
 
     return (
         <>

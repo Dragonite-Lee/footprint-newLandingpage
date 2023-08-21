@@ -63,8 +63,8 @@ function Footer() {
         <div className={styles.footer_right}>
             <div className={styles.footer_right_contact}>
               <Image src={footer_right_contact} className={styles.footer_right_contact_img} alt='footer_right_contact이미지' />
-              <Image src={instagram} className={styles.instagram} alt='instagram이미지' onClick={() => {window.open('https://www.instagram.com/footprint_story/')}} />
-              <Image src={facebook} className={styles.facebook} alt='facebook이미지' onClick={() => {window.open('https://www.facebook.com/footprintcareers?mibextid=ZbWKwL')}} />
+              <Image src={instagram} className={styles.instagram} alt='instagram이미지' onClick={() => {window.open('https://www.instagram.com/footprint_story/', '_blank', 'noopener')}} />
+              <Image src={facebook} className={styles.facebook} alt='facebook이미지' onClick={() => {window.open('https://www.facebook.com/footprintcareers?mibextid=ZbWKwL', '_blank', 'noopener')}} />
             </div>
             <div className={styles.footer_right_bussiness}>
               <Image src={footer_right_bussiness} className={styles.footer_right_bussiness_img} alt='footer_right_bussiness이미지' />
@@ -78,8 +78,8 @@ function Footer() {
         <div className={styles.footer_right}>
           <div className={styles.footer_right_contact}>
             <Image src={footer_right_contact_tablet} className={styles.footer_right_contact_img} alt='footer_right_contact이미지' />
-            <Image src={instagram_tablet} className={styles.instagram} alt='instagram이미지' onClick={() => {window.open('https://www.instagram.com/footprint_story/')}} />
-            <Image src={facebook_tablet} className={styles.facebook} alt='facebook이미지' onClick={() => {window.open('https://www.facebook.com/footprintcareers?mibextid=ZbWKwL')}} />
+            <Image src={instagram_tablet} className={styles.instagram} alt='instagram이미지' onClick={() => {window.open('https://www.instagram.com/footprint_story/', '_blank', 'noopener')}} />
+            <Image src={facebook_tablet} className={styles.facebook} alt='facebook이미지' onClick={() => {window.open('https://www.facebook.com/footprintcareers?mibextid=ZbWKwL', '_blank', 'noopener')}} />
           </div>
           <div className={styles.footer_right_bussiness_mobile}>
             <Image src={footer_right_bussiness_tablet} className={styles.footer_right_bussiness_img} alt='footer_right_bussiness이미지' />
@@ -125,8 +125,8 @@ function Footer() {
                 <Image src={footer_back} className={styles.footer_back} alt='footer_back' />
                 <div className={styles.sub_title}>Contact us</div>
               </div>
-              <Image src={mobile_instagram} className={styles.mobile_instagram} alt='mobile_instagram' onClick={() => {window.open('https://www.instagram.com/footprint_story/')}} />
-              <Image src={mobile_facebook} className={styles.mobile_facebook} alt='mobile_facebook' onClick={() => {window.open('https://www.facebook.com/footprintcareers?mibextid=ZbWKwL')}} />
+              <Image src={mobile_instagram} className={styles.mobile_instagram} alt='mobile_instagram' onClick={() => {window.open('https://www.instagram.com/footprint_story/', '_blank', 'noopener')}} />
+              <Image src={mobile_facebook} className={styles.mobile_facebook} alt='mobile_facebook' onClick={() => {window.open('https://www.facebook.com/footprintcareers?mibextid=ZbWKwL', '_blank', 'noopener')}} />
             </div>
           )
         }

@@ -3,6 +3,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image';
+import { clearTimeout, setTimeout } from 'timers';
 
 
 import styles from '../styles/Home.module.css'
@@ -28,6 +29,16 @@ import bg_mobile_main4 from '../public/bg_mobile/main4.png'
 
 const Home: NextPage = () => {
 
+
+  function timer() {
+    scrollTo(0,0);
+  };
+  if (typeof window !== 'undefined') {
+    window.onload = function() {
+      let onloadTimer = setTimeout(timer, 100);
+      clearTimeout(onloadTimer);
+    }
+  };
 
   return (
     <>
