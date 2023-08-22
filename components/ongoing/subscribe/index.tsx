@@ -126,7 +126,7 @@ function Subscribe() {
                 "Content-Type": `application/json`,
             }
         })
-        .then(async function(res) {
+        .then(async function(res: { data: { sent: boolean } }) {
             if (res.data.sent == true) {
               setEmailState(true);
               setAuthLoading(false);
@@ -140,7 +140,7 @@ function Subscribe() {
               setTimePlay(true);
             }
         })
-        .catch((err) => {
+        .catch((err: any) => {
             alert('이메일 전송에 실패했어요!! \n다시 입력해주세요.');
             setEmailState(true);
             setAuthLoading(false);
@@ -154,7 +154,7 @@ function Subscribe() {
             "Content-Type": `application/json`,
         }
     })
-    .then(function(res) {
+    .then(function(res: { data: { joined: boolean } }) {
         if (res.data.joined === true) {//백엔드에서 ok응답
           setCompleteModal(true);
           setTimeState(false);
@@ -172,7 +172,7 @@ function Subscribe() {
           setAuthNot(true);
         }
     })
-    .catch((err) => {
+    .catch((err: any) => {
         console.log(err)
     })
 };

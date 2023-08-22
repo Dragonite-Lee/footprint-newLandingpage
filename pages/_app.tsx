@@ -2,9 +2,9 @@ import '../styles/globals.css'
 import Layout from '../components/layout'
 
 import type { AppProps } from 'next/app'
-import Script from 'next/script';
+import Script from 'next/script'
 import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router"
 import * as fbq from '../lib/fpixel'
 
 declare global {
