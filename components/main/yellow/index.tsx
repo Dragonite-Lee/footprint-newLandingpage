@@ -41,7 +41,7 @@ function Yellow() {
     };
   }
   useEffect(() => {
-    return () => animation().init();
+    animation().init();
   },[])
 
   return (

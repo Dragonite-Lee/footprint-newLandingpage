@@ -38,7 +38,7 @@ function Curious() {
     };
   };
   useEffect(() => {
-    return () => animation().init();
+    animation().init();
   },[])
 
   return (

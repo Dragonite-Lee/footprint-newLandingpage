@@ -28,7 +28,7 @@
     font-family: 'Pretendard-extrabold';
     font-style: normal;
     font-weight: 800;
-    margin-top: 864px; /*반응*/
+    margin-top: 874px; /*반응*/
     margin-right: 353px; /*반응*/
     margin-left: 15px; /*반응*/
 }
@@ -89,7 +89,7 @@
     }
     .close_question {
         font-size: calc(0.021869 * 100vw + 0.011428px); /*반응*/
-        margin-top: calc(0.420238 * 100vw + 52.1428px);
+        margin-top: calc(0.45446428 * 100vw - 10.428px);
         margin-right: calc(0.18385714 * 100vw - 0.005714px);
         margin-left: calc(0.007369 * 100vw + 0.8514px); 
     }

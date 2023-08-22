@@ -40,7 +40,7 @@ function But() {
     };
   }
   useEffect(() => {
-    return () => animation().init();
+    animation().init();
   },[])
   
   return (

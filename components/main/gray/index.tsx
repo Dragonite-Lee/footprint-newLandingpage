@@ -40,7 +40,7 @@ function Gray() {
     };
   };
   useEffect(() => {
-    return () => animation().init();
+    animation().init();
   },[]);
 
   return (
