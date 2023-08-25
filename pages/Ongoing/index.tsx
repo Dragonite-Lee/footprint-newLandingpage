@@ -51,7 +51,7 @@ function Ongoing() {
                 {/* open graph 설정 */}
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="footprint story" />
-                <meta property="og:url" content="https://server.footprintstory.kr/" />
+                <meta property="og:url" content="https://footprintstory.kr/" />
                 <meta property="og:image" content="https://server.footprintstory.kr/images/shareLogo.png" />
                 <meta property="og:image:width" content="800" />
                 <meta property="og:image:height" content="800" />
