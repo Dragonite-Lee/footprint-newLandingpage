@@ -1,45 +1,15 @@
 'use client'
 
 import styles from './curious.module.css'
+import scrollAnimation from '../../../hook/scrollAnimation';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 
 function Curious() {
   
   const curiousRef = useRef<HTMLDivElement>(null);
 
-  const animation = () => {
-    let winH: number;
-   
-    const initModule = () => {
-      winH = window.innerHeight;
-      addEventHandlers();
-    };
-   
-    const addEventHandlers = () => {
-      window.addEventListener("scroll", checkPosition);
-      window.addEventListener("load", checkPosition);
-      window.addEventListener("resize", initModule);
-    };
-   
-    const checkPosition = () => {
-        if (curiousRef.current) {
-          var posFromTop = curiousRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop + 100) {
-            curiousRef.current.style.opacity = '1';
-            curiousRef.current.style.transform = 'translateY(0px)'
-            curiousRef.current.style.transition = '1.4s';
-          }
-        }
-    };
-   
-    return {
-      init: initModule
-    };
-  };
-  useEffect(() => {
-    animation().init();
-  },[])
+  scrollAnimation(curiousRef);
 
   return (
     <div className={styles.container}>

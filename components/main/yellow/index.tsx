@@ -3,46 +3,16 @@
 import styles from './yellow.module.css'
 import yellow_main_text from '../../../public/main/yellow_main_text.png'
 import yellow_sub_text from '../../../public/main/yellow_sub_text.png'
+import scrollAnimation from '../../../hook/scrollAnimation';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 
 function Yellow() {
   
-    const yellowRef = useRef<HTMLDivElement>(null);
+  const yellowRef = useRef<HTMLDivElement>(null);
 
-    const animation = () => {
-        let winH: number;
-   
-    const initModule = () => {
-      winH = window.innerHeight;
-      addEventHandlers();
-    };
-   
-    const addEventHandlers = () => {
-      window.addEventListener("scroll", checkPosition);
-      window.addEventListener("load", checkPosition);
-      window.addEventListener("resize", initModule);
-    };
-   
-    const checkPosition = () => {
-        if (yellowRef.current) {
-          var posFromTop = yellowRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop + 100) {
-            yellowRef.current.style.opacity = '1';
-            yellowRef.current.style.transform = 'translateY(0px)'
-            yellowRef.current.style.transition = '1.4s';
-          }
-        }
-    };
-   
-    return {
-      init: initModule
-    };
-  }
-  useEffect(() => {
-    animation().init();
-  },[])
+  scrollAnimation(yellowRef);
 
   return (
     <div className={styles.container} ref={yellowRef}>

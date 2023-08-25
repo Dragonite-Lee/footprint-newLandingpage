@@ -2,46 +2,16 @@
 
 import styles from './gray.module.css'
 import gray_text from '../../../public/main/gray_text.png'
+import scrollAnimation from '../../../hook/scrollAnimation';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 
 function Gray() {
   
   const grayRef = useRef<HTMLDivElement>(null);
 
-    const animation = () => {
-        let winH: number;
-   
-    const initModule = () => {
-      winH = window.innerHeight;
-      addEventHandlers();
-    };
-   
-    const addEventHandlers = () => {
-      window.addEventListener("scroll", checkPosition);
-      window.addEventListener("load", checkPosition);
-      window.addEventListener("resize", initModule);
-    };
-   
-    const checkPosition = () => {
-        if (grayRef.current) {
-          var posFromTop = grayRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop + 100) {
-            grayRef.current.style.opacity = '1';
-            grayRef.current.style.transform = 'translateY(0px)'
-            grayRef.current.style.transition = '1.4s';
-          }
-        }
-    };
-   
-    return {
-      init: initModule
-    };
-  };
-  useEffect(() => {
-    animation().init();
-  },[]);
+  scrollAnimation(grayRef);
 
   return (
     <div className={styles.container}>

@@ -33,7 +33,7 @@ function Subscribe() {
   const [email, setEmail] = useState<string>('');
   const [auth, setAuth] = useState<string>('');
   const [emailValid, setEmailValid] = useState<boolean>(false);
-  const [completeModal, setCompleteModal] = useState<boolean>(false);
+  const [completeModal, setCompleteModal] = useState<boolean>(true);
   //이메일 보내는 로직 state
   const [emailState, setEmailState] = useState<boolean>(true); 
     //true  이메일 적는 란 false 인증번호 입력 란
@@ -121,7 +121,7 @@ function Subscribe() {
       //api전송 email, agree
         setEmailState(false);
         setAuthLoading(true);
-        await axios.post(`https://footprintstory.kr/api/members`,JSON.stringify(sendData),{
+        await axios.post(`https://server.footprintstory.kr/api/members`,JSON.stringify(sendData),{
             headers: {
                 "Content-Type": `application/json`,
             }
@@ -149,7 +149,7 @@ function Subscribe() {
   };
 
   const authNumberIsSuccess = async () => {
-    await axios.post(`https://footprintstory.kr/api/members/code`,JSON.stringify(sendAuthData),{
+    await axios.post(`https://server.footprintstory.kr/api/members/code`,JSON.stringify(sendAuthData),{
         headers: {
             "Content-Type": `application/json`,
         }

@@ -50,14 +50,14 @@ const Home: NextPage = () => {
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Cache-Control" content="no-cache" />
         <meta name="description" content="footprint story - 다양한 분야에 종사하고 있는 선배들의 커리어 성장기와 삶을 이야기에 담아 연재하는 서비스" />
-        <link rel="icon" href='https://footprintstory.kr/images/favicon.png' />
+        <link rel="icon" href='https://server.footprintstory.kr/images/favicon.png' />
         <meta name='robots' content='all' />
         <meta name='keywords' content='현직자, 직업인, 스토리, 커리어, 취업, 진로, 꿈, 직장' />
         {/* open graph 설정 */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="footprint story" />
-        <meta property="og:url" content="https://footprintstory.kr/" />
-        <meta property="og:image" content="https://footprintstory.kr/images/shareLogo.png" />
+        <meta property="og:url" content="https://server.footprintstory.kr/" />
+        <meta property="og:image" content="https://server.footprintstory.kr/images/shareLogo.png" />
         <meta property="og:image:width" content="800" />
         <meta property="og:image:height" content="800" />
         <meta property="og:site_name" content="footprint story" />
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
         {/* 트위터 open graph 설정 */}
         <meta name="twitter:title" content="footprint story" /> 
         <meta name="twitter:description" content="footprint story - 다양한 분야에 종사하고 있는 선배들의 커리어 성장기와 삶을 이야기에 담아 연재하는 서비스" /> 
-        <meta name="twitter:image" content="https://footprintstory.kr/images/shareLogo.png" /> 
+        <meta name="twitter:image" content="https://server.footprintstory.kr/images/shareLogo.png" /> 
         
       </Head>
 

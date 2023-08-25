@@ -2,46 +2,16 @@
 
 import styles from './together.module.css'
 import curious_text from '../../../public/main/curious_text.png'
+import scrollAnimation from '../../../hook/scrollAnimation';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 
 function Together() {
   
   const togetherRef = useRef<HTMLDivElement>(null);
 
-    const animation = () => {
-        let winH: number;
-   
-    const initModule = () => {
-      winH = window.innerHeight;
-      addEventHandlers();
-    };
-   
-    const addEventHandlers = () => {
-      window.addEventListener("scroll", checkPosition);
-      window.addEventListener("load", checkPosition);
-      window.addEventListener("resize", initModule);
-    };
-   
-    const checkPosition = () => {
-        if (togetherRef.current) {
-          var posFromTop = togetherRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop + 100) {
-            togetherRef.current.style.opacity = '1';
-            togetherRef.current.style.transform = 'translateY(0px)'
-            togetherRef.current.style.transition = '1.4s';
-          }
-        }
-    };
-   
-    return {
-      init: initModule
-    };
-  }
-  useEffect(() => {
-    animation().init();
-  },[])
+  scrollAnimation(togetherRef);
 
   return (
     <div className={styles.container}>

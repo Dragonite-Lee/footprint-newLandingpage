@@ -2,46 +2,15 @@
 
 import styles from './but.module.css'
 import but_text from '../../../public/main/but_text.png'
+import scrollAnimation from '../../../hook/scrollAnimation';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import Image from 'next/image';
 
 function But() {
   const butRef = useRef<HTMLDivElement>(null);
 
-
-  const animation = () => {
-    let winH: number;
-   
-    const initModule = () => {
-      winH = window.innerHeight;
-      addEventHandlers();
-    };
-   
-    const addEventHandlers = () => {
-      window.addEventListener("scroll", checkPosition);
-      window.addEventListener("load", checkPosition);
-      window.addEventListener("resize", initModule);
-    };
-   
-    const checkPosition = () => {
-        if (butRef.current) {
-          var posFromTop = butRef.current.getBoundingClientRect().top;
-          if (winH > posFromTop + 100) {
-            butRef.current.style.opacity = '1';
-            butRef.current.style.transform = 'translateY(0px)'
-            butRef.current.style.transition = '1.4s';
-          }
-        }
-    };
-   
-    return {
-      init: initModule
-    };
-  }
-  useEffect(() => {
-    animation().init();
-  },[])
+  scrollAnimation(butRef);
   
   return (
     <div className={styles.container} ref={butRef}>
